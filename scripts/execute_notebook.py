@@ -1,6 +1,8 @@
 """Refresh saved notebook outputs only after a complete successful execution."""
 from pathlib import Path
 import shutil
+import hashlib
+import json
 import tempfile
 import nbformat
 from nbclient import NotebookClient
@@ -28,6 +30,16 @@ with tempfile.TemporaryDirectory() as work:
     errors = [o for c in notebook.cells if c.cell_type == "code"
               for o in c.outputs if o.output_type == "error"]
     assert not errors
+    widget_states = notebook.metadata.get("widgets", {}).get("application/vnd.jupyter.widget-state+json", {}).get("state", {})
+    widget_errors = [output for model in widget_states.values()
+                     for output in model.get("state", {}).get("outputs", [])
+                     if output.get("output_type") == "error"]
+    if widget_errors:
+        raise RuntimeError("A widget callback failed during notebook execution.")
+    notebook.metadata["executed_code_sha256"] = hashlib.sha256(
+        json.dumps([cell.source for cell in notebook.cells if cell.cell_type == "code"],
+                   ensure_ascii=False).encode("utf-8")
+    ).hexdigest()
     nbformat.validate(notebook)
     nbformat.write(notebook, source)
     print("Saved successfully executed notebook", flush=True)
