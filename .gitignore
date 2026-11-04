@@ -33,3 +33,7 @@ verified_*.ipynb
 
 # Outputs from the offline verification runner
 artifacts/
+
+# Published GitHub Pages HTML
+!docs/index.html
+!docs/maps/*.html

@@ -157,3 +157,26 @@ execution dependencies are included in `requirements.txt`.
 
 The examples use Matplotlib, Folium, and Jupyter widgets. This repository does not
 include a Plotly Dash application.
+
+## Public chart portfolio
+
+Visit **[Python Charts](https://aloysius109.github.io/python-charts/)** for a curated
+selection of notebook charts and the interactive NASA Johnson Space Center map.
+GitHub Pages publishes the static `docs/` folder from `main`.
+
+To update the published snapshots after a successful notebook refresh:
+
+```bash
+python -X utf8 scripts/execute_notebook.py
+python -X utf8 scripts/build_portfolio.py
+```
+
+Review the resulting charts, then commit and push `docs/` along with the updated
+notebook. The build script selects three verified notebook outputs and regenerates
+the NASA HTML map from its Python source. It refuses notebooks with missing
+execution counts or saved errors. The existing example-check workflow uploads its
+outputs as artifacts; it does not update or deploy the curated Pages files.
+
+The portfolio uses aggregate public UNHCR snapshots and a geographic location
+example. Maps require external JavaScript and map-tile services. No private work
+files or client datasets are included in `docs/`.
