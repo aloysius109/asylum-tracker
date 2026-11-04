@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A selection of Python data visualisations by Kathryn Hopkins: UNHCR asylum charts in Matplotlib and an interactive Folium location map.">
+  <meta name="theme-color" content="#102d36">
+  <title>Python Charts · Kathryn Hopkins</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="Python Charts home"><span class="mark" aria-hidden="true">▥</span> Python Charts<span class="wordmark-note"> / Kathryn Hopkins</span></a>
+    <nav aria-label="Main navigation"><a href="#charts">Charts</a><a href="#maps">Maps</a><a href="https://github.com/aloysius109/python-charts">GitHub ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="intro-title">
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span> A PYTHON VISUALISATION PORTFOLIO</div>
+      <h1 id="intro-title">From public data<br>to a clearer <em>picture.</em></h1>
+      <div class="hero-bottom"><p>Exploring asylum statistics and geographic data through thoughtful charts, interactive maps, and reproducible Python.</p><a class="button" href="#charts">Explore the work <span aria-hidden="true">↓</span></a></div>
+      <div class="toolstrip"><span>BUILT WITH</span><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Folium</span></div>
+    </section>
+
+    <section class="gallery wrap" id="charts" aria-labelledby="charts-title">
+      <div class="section-heading"><div><span class="eyebrow">01 / SELECTED CHARTS</span><h2 id="charts-title">Asylum, in perspective.</h2></div><p>Selected notebook outputs.<br>Open any chart at full resolution.</p></div>
+      <figure class="feature-chart">
+        <a class="image-link" href="assets/annual-asylum-flows.png" aria-label="Open annual asylum applications and decisions chart at full resolution"><img src="assets/annual-asylum-flows.png" alt="Annual asylum applications by type and decisions from 1999 to 2025, with persons and cases shown on separate labelled axes." width="1990" height="975" fetchpriority="high"></a>
+        <figcaption><div><span class="eyebrow">TIME SERIES / MATPLOTLIB</span><h3>Following the flow of applications.</h3></div><p>New, repeat, appeal, and other applications alongside decisions. Persons and cases use separate axes; the opening 1999 pending stock is shown as context, rather than a year's applications.</p></figcaption>
+      </figure>
+      <div class="chart-pair">
+        <figure>
+          <a class="image-link" href="assets/decision-outcomes.png" aria-label="Open worldwide decision outcomes chart at full resolution"><img src="assets/decision-outcomes.png" alt="Worldwide decision outcomes for 2000 to 2025: granted 22.4 percent, other protection 9.3 percent, refused 36.4 percent, and closed 31.9 percent." width="583" height="550" loading="lazy"></a>
+          <figcaption><span class="eyebrow">COMPOSITION / MATPLOTLIB</span><h3>How decisions are recorded.</h3><p>A breakdown of recorded decisions across four outcomes, aggregated over 2000–2025. These shares describe the selected extract, not an individual applicant's probability of protection.</p></figcaption>
+        </figure>
+        <figure>
+          <a class="image-link" href="assets/receiving-countries.png" aria-label="Open 2025 receiving-country ranking chart at full resolution"><img src="assets/receiving-countries.png" alt="Horizontal bar chart of the top 20 receiving countries by reported asylum application volume in 2025, with the United Kingdom highlighted." width="1585" height="889" loading="lazy"></a>
+          <figcaption><span class="eyebrow">COUNTRY COMPARISON / MATPLOTLIB</span><h3>Comparing receiving countries.</h3><p>A 2025 ranking by reported application volume. This exploratory chart combines persons and cases, which are different units; it is not a like-for-like count of people.</p></figcaption>
+        </figure>
+      </div>
+      <a class="text-link" href="https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb">Read the executed analysis notebook <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="map-section" id="maps" aria-labelledby="maps-title">
+      <div class="wrap">
+        <div class="section-heading"><div><span class="eyebrow">02 / INTERACTIVE GEOGRAPHY</span><h2 id="maps-title">A place on the map.</h2></div><span class="tag">FOLIUM + LEAFLET</span></div>
+        <div class="map-intro"><p>Find NASA's Johnson Space Center in Houston, Texas. Pan, zoom, and select the marker to explore this Python-generated map.</p><a class="text-link" href="maps/nasa-johnson-space-center.html">Open full map <span aria-hidden="true">↗</span></a></div>
+        <iframe src="maps/nasa-johnson-space-center.html" title="Interactive map of NASA Johnson Space Center in Houston, Texas" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <p class="map-note">Map tiles and JavaScript libraries load from external providers. <a href="https://github.com/aloysius109/python-charts/blob/main/FoliumNASASpaceCenter.py">View the Python source ↗</a></p>
+      </div>
+    </section>
+
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div><span class="eyebrow">03 / SOURCES &amp; METHOD</span><h2 id="about-title">The work behind<br>the visuals.</h2></div>
+      <div class="about-copy"><p>I'm Kathryn Hopkins. This collection brings together my Python chart-building and mapping examples, with the code and inputs available to explore on GitHub.</p><p>The asylum charts use the repository's UNHCR data snapshots. Source reporting, units, and coverage vary by country and year. Annual applications and decisions are different flows; their difference should not be treated as an observed backlog.</p><p>This is a static showcase. The Python and Jupyter analysis runs separately; the published chart images are snapshots from the executed notebook.</p><div class="source-links"><a href="https://www.unhcr.org/refugee-statistics/">UNHCR Refugee Data Finder ↗</a><a href="https://github.com/aloysius109/python-charts">Code, data &amp; run instructions ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="wrap"><span>Python Charts / Kathryn Hopkins</span><span>Selected work · Published November 2026</span><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
