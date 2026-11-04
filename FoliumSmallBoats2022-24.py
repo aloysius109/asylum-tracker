@@ -10,13 +10,10 @@ Code to create Folium map of small boat arrivals to the UK
 between January 2022 and April 21, 2024
 """
 #%% Import the required libraries
-import webbrowser
+import json
+from urllib.request import urlopen
 import folium
 import pandas as pd
-import xyzservices.providers as xyz
-import json
-import geojson
-from urllib.request import urlopen
 #%% =============================================================================
 # Prepare data for plotting
 # =============================================================================
