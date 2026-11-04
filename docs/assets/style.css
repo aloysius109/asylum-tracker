@@ -4,3 +4,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.image-link{transition:none}}
 
 @media(max-width:650px){.site-header{flex-wrap:wrap;padding-block:14px;gap:8px}.site-header nav{width:100%;justify-content:space-between}}
+
+@media(max-width:650px){.site-header nav{flex-wrap:wrap;justify-content:flex-start;gap:10px 20px}}

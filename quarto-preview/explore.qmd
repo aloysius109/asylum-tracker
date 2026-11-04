@@ -1,0 +1,193 @@
+---
+title: "Explore a country"
+subtitle: "Applications, decisions, and outcomes over time."
+toc: false
+---
+
+Type a country name or three-letter ISO code, then select a result. Keep **persons** and **cases** separate: a case may include more than one person. The chart updates in your browser.
+
+```{ojs}
+//| echo: false
+//| output: false
+data = FileAttachment("data/explorer.json").json()
+core = import(await FileAttachment("assets/explorer-core.js").url())
+```
+
+```{ojs}
+//| echo: false
+{
+  const p = document.createElement("p");
+  p.className = "reading-note";
+  const m = data.metadata;
+  const stamp = m.downloaded_at_utc
+    ? new Date(m.downloaded_at_utc).toLocaleString("en-GB", {timeZone: "UTC"}) + " UTC"
+    : "Bundled snapshot; no new API download";
+  p.textContent = "Data downloaded: " + stamp + ". Requested coverage: " + m.year_from +
+    "–" + m.requested_year_to + ". Latest year present in both sources: " +
+    m.year_to_common + ". A year present in the source is not necessarily complete.";
+  return p;
+}
+```
+
+```{ojs}
+//| echo: false
+viewof matches = Inputs.search(data.countries, {
+  keys: ["name", "iso"], label: "Find a country", placeholder: "Country name or ISO code"
+})
+viewof selected = Inputs.select(matches, {
+  label: "Receiving country",
+  format: d => d.name + " (" + d.iso + ")",
+  value: matches.find(d => d.iso === "GBR") || matches[0]
+})
+viewof unit = Inputs.radio(new Map([["Persons (reported)", "P"], ["Cases (reported)", "C"]]), {
+  label: "Reporting unit", value: "P"
+})
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+rows = selected ? core.countryYears(data, selected.iso, unit) : []
+observed = rows.filter(d => d.applications != null || d.decisions != null)
+outcomeRows = rows.flatMap(d => core.outcomes
+  .filter(([key]) => d[key] != null)
+  .map(([key, outcome]) => ({year: d.year, value: d[key], outcome})))
+```
+
+```{ojs}
+//| echo: false
+{
+  const p = document.createElement("p");
+  p.className = "explorer-status";
+  if (!selected) p.textContent = "No countries match that search. Try another name or ISO code.";
+  else if (!observed.length) p.textContent = "No " + (unit === "P" ? "persons" : "cases") +
+    "-reported observations are available for " + selected.name + ". Try the other reporting unit.";
+  else {
+    const latest = observed[observed.length - 1];
+    const number = value => value == null ? "not reported" : value.toLocaleString("en-GB");
+    p.textContent = selected.name + " · Latest observed year: " + latest.year +
+      " · Applications: " + number(latest.applications) +
+      " · Decisions: " + number(latest.decisions) +
+      " · Unit: " + (unit === "P" ? "persons" : "cases") + ".";
+  }
+  return p;
+}
+```
+
+## Applications and recorded decisions
+
+```{ojs}
+//| echo: false
+{
+  if (!observed.length) return null;
+  return Plot.plot({
+    width: Math.min(width, 1000), height: 430,
+    marginLeft: 85, marginBottom: 45,
+    ariaLabel: "Recorded applications and decisions for " + selected.name,
+    x: {type: "band", label: "Year", tickFormat: d => d % 5 === 0 || d === data.metadata.year_to_available ? String(d) : ""},
+    y: {label: unit === "P" ? "Reported persons" : "Reported cases", grid: true},
+    color: {domain: core.outcomes.map(d => d[1]), range: core.outcomes.map(d => d[2]), legend: true},
+    marks: [
+      Plot.barY(outcomeRows, Plot.stackY({
+        x: "year", y: "value", fill: "outcome",
+        title: d => d.year + " · " + d.outcome + ": " + d.value.toLocaleString("en-GB")
+      })),
+      Plot.lineY(rows, {x: "year", y: "applications", stroke: "#153b40", strokeWidth: 2.5}),
+      Plot.dot(rows.filter(d => d.applications != null), {
+        x: "year", y: "applications", fill: "#153b40", r: 3,
+        title: d => d.year + " · Applications: " + d.applications.toLocaleString("en-GB")
+      }),
+      Plot.ruleY([0])
+    ]
+  });
+}
+```
+
+**Dark line and dots:** applications. **Stacked bars:** recorded decision outcomes. Hover over a dot or bar for its value. Decisions can relate to applications made in earlier years. A gap means no value is available in the selected source/unit, not a confirmed zero.
+
+## How are decisions recorded?
+
+```{ojs}
+//| echo: false
+{
+  const complete = rows.filter(d => d.decisions > 0 &&
+    core.outcomes.every(([key]) => d[key] != null) &&
+    core.outcomes.reduce((sum, [key]) => sum + d[key], 0) === d.decisions);
+  if (!complete.length) {
+    const p = document.createElement("p");
+    p.textContent = "No complete positive decision totals are available for an outcome-share chart.";
+    return p;
+  }
+  const shares = complete.flatMap(d => core.outcomes.map(([key, outcome]) => ({
+    year: d.year, share: d[key] / d.decisions, outcome, count: d[key]
+  })));
+  return Plot.plot({
+    width: Math.min(width, 1000), height: 300, marginLeft: 65,
+    ariaLabel: "Annual decision-outcome shares for " + selected.name,
+    x: {type: "band", label: "Year", tickFormat: d => d % 5 === 0 || d === data.metadata.year_to_available ? String(d) : ""},
+    y: {domain: [0, 1], tickFormat: d => Math.round(d * 100) + "%", label: "Share of recorded decisions", grid: true},
+    color: {domain: core.outcomes.map(d => d[1]), range: core.outcomes.map(d => d[2])},
+    marks: [Plot.barY(shares, Plot.stackY({
+      x: "year", y: "share", fill: "outcome",
+      title: d => d.year + " · " + d.outcome + ": " + (d.share * 100).toFixed(1) + "% (" + d.count.toLocaleString("en-GB") + ")"
+    })), Plot.ruleY([0])]
+  });
+}
+```
+
+These are annual outcome shares, including administrative closures in the denominator—not cohort success probabilities or substantive-decision recognition rates. Years without a complete, positive, reconciled outcome total are omitted from this percentage chart. [Definitions and limitations](methods.qmd#decision-rates).
+
+## Source links and downloads
+
+```{ojs}
+//| echo: false
+{
+  const container = document.createElement("div");
+  container.className = "explorer-links";
+  if (selected) {
+    for (const [dataset, label] of [
+      ["asylum-applications", "Current UNHCR applications download"],
+      ["asylum-decisions", "Current UNHCR decisions download"]
+    ]) {
+      const a = document.createElement("a");
+      a.textContent = label;
+      a.href = core.sourceLink(dataset, selected.iso, data.metadata);
+      a.target = "_blank";
+      a.rel = "noopener";
+      container.append(a);
+    }
+    const a = document.createElement("a");
+    const url = URL.createObjectURL(new Blob([core.csvFor(rows)], {type: "text/csv;charset=utf-8"}));
+    a.href = url;
+    a.download = selected.iso + "-" + unit + "-asylum-chart-data.csv";
+    a.textContent = "Download this chart's data (CSV)";
+    container.append(a);
+    invalidation.then(() => URL.revokeObjectURL(url));
+  }
+  const snapshot = document.createElement("a");
+  snapshot.href = "data/source-snapshot.zip";
+  snapshot.textContent = "Download the exact source snapshots (ZIP)";
+  container.append(snapshot);
+  return container;
+}
+```
+
+The CSV contains the selected country's annual aggregates in the selected reporting unit; empty fields mean unavailable values. The ZIP contains the full source CSVs and their download provenance. UNHCR's current downloads can contain later revisions and both reporting units, so they may differ from the stored chart data.
+
+### Values behind the chart
+
+```{ojs}
+//| echo: false
+Inputs.table(observed, {
+  columns: ["year", "applications", "decisions", "recognised", "other_protection", "rejected", "closed"],
+  header: {year: "Year", applications: "Applications", decisions: "Decisions", recognised: "Recognised",
+    other_protection: "Other protection", rejected: "Rejected", closed: "Closed"},
+  rows: 8
+})
+```
+
+::: {.reading-note}
+**Refresh policy:** weekly, plus publication updates. Each refresh validates schema, reporting units, years, non-negative counts, and aggregation totals. A failed refresh does not replace the published dataset. Download time is not the same as UNHCR's publication date or confirmation that a year is complete.
+
+The worldwide-trends chapter remains a fixed notebook edition; this explorer has its own dated source snapshots.
+:::

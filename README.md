@@ -212,3 +212,29 @@ cells and saved errors, including failures captured in widget callbacks. Input
 hashes, source coverage, and cache provenance appear in the notebook. Live stock
 sources can change between executions, so retain the executed version used for
 any published figure.
+
+## Interactive Quarto publication and scheduled refreshes
+
+The publication is served under `/asylum/`, with the country explorer at
+`/asylum/explore.html`. It searches receiving countries, separates persons and
+cases, and provides chart-data CSV downloads, country-filtered UNHCR links, and
+source-snapshot ZIP downloads with provenance.
+
+From the repository root:
+
+    python scripts/prepare_quarto_preview.py
+    python scripts/refresh_explorer_data.py --refresh
+    quarto preview quarto-preview
+
+Use `--bundled` instead of `--refresh` for an offline demonstration. That mode is
+labelled as a bundled snapshot, with no claim of a fresh API download.
+
+`.github/workflows/publish-quarto.yml` refreshes weekly on Monday at 06:17 UTC,
+on relevant main-branch pushes, and via its manual Run workflow button. It validates,
+renders, and deploys the portfolio plus the Quarto publication using GitHub Actions
+as the Pages publishing source. Failed refreshes do not replace the current site.
+Source snapshots are retained as workflow artifacts for 30 days and can also be
+downloaded from the explorer. Scheduled runs can be delayed; use the displayed date.
+
+The narrative chapter is a fixed notebook edition. Refreshing the explorer does
+not rewrite that chapter; new editions require updating the input lock and dates.

@@ -1,0 +1,10 @@
+**Notebook code fingerprint:** <code>d0de64d9d029e56f0922b595e13dddb6bf0a7e8217a6e7b191015d4b7f87bfd7</code>
+
+| Input snapshot | Rows | SHA-256 |
+|---|---:|---|
+| Applications | 120,597 | <code>3dfa9b39add772bfbff09888183c1912e609ad79fca86693a410d307153843d0</code> |
+| Decisions | 113,929 | <code>5112b825e82d64b707242bb8775f3d9071b31fec669afccef857358658384415</code> |
+
+**Stock provenance:** UNHCR worldwide stock observations retrieved at: 2026-11-04T14:42:46.789863+00:00
+
+File hashes identify exact inputs; they do not establish when the source first published them.
