@@ -9,6 +9,7 @@ Created on Tue Jun 11 10:43:15 2024
 This code produces a Folium map of the location of the NASA Johnson Space Center in South-East Houston, Texas, USA
 '''
 #%% Import packages
+import os
 import folium
 from folium.features import DivIcon
 #%% Create Folium map
@@ -41,6 +42,8 @@ print("Interactive map successfully saved to 'NASA_JSC.html'.")
 
 #%% Convert HTML map to png (optional, requires selenium & browser webdriver)
 try:
+    if os.environ.get("SKIP_MAP_PNG") == "1":
+        raise RuntimeError("static map export disabled")
     import io
     from PIL import Image
     site_map_data = site_map._to_png(5)

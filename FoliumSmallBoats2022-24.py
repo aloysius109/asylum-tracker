@@ -12,6 +12,7 @@ between January 2022 and April 21, 2024
 #%% Import the required libraries
 import os
 import json
+from pathlib import Path
 from urllib.request import urlopen
 import folium
 import pandas as pd
@@ -21,9 +22,9 @@ import pandas as pd
 # =============================================================================
 # The published migration statistics are available here:
 # https://www.gov.uk/government/statistics/statistics-relating-to-the-illegal-migration-bill
-ODS_FILE = "statistics-relating-to-the-illegal-migration-act-data-tables-to-apr-2024.ods"
-COORD_FILE = "country-coord.csv"
-GEOJSON_FILE = "world-countries.json"
+ODS_FILE = str(Path(__file__).resolve().parent / "statistics-relating-to-the-illegal-migration-act-data-tables-to-apr-2024.ods")
+COORD_FILE = str(Path(__file__).resolve().parent / "country-coord.csv")
+GEOJSON_FILE = str(Path(__file__).resolve().parent / "world-countries.json")
 
 # Fallback reference dataset (UK Home Office IMB_01b small boat arrivals Jan 2022 - Apr 2024)
 FALLBACK_ARRIVALS = [
@@ -197,6 +198,8 @@ print("Interactive map successfully saved to 'SmallBoats.html'.")
 
 #%% Convert to png (optional, requires selenium & browser webdriver)
 try:
+    if os.environ.get("SKIP_MAP_PNG") == "1":
+        raise RuntimeError("static map export disabled")
     import io
     from PIL import Image
     SmallBoats_data = SmallBoats._to_png(5)
