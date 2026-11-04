@@ -7,6 +7,7 @@ on:
       - "quarto-preview/**"
       - "scripts/prepare_quarto_preview.py"
       - "scripts/prepare_origin_gallery.py"
+      - "scripts/prepare_additional_origins.py"
       - "scripts/refresh_explorer_data.py"
       - "tests/test_explorer_data.py"
       - ".github/workflows/publish-quarto.yml"
@@ -34,10 +35,17 @@ jobs:
       - run: python -m pip install -r requirements.txt
       - name: Check explorer data safeguards
         run: python -m unittest discover -s tests -p test_explorer_data.py
+      - name: Restore cached additional origin charts
+        uses: actions/cache@v6
+        with:
+          path: quarto-preview/assets/origins/additional
+          key: origin-profiles-linux-v1-${{ hashFiles('quarto-preview/_inputs.json', 'scripts/prepare_additional_origins.py', 'requirements.txt') }}
+          restore-keys: origin-profiles-linux-v1-
       - name: Validate and prepare the fixed analytical chapter
         run: |
           python scripts/prepare_quarto_preview.py
           python scripts/prepare_origin_gallery.py
+          python scripts/prepare_additional_origins.py
       - name: Download and validate current explorer data
         run: python scripts/refresh_explorer_data.py --refresh
       - name: Render the publication

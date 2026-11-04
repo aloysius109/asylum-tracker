@@ -7,6 +7,8 @@ project:
     - explore.qmd
     - origins.qmd
   resources:
+    - assets/origin-selector.js
+    - assets/origins/additional/**
     - assets/explorer-core.js
     - data/explorer.json
     - data/source-snapshot.zip
