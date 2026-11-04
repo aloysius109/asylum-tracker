@@ -37,3 +37,6 @@ artifacts/
 # Published GitHub Pages HTML
 !docs/index.html
 !docs/maps/*.html
+
+# Complete published notebook
+!docs/asylum-analysis.html

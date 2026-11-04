@@ -180,3 +180,35 @@ outputs as artifacts; it does not update or deploy the curated Pages files.
 The portfolio uses aggregate public UNHCR snapshots and a geographic location
 example. Maps require external JavaScript and map-tile services. No private work
 files or client datasets are included in `docs/`.
+
+## Complete asylum-statistics report
+
+Read the **[full published analysis](https://aloysius109.github.io/python-charts/asylum-analysis.html)**.
+It includes the complete notebook narrative and charts, expandable Python source,
+and saved initial views of the Jupyter controls. Changing dropdown selections
+requires a live Jupyter kernel; GitHub Pages does not execute Python.
+
+The publication distinguishes persons from cases, recognised shares of all
+recorded decisions from substantive-decision recognition rates, and observed
+pending stocks from annual flow differences. Main worldwide summaries use
+persons-reported records. Mixed-unit country selections remain exploratory and
+are identified in the text. Decisions without current-year matching applications
+are retained, and unsupported case-to-person estimates and modelled backlog
+allocations have been removed. Eurostat pending observations are labelled as
+all-instance pending persons.
+
+To refresh the complete publication and gallery:
+
+```bash
+python -m pip install -r requirements.txt
+python -X utf8 scripts/execute_notebook.py
+python -X utf8 scripts/publish_notebook.py
+python -X utf8 scripts/build_portfolio.py
+```
+
+Review and commit the updated notebook, `docs/asylum-analysis.html`,
+`docs/assets/report/`, and gallery assets together. The exporter refuses unexecuted
+cells and saved errors, including failures captured in widget callbacks. Input
+hashes, source coverage, and cache provenance appear in the notebook. Live stock
+sources can change between executions, so retain the executed version used for
+any published figure.

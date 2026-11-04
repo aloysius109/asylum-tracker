@@ -14,3 +14,6 @@ pyarrow>=14.0
 nbclient>=0.10
 nbformat>=5.9
 ipykernel>=6.25
+
+# Static publication of the complete executed notebook
+nbconvert>=7.16
