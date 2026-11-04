@@ -1,0 +1,9 @@
+::: {.snapshot}
+<div><span class="value">2.96m</span><span class="label">application events recorded in 2025<br>Persons-reported subset</span></div>
+<div><span class="value">2.40m</span><span class="label">decisions recorded in 2025<br>Persons-reported subset</span></div>
+<div><span class="value">138</span><span class="label">receiving-country codes with<br>persons-reported applications in 2025</span></div>
+:::
+
+::: {.snapshot-note}
+Latest shared year in the saved extracts. These totals are not estimates of complete worldwide coverage, and applications are not necessarily unique individuals.
+:::

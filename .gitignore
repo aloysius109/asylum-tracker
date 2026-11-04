@@ -40,3 +40,10 @@ artifacts/
 
 # Complete published notebook
 !docs/asylum-analysis.html
+
+# Local Quarto prototype output
+quarto-preview/_site/
+quarto-preview/.quarto/
+
+# Combined deployment staging
+_publication/

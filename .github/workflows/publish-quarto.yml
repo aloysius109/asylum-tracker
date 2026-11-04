@@ -1,0 +1,62 @@
+name: Refresh and publish asylum explorer
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "quarto-preview/**"
+      - "scripts/prepare_quarto_preview.py"
+      - "scripts/refresh_explorer_data.py"
+      - "tests/test_explorer_data.py"
+      - ".github/workflows/publish-quarto.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.11.9"
+      - run: python -m pip install -r requirements.txt
+      - name: Check explorer data safeguards
+        run: python -m unittest discover -s tests -p test_explorer_data.py
+      - name: Validate and prepare the fixed analytical chapter
+        run: python scripts/prepare_quarto_preview.py
+      - name: Download and validate current explorer data
+        run: python scripts/refresh_explorer_data.py --refresh
+      - name: Render the publication
+        run: quarto render quarto-preview
+      - name: Assemble the portfolio and Quarto publication
+        run: |
+          python -c "import shutil; from pathlib import Path; shutil.copytree('docs', '_publication', dirs_exist_ok=True); shutil.copytree('quarto-preview/_site', '_publication/asylum', dirs_exist_ok=True); Path('_publication/.nojekyll').touch()"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: explorer-source-snapshots
+          path: quarto-preview/data/
+          retention-days: 30
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _publication
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment: github-pages
+    steps:
+      - uses: actions/configure-pages@v6
+      - uses: actions/deploy-pages@v5

@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - methods.qmd
+    - explore.qmd
+  resources:
+    - assets/explorer-core.js
+    - data/explorer.json
+    - data/source-snapshot.zip
+website:
+  title: "Asylum in perspective"
+  description: "A reader's guide to worldwide asylum applications, decisions, and pending claims."
+  navbar:
+    background: "#153b40"
+    foreground: "#ffffff"
+    left:
+      - href: index.qmd
+        text: Worldwide trends
+      - href: explore.qmd
+        text: Country explorer
+      - href: methods.qmd
+        text: Methods & sources
+    right:
+      - href: https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb
+        text: Analysis notebook
+        icon: github
+  search: true
+  page-footer:
+    left: "An independent analysis by Kathryn Hopkins"
+    right: "Source data: UNHCR · Independent analysis"
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    toc-title: "In this chapter"
+    toc-depth: 2
+    number-sections: false
+    link-external-newwindow: true
+    fig-cap-location: bottom
+    lightbox: true
+    smooth-scroll: true
+    anchor-sections: true
+    lang: en-GB
+execute:
+  enabled: false
+  echo: false
