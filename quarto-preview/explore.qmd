@@ -4,7 +4,7 @@ subtitle: "Applications, decisions, and outcomes over time."
 toc: false
 ---
 
-Type a country name or three-letter ISO code, then select a result. Keep **persons** and **cases** separate: a case may include more than one person. The chart updates in your browser.
+Choose a receiving country from the dropdown. You can type while the dropdown is focused to jump to a country. Keep **persons** and **cases** separate: a case may include more than one person. The chart updates in your browser.
 
 ```{ojs}
 //| echo: false
@@ -31,13 +31,10 @@ core = import(await FileAttachment("assets/explorer-core.js").url())
 
 ```{ojs}
 //| echo: false
-viewof matches = Inputs.search(data.countries, {
-  keys: ["name", "iso"], label: "Find a country", placeholder: "Country name or ISO code"
-})
-viewof selected = Inputs.select(matches, {
-  label: "Receiving country",
+viewof selected = Inputs.select(data.countries, {
+  label: "Find a country",
   format: d => d.name + " (" + d.iso + ")",
-  value: matches.find(d => d.iso === "GBR") || matches[0]
+  value: data.countries.find(d => d.iso === "GBR") || data.countries[0]
 })
 viewof unit = Inputs.radio(new Map([["Persons (reported)", "P"], ["Cases (reported)", "C"]]), {
   label: "Reporting unit", value: "P"
