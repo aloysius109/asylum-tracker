@@ -42,3 +42,14 @@ table { font-size: .85rem; }
 body:has(.explorer-status) #title-block-header { padding-bottom:.7rem; margin-bottom:1.2rem; }
 body:has(.explorer-status) #title-block-header .title { font-size:clamp(2.1rem,4vw,3rem); }
 body:has(.explorer-status) .reading-note { margin-block:1rem; font-size:.8rem; }
+
+.origin-jump { display:flex;flex-wrap:wrap;gap:.45rem .7rem;margin:1.5rem 0 2.4rem; }
+.origin-jump a { padding:.3rem .75rem;border:1px solid #ccd9cf;border-radius:3px;font-size:.8rem;text-decoration:none; }
+.origin-jump a:hover { background:#e5ecde; }
+.origin-gallery { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;align-items:start; }
+.origin-card { min-width:0;border-top:2px solid #c2d0c4;padding-top:1rem; }
+.origin-card h2 { margin-top:.2rem;font-size:1.6rem; }
+.origin-card figure { padding:.35rem;margin-block:1rem; }
+.origin-card img { width:100%;height:auto; }
+.origin-card > p { font-size:.8rem; }
+@media (max-width: 850px) { .origin-gallery { grid-template-columns: 1fr; } }

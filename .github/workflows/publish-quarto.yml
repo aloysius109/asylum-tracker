@@ -6,6 +6,7 @@ on:
       - "docs/**"
       - "quarto-preview/**"
       - "scripts/prepare_quarto_preview.py"
+      - "scripts/prepare_origin_gallery.py"
       - "scripts/refresh_explorer_data.py"
       - "tests/test_explorer_data.py"
       - ".github/workflows/publish-quarto.yml"
@@ -34,7 +35,9 @@ jobs:
       - name: Check explorer data safeguards
         run: python -m unittest discover -s tests -p test_explorer_data.py
       - name: Validate and prepare the fixed analytical chapter
-        run: python scripts/prepare_quarto_preview.py
+        run: |
+          python scripts/prepare_quarto_preview.py
+          python scripts/prepare_origin_gallery.py
       - name: Download and validate current explorer data
         run: python scripts/refresh_explorer_data.py --refresh
       - name: Render the publication

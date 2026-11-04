@@ -5,6 +5,7 @@ project:
     - index.qmd
     - methods.qmd
     - explore.qmd
+    - origins.qmd
   resources:
     - assets/explorer-core.js
     - data/explorer.json
@@ -20,6 +21,8 @@ website:
         text: Worldwide trends
       - href: explore.qmd
         text: Country explorer
+      - href: origins.qmd
+        text: Origins & destinations
       - href: methods.qmd
         text: Methods & sources
     right:

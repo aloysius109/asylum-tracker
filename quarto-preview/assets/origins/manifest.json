@@ -1,0 +1,129 @@
+{
+  "executed_code_sha256": "d0de64d9d029e56f0922b595e13dddb6bf0a7e8217a6e7b191015d4b7f87bfd7",
+  "period": [
+    2000,
+    2025
+  ],
+  "profiles": [
+    {
+      "origin": "AFG",
+      "name": "Afghanistan",
+      "file": "assets/origins/afg.png",
+      "sha256": "7d755087a0b476c2e7b135e5b516cd793b2198cd866b0ae18bb820e03eba6416"
+    },
+    {
+      "origin": "VEN",
+      "name": "Venezuela, Bolivarian Republic of",
+      "file": "assets/origins/ven.png",
+      "sha256": "f634eeb511ef9dc57a7a1d4c1c55f881e6191fca8145edc0b462695e67c4f038"
+    },
+    {
+      "origin": "SYR",
+      "name": "Syrian Arab Republic",
+      "file": "assets/origins/syr.png",
+      "sha256": "a29065829572b420b51a4ecca696540ce2c0d7c1b459c8ee200718d7246b6093"
+    },
+    {
+      "origin": "IRQ",
+      "name": "Iraq",
+      "file": "assets/origins/irq.png",
+      "sha256": "034b9fd92bac9fa2accbae2e0d234053db030ef9ba027a28ef39860c64e55324"
+    },
+    {
+      "origin": "UNK",
+      "name": "Unknown",
+      "file": "assets/origins/unk.png",
+      "sha256": "867e345d9f3eedbcffba1a18ec88be0e61f659da28c0df57fb702aa21113bf6e"
+    },
+    {
+      "origin": "SDN",
+      "name": "Sudan",
+      "file": "assets/origins/sdn.png",
+      "sha256": "39373b27ebfe3afa3435ad65a8d1d32d791d2c19283865511d48c53327530362"
+    },
+    {
+      "origin": "COD",
+      "name": "Congo, The Democratic Republic of the",
+      "file": "assets/origins/cod.png",
+      "sha256": "1d6a0ee73906a9f80172c45e526a6c28f1ad1825af8103c55de9476b7fa319a0"
+    },
+    {
+      "origin": "SOM",
+      "name": "Somalia",
+      "file": "assets/origins/som.png",
+      "sha256": "a2fcfd458bc1b80993eafcbf123e2c3caab236292ca518f29723d1356696ee32"
+    },
+    {
+      "origin": "COL",
+      "name": "Colombia",
+      "file": "assets/origins/col.png",
+      "sha256": "3891ed6091bec8514393f1997045d3954e4179f907f470ee25d74b60d170d4a5"
+    },
+    {
+      "origin": "ERI",
+      "name": "Eritrea",
+      "file": "assets/origins/eri.png",
+      "sha256": "20a6b9f599df371cb6e9713b7454dc434313b51e2a2c54b7039c853cdd0db2df"
+    },
+    {
+      "origin": "UKR",
+      "name": "Ukraine",
+      "file": "assets/origins/ukr.png",
+      "sha256": "2fa494037d81c4606cadea521bf5def1347d7af486def1822432511839907323"
+    },
+    {
+      "origin": "TUR",
+      "name": "Türkiye",
+      "file": "assets/origins/tur.png",
+      "sha256": "36566fb6ac07da90eb2110792e60b6659bdbb128ab81ac70fbcc3d10f41b743e"
+    },
+    {
+      "origin": "PAK",
+      "name": "Pakistan",
+      "file": "assets/origins/pak.png",
+      "sha256": "951fee5295a3e21f46546a98cbaf45b2ea50e73d6db2f24758fb6673b3b5a3e1"
+    },
+    {
+      "origin": "NGA",
+      "name": "Nigeria",
+      "file": "assets/origins/nga.png",
+      "sha256": "589678dbab12caeb900875f1cc45f8d83fcb97ff3647cece334e4004f8426c07"
+    },
+    {
+      "origin": "CHN",
+      "name": "China",
+      "file": "assets/origins/chn.png",
+      "sha256": "249f6c30bdc1ca9be71d20100248217dbe91c908446712d79c4958b9fd7695a5"
+    },
+    {
+      "origin": "SRB",
+      "name": "Serbia",
+      "file": "assets/origins/srb.png",
+      "sha256": "24e1b203eeb6c662a843d8702be36e7ec5210ae8df0603af1f2d72f290bbcfbf"
+    },
+    {
+      "origin": "RUS",
+      "name": "Russian Federation",
+      "file": "assets/origins/rus.png",
+      "sha256": "bce91a04504dd62cad42bb4506c0d72fa7d3c1d9e342c55517cd261359add568"
+    },
+    {
+      "origin": "IRN",
+      "name": "Iran, Islamic Republic of",
+      "file": "assets/origins/irn.png",
+      "sha256": "11760f53bc71cc58ae9f831c40032d7cf52560d190ddb6a85338a784870a3e14"
+    },
+    {
+      "origin": "HTI",
+      "name": "Haiti",
+      "file": "assets/origins/hti.png",
+      "sha256": "670f48977187a819e3a6871b798b1bd0ec451c7be44673edd6126bddb0c80ca2"
+    },
+    {
+      "origin": "CUB",
+      "name": "Cuba",
+      "file": "assets/origins/cub.png",
+      "sha256": "e32ed9acfd57632b244d00bdc15feb54da23d5d5d9ac4269f041da315193564a"
+    }
+  ]
+}

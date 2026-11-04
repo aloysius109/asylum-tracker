@@ -238,3 +238,18 @@ downloaded from the explorer. Scheduled runs can be delayed; use the displayed d
 
 The narrative chapter is a fixed notebook edition. Refreshing the explorer does
 not rewrite that chapter; new editions require updating the input lock and dates.
+
+### Country-of-origin chart gallery
+
+The Quarto Origins & destinations page (`/asylum/origins.html`) reproduces all
+20 multicoloured country-of-origin profiles from the verified notebook. Each
+profile shows receiving-country shares of applications and recognised decisions,
+plus their percentage-point difference. Charts retain the notebook colours and
+open at full size. They are the fixed 2000?2025 edition and retain its exploratory
+mixed-unit reporting conventions, explained on the page.
+
+    python scripts/prepare_origin_gallery.py
+    quarto render quarto-preview
+
+Scheduled publication regenerates the gallery from the pinned notebook outputs;
+it does not replace them with the explorer's independently refreshed data.
