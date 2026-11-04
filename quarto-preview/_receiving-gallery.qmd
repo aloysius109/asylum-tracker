@@ -1,0 +1,169 @@
+## Gallery: Top 20 receiving countries {#top-20-gallery}
+
+The 20 receiving countries with the largest **combined reported application volume, 2000–2025**, in the fixed notebook edition. This selection adds persons- and case-reported values to match the notebook's exploratory ranking; it is **not a ranking of unique applicants or harmonised person counts**. Each profile keeps the two reporting units in separate panels. The dropdown above uses its own dated, refreshed dataset.
+
+**Colours show decision outcomes; the blue line shows applications.** Decisions can concern earlier applications. Gaps indicate unavailable records, not confirmed zeros. Click a chart to enlarge it.
+
+:::: {.origin-gallery .receiving-gallery}
+
+::: {.origin-card}
+### 1. United States
+
+![United States: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/usa.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/usa.png) · **USA**
+:::
+
+::: {.origin-card}
+### 2. Germany
+
+![Germany: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/deu.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/deu.png) · **DEU**
+:::
+
+::: {.origin-card}
+### 3. France
+
+![France: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/fra.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/fra.png) · **FRA**
+:::
+
+::: {.origin-card}
+### 4. United Kingdom
+
+![United Kingdom: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/gbr.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/gbr.png) · **GBR**
+:::
+
+::: {.origin-card}
+### 5. South Africa
+
+![South Africa: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/zaf.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/zaf.png) · **ZAF**
+:::
+
+::: {.origin-card}
+### 6. Italy
+
+![Italy: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/ita.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/ita.png) · **ITA**
+:::
+
+::: {.origin-card}
+### 7. Canada
+
+![Canada: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/can.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/can.png) · **CAN**
+:::
+
+::: {.origin-card}
+### 8. Egypt
+
+![Egypt: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/egy.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/egy.png) · **EGY**
+:::
+
+::: {.origin-card}
+### 9. Sweden
+
+![Sweden: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/swe.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/swe.png) · **SWE**
+:::
+
+::: {.origin-card}
+### 10. Spain
+
+![Spain: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/esp.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/esp.png) · **ESP**
+:::
+
+::: {.origin-card}
+### 11. Greece
+
+![Greece: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/grc.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/grc.png) · **GRC**
+:::
+
+::: {.origin-card}
+### 12. Türkiye
+
+![Türkiye: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/tur.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/tur.png) · **TUR**
+:::
+
+::: {.origin-card}
+### 13. Austria
+
+![Austria: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/aut.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/aut.png) · **AUT**
+:::
+
+::: {.origin-card}
+### 14. Belgium
+
+![Belgium: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/bel.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/bel.png) · **BEL**
+:::
+
+::: {.origin-card}
+### 15. Mexico
+
+![Mexico: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/mex.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/mex.png) · **MEX**
+:::
+
+::: {.origin-card}
+### 16. Russian Federation
+
+![Russian Federation: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/rus.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/rus.png) · **RUS**
+:::
+
+::: {.origin-card}
+### 17. Switzerland
+
+![Switzerland: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/che.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/che.png) · **CHE**
+:::
+
+::: {.origin-card}
+### 18. Peru
+
+![Peru: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/per.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/per.png) · **PER**
+:::
+
+::: {.origin-card}
+### 19. Kenya
+
+![Kenya: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/ken.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/ken.png) · **KEN**
+:::
+
+::: {.origin-card}
+### 20. Netherlands
+
+![Netherlands: annual applications and decision outcomes in separate persons and cases panels, 2000–2025.](assets/receiving/nld.png){loading="lazy"}
+
+[Open full-size chart](assets/receiving/nld.png) · **NLD**
+:::
+
+::::

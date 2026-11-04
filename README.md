@@ -225,6 +225,7 @@ From the repository root:
     python scripts/prepare_quarto_preview.py
     python scripts/prepare_origin_gallery.py
     python scripts/prepare_additional_origins.py
+    python scripts/style_publication_charts.py
     python scripts/refresh_explorer_data.py --refresh
     quarto preview quarto-preview
 
@@ -252,6 +253,7 @@ mixed-unit reporting conventions, explained on the page.
 
     python scripts/prepare_origin_gallery.py
     python scripts/prepare_additional_origins.py
+    python scripts/style_publication_charts.py
     quarto render quarto-preview
 
 Scheduled publication regenerates the gallery from the pinned notebook outputs;

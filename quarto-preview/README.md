@@ -30,6 +30,7 @@ To populate the dropdown for additional origins, run:
 
     python scripts/prepare_origin_gallery.py
     python scripts/prepare_additional_origins.py
+    python scripts/style_publication_charts.py
 
 The first additional-profile build renders 195 images and can take a few minutes.
 Subsequent builds reuse validated cached images. The dropdown covers all 215

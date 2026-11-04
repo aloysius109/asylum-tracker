@@ -6,6 +6,7 @@ on:
       - "docs/**"
       - "quarto-preview/**"
       - "scripts/prepare_quarto_preview.py"
+      - "scripts/style_publication_charts.py"
       - "scripts/prepare_origin_gallery.py"
       - "scripts/prepare_additional_origins.py"
       - "scripts/refresh_explorer_data.py"
@@ -46,6 +47,7 @@ jobs:
           python scripts/prepare_quarto_preview.py
           python scripts/prepare_origin_gallery.py
           python scripts/prepare_additional_origins.py
+          python scripts/style_publication_charts.py
       - name: Download and validate current explorer data
         run: python scripts/refresh_explorer_data.py --refresh
       - name: Render the publication

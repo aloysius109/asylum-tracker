@@ -139,7 +139,9 @@ Choose from **{len(all_profiles)} recorded origins** to see where applications w
 <p><a id="origin-selected-full" target="_blank" rel="noopener">Open full-size chart</a> · <a id="origin-selected-download" download>Download chart (PNG)</a></p>
 </section>
 
-## Featured gallery
+## Gallery: Top 20 reported origins
+
+The **20 origins with the largest combined reported application volume, 2000-2025**, in the notebook edition. This includes **Unknown origin**. The ranking combines persons- and case-reported values: it describes application events in mixed reporting units, not unique applicants or harmonised person counts.
 '''
     page = DEST / "origins.qmd"
     text = page.read_text(encoding="utf-8")
