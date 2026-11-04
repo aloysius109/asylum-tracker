@@ -1,0 +1,211 @@
+---
+title: "Where applications originated"
+subtitle: "Twenty country-of-origin profiles, told through the countries receiving their applications and recognising refugee status."
+toc: false
+page-layout: full
+---
+
+These multicoloured charts follow one **country of origin** at a time. The colours identify **receiving countries**; the same receiving country keeps its colour across the collection. Click any chart to open the full-size version.
+
+**Notebook edition: 2000-2025.** These exploratory profiles retain the original persons- and case-reported values; see the reading guide for interpretation.
+
+::: {.callout-note collapse="true" title="How to read these charts"}
+**How to read each profile:** the top panel shows destinations' shares of recorded applications. The middle panel shows their shares of recognised refugee-status decisions. The lower panel compares those two distributions in **percentage points**. It is not a grant rate or an individual's chance of recognition: decisions may concern earlier applications.
+
+The figures reproduce the **2000–2025 notebook edition**. They combine original persons- and case-reported values and are exploratory comparisons, not harmonised counts of people. The 20 origins are selected by combined reported application volume. The six featured destinations per origin are selected using their combined shares of applications and recognised decisions; the remainder form **Other (OTH)**.
+:::
+
+<nav class="origin-jump" aria-label="Choose a country of origin">
+<a href="#origin-afg">Afghanistan</a>
+<a href="#origin-chn">China</a>
+<a href="#origin-col">Colombia</a>
+<a href="#origin-cod">Congo, The Democratic Republic of the</a>
+<a href="#origin-cub">Cuba</a>
+<a href="#origin-eri">Eritrea</a>
+<a href="#origin-hti">Haiti</a>
+<a href="#origin-irn">Iran, Islamic Republic of</a>
+<a href="#origin-irq">Iraq</a>
+<a href="#origin-nga">Nigeria</a>
+<a href="#origin-pak">Pakistan</a>
+<a href="#origin-rus">Russian Federation</a>
+<a href="#origin-srb">Serbia</a>
+<a href="#origin-som">Somalia</a>
+<a href="#origin-sdn">Sudan</a>
+<a href="#origin-syr">Syrian Arab Republic</a>
+<a href="#origin-tur">Türkiye</a>
+<a href="#origin-ukr">Ukraine</a>
+<a href="#origin-unk">Unknown</a>
+<a href="#origin-ven">Venezuela, Bolivarian Republic of</a>
+</nav>
+
+:::: {.origin-gallery}
+
+::: {.origin-card}
+## Afghanistan {#origin-afg}
+
+![Afghanistan: applications and recognised decisions by receiving country.](assets/origins/afg.png){#fig-origin-afg fig-alt="Afghanistan: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/afg.png) · Origin code: **AFG**
+:::
+
+::: {.origin-card}
+## Venezuela, Bolivarian Republic of {#origin-ven}
+
+![Venezuela, Bolivarian Republic of: applications and recognised decisions by receiving country.](assets/origins/ven.png){#fig-origin-ven fig-alt="Venezuela, Bolivarian Republic of: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/ven.png) · Origin code: **VEN**
+:::
+
+::: {.origin-card}
+## Syrian Arab Republic {#origin-syr}
+
+![Syrian Arab Republic: applications and recognised decisions by receiving country.](assets/origins/syr.png){#fig-origin-syr fig-alt="Syrian Arab Republic: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/syr.png) · Origin code: **SYR**
+:::
+
+::: {.origin-card}
+## Iraq {#origin-irq}
+
+![Iraq: applications and recognised decisions by receiving country.](assets/origins/irq.png){#fig-origin-irq fig-alt="Iraq: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/irq.png) · Origin code: **IRQ**
+:::
+
+::: {.origin-card}
+## Unknown {#origin-unk}
+
+![Unknown: applications and recognised decisions by receiving country.](assets/origins/unk.png){#fig-origin-unk fig-alt="Unknown: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/unk.png) · Origin code: **UNK**
+:::
+
+::: {.origin-card}
+## Sudan {#origin-sdn}
+
+![Sudan: applications and recognised decisions by receiving country.](assets/origins/sdn.png){#fig-origin-sdn fig-alt="Sudan: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/sdn.png) · Origin code: **SDN**
+:::
+
+::: {.origin-card}
+## Congo, The Democratic Republic of the {#origin-cod}
+
+![Congo, The Democratic Republic of the: applications and recognised decisions by receiving country.](assets/origins/cod.png){#fig-origin-cod fig-alt="Congo, The Democratic Republic of the: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/cod.png) · Origin code: **COD**
+:::
+
+::: {.origin-card}
+## Somalia {#origin-som}
+
+![Somalia: applications and recognised decisions by receiving country.](assets/origins/som.png){#fig-origin-som fig-alt="Somalia: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/som.png) · Origin code: **SOM**
+:::
+
+::: {.origin-card}
+## Colombia {#origin-col}
+
+![Colombia: applications and recognised decisions by receiving country.](assets/origins/col.png){#fig-origin-col fig-alt="Colombia: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/col.png) · Origin code: **COL**
+:::
+
+::: {.origin-card}
+## Eritrea {#origin-eri}
+
+![Eritrea: applications and recognised decisions by receiving country.](assets/origins/eri.png){#fig-origin-eri fig-alt="Eritrea: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/eri.png) · Origin code: **ERI**
+:::
+
+::: {.origin-card}
+## Ukraine {#origin-ukr}
+
+![Ukraine: applications and recognised decisions by receiving country.](assets/origins/ukr.png){#fig-origin-ukr fig-alt="Ukraine: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/ukr.png) · Origin code: **UKR**
+:::
+
+::: {.origin-card}
+## Türkiye {#origin-tur}
+
+![Türkiye: applications and recognised decisions by receiving country.](assets/origins/tur.png){#fig-origin-tur fig-alt="Türkiye: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/tur.png) · Origin code: **TUR**
+:::
+
+::: {.origin-card}
+## Pakistan {#origin-pak}
+
+![Pakistan: applications and recognised decisions by receiving country.](assets/origins/pak.png){#fig-origin-pak fig-alt="Pakistan: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/pak.png) · Origin code: **PAK**
+:::
+
+::: {.origin-card}
+## Nigeria {#origin-nga}
+
+![Nigeria: applications and recognised decisions by receiving country.](assets/origins/nga.png){#fig-origin-nga fig-alt="Nigeria: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/nga.png) · Origin code: **NGA**
+:::
+
+::: {.origin-card}
+## China {#origin-chn}
+
+![China: applications and recognised decisions by receiving country.](assets/origins/chn.png){#fig-origin-chn fig-alt="China: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/chn.png) · Origin code: **CHN**
+:::
+
+::: {.origin-card}
+## Serbia {#origin-srb}
+
+![Serbia: applications and recognised decisions by receiving country.](assets/origins/srb.png){#fig-origin-srb fig-alt="Serbia: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/srb.png) · Origin code: **SRB**
+:::
+
+::: {.origin-card}
+## Russian Federation {#origin-rus}
+
+![Russian Federation: applications and recognised decisions by receiving country.](assets/origins/rus.png){#fig-origin-rus fig-alt="Russian Federation: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/rus.png) · Origin code: **RUS**
+:::
+
+::: {.origin-card}
+## Iran, Islamic Republic of {#origin-irn}
+
+![Iran, Islamic Republic of: applications and recognised decisions by receiving country.](assets/origins/irn.png){#fig-origin-irn fig-alt="Iran, Islamic Republic of: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/irn.png) · Origin code: **IRN**
+:::
+
+::: {.origin-card}
+## Haiti {#origin-hti}
+
+![Haiti: applications and recognised decisions by receiving country.](assets/origins/hti.png){#fig-origin-hti fig-alt="Haiti: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/hti.png) · Origin code: **HTI**
+:::
+
+::: {.origin-card}
+## Cuba {#origin-cub}
+
+![Cuba: applications and recognised decisions by receiving country.](assets/origins/cub.png){#fig-origin-cub fig-alt="Cuba: receiving-country shares of applications and recognised decisions, with percentage-point differences, 2000 to 2025." loading="lazy"}
+
+[Open full-size chart](assets/origins/cub.png) · Origin code: **CUB**
+:::
+
+::::
+
+## Reading the colours and country codes
+
+The legend above each chart names the featured receiving countries using ISO codes. **OTH** collects destinations outside that profile's featured six. A destination's colour remains consistent across profiles, but colours do not indicate better or worse outcomes.
+
+Shares can change with source coverage, reporting units, procedures, and the mix of claims. Some years have little or no recorded volume. These charts do not track application cohorts or explain the causes of differences between destinations.
+
+[Methods and source definitions](methods.qmd) · [Explore a receiving country's annual totals](explore.qmd) · [Original analysis notebook](https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb)

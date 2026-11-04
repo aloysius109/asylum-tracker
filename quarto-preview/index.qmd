@@ -23,6 +23,8 @@ This chapter asks three questions: **how has reported application volume changed
 **A note about units.** The application and decision charts use records reported as **persons**. Records reported as **cases** are excluded, rather than converted using an assumed family size. An application event is still not necessarily a unique person: the source includes new claims, repeats, and appeals.
 :::
 
+**Explore the coloured country profiles:** [Origins & destinations](origins.qmd) shows all 20 country-of-origin charts.
+
 **Choose a receiving country:** [Open the interactive country explorer](explore.qmd) for applications, decisions, source downloads, and its latest refresh date.
 
 ## 1. Applications and decisions follow different timelines {#applications}

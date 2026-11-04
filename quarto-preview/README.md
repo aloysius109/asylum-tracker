@@ -20,3 +20,8 @@ range deliberately. Rendered files live in _site/ and are excluded from Git.
 
 Explorer data is refreshed using python scripts/refresh_explorer_data.py --refresh.
 Weekly deployment is configured in .github/workflows/publish-quarto.yml.
+
+The Origins & destinations page shows all 20 coloured country-of-origin profiles.
+Regenerate its figures from the verified notebook using:
+
+    python scripts/prepare_origin_gallery.py
