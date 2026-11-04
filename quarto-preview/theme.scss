@@ -64,6 +64,6 @@ body:has(.explorer-status) .reading-note { margin-block:1rem; font-size:.8rem; }
 .origin-selected-profile p { font-size: .85rem; margin-bottom: 0; }
 
 .observablehq:has(svg[aria-label]) { background: white; border: 1px solid #d8e2da; border-top: 4px solid #00a98f; border-radius: 5px; padding: 1.3rem .7rem .7rem; margin-block: 1rem 1.7rem; box-shadow: 0 5px 20px #20383b08; }
-.receiving-gallery .origin-card h3 { font-family: Georgia, serif; font-size: 1.5rem; margin-top: .3rem; }
+.receiving-gallery .origin-card h3, .productivity-gallery .origin-card h3 { font-family: Georgia, serif; font-size: 1.5rem; margin-top: .3rem; }
 .origin-card { border-top-color: #00a98f; }
 figure { border-radius: 5px; box-shadow: 0 5px 20px #20383b08; }

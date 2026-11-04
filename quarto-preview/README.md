@@ -35,3 +35,8 @@ To populate the dropdown for additional origins, run:
 The first additional-profile build renders 195 images and can take a few minutes.
 Subsequent builds reuse validated cached images. The dropdown covers all 215
 origins in the fixed notebook edition, including the original gallery profiles.
+
+Processing Productivity and the combined-unit receiving-country gallery are generated
+by python scripts/style_publication_charts.py from pinned inputs. Productivity is
+decisions per 100 applications, with a centred three-year mean; source values
+and both ratio series are downloadable as data/processing-productivity.csv.
