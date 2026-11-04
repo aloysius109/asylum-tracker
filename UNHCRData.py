@@ -14,6 +14,7 @@ https://www.unhcr.org/refugee-statistics/download/?url=837ayH
 '''
 # %% Preprocessing - Import requirements
 # %% Import Requirements
+import os
 from io import BytesIO
 from datetime import date
 from zipfile import BadZipFile, ZipFile
@@ -54,34 +55,60 @@ APPLICATION_CASE_TO_PERSON_MULTIPLIERS = {
 # %% Pre-processing - Function to download UNHCR CSV data
 # %% Function to download UNHCR CSV data
 def download_unhcr_csv(dataset):
-	"""Download a country-level UNHCR dataset and return its CSV as a
+	"""Download or load a country-level UNHCR dataset and return its CSV as a
 	DataFrame."""
-	response = requests.get(
-		f"{API_BASE_URL}/{dataset}/",
-		params={
-			"yearFrom": YEAR_FROM,
-			"download": "true",
-			"coo_all": "true",
-			"coa_all": "true",
-			"cf_type": "ISO",
-		},
-		timeout=REQUEST_TIMEOUT_SECONDS,
-	)
-	response.raise_for_status()
+	# Check for local CSV file first (or in cache)
+	local_csv = f"{dataset}.csv"
+	if os.path.exists(local_csv):
+		print(f"Loading '{dataset}' from local file '{local_csv}'...")
+		return pd.read_csv(local_csv)
 
+	script_dir = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else "."
+	script_local_csv = os.path.join(script_dir, f"{dataset}.csv")
+	if os.path.exists(script_local_csv):
+		print(f"Loading '{dataset}' from local file '{script_local_csv}'...")
+		return pd.read_csv(script_local_csv)
+
+	cache_parquet = os.path.join(script_dir, "unhcr_cache", f"{dataset}_from_{YEAR_FROM}.parquet")
+	if os.path.exists(cache_parquet):
+		print(f"Loading '{dataset}' from local cache '{cache_parquet}'...")
+		return pd.read_parquet(cache_parquet)
+
+	print(f"Fetching '{dataset}' from UNHCR API ({API_BASE_URL}/{dataset}/)...")
 	try:
+		response = requests.get(
+			f"{API_BASE_URL}/{dataset}/",
+			params={
+				"yearFrom": YEAR_FROM,
+				"download": "true",
+				"coo_all": "true",
+				"coa_all": "true",
+				"cf_type": "ISO",
+			},
+			timeout=REQUEST_TIMEOUT_SECONDS,
+		)
+		response.raise_for_status()
+
 		with ZipFile(BytesIO(response.content)) as archive:
 			csv_name = f"{dataset}.csv"
-			if csv_name not in archive.namelist():
+			matched_name = next(
+				(f for f in archive.namelist() if f.endswith(csv_name)), None
+			)
+			if not matched_name:
 				raise ValueError(
 					f"Expected {csv_name} in the UNHCR download, found "
-                    f"{archive.namelist()}."
+					f"{archive.namelist()}."
 				)
-			with archive.open(csv_name) as csv_file:
-				return pd.read_csv(csv_file)
-	except BadZipFile as error:
+			with archive.open(matched_name) as csv_file:
+				df = pd.read_csv(csv_file)
+				try:
+					df.to_csv(local_csv, index=False)
+				except Exception:
+					pass
+				return df
+	except Exception as error:
 		raise RuntimeError(
-			f"UNHCR did not return a valid ZIP download for {dataset}."
+			f"Could not load '{dataset}' from local file '{local_csv}' or live API: {error}"
 		) from error
 # %% Pre-processing - Formatting functions
 # %% Function to calculate percentages for pie charts
