@@ -23,3 +23,10 @@ ehthumbs.db
 # IDE configuration
 .idea/
 .vscode/
+
+# Generated map outputs and temporary test runs
+*.html
+NASA_JSC.png
+SmallBoats.png
+test_*.ipynb
+verified_*.ipynb
