@@ -118,3 +118,25 @@ pip install -r requirements.txt
 * **UNHCR:** [UNHCR Refugee Data Finder](https://www.unhcr.org/refugee-statistics/) / Population Statistics API.
 * **UK Home Office:** [Statistics relating to the Illegal Migration Act](https://www.gov.uk/government/statistics/statistics-relating-to-the-illegal-migration-bill).
 * **GeoJSON:** [Python Visualization Folium Data Repository](https://github.com/python-visualization/folium).
+
+## Automated offline verification
+
+From the repository root with Python 3.12:
+
+```bash
+python -m pip install -r requirements.txt
+python -X utf8 scripts/verify_examples.py
+```
+
+This runs all three Python scripts with network connections disabled, checks both
+HTML maps and the UNHCR chart exports, and copies outputs to `artifacts/`.
+It uses the tracked UNHCR CSV snapshots and `world-countries.json`; keep these
+files in the repository. Small-boats arrivals and coordinates use the script's
+existing embedded fallback when the optional source spreadsheet is absent.
+This check validates execution, not the accuracy of those fallback figures.
+Map HTML generation is offline; displaying map tiles and remote JavaScript in a
+browser still needs internet. Browser-dependent map PNG screenshots are skipped.
+
+Pushes, pull requests, and manual runs trigger `.github/workflows/examples.yml`.
+Download charts and HTML maps from its `example-outputs` artifact after a successful
+run. The checked-in notebook is an exploratory companion; CI runs the Python scripts.

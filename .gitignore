@@ -30,3 +30,6 @@ NASA_JSC.png
 SmallBoats.png
 test_*.ipynb
 verified_*.ipynb
+
+# Outputs from the offline verification runner
+artifacts/
