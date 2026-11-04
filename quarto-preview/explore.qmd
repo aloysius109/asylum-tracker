@@ -176,6 +176,7 @@ The CSV contains the selected country's annual aggregates in the selected report
 ```{ojs}
 //| echo: false
 Inputs.table(observed, {
+  format: {year: value => String(value)},
   columns: ["year", "applications", "decisions", "recognised", "other_protection", "rejected", "closed"],
   header: {year: "Year", applications: "Applications", decisions: "Decisions", recognised: "Recognised",
     other_protection: "Other protection", rejected: "Rejected", closed: "Closed"},
