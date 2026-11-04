@@ -6,12 +6,14 @@ project:
     - methods.qmd
     - explore.qmd
     - origins.qmd
+    - productivity.qmd
   resources:
     - assets/origin-selector.js
     - assets/origins/additional/**
     - assets/explorer-core.js
     - data/explorer.json
     - data/source-snapshot.zip
+    - data/processing-productivity.csv
 website:
   title: "Asylum in perspective"
   description: "A reader's guide to worldwide asylum applications, decisions, and pending claims."
@@ -25,6 +27,8 @@ website:
         text: Country explorer
       - href: origins.qmd
         text: Origins & destinations
+      - href: productivity.qmd
+        text: Processing Productivity
       - href: methods.qmd
         text: Methods & sources
     right:
