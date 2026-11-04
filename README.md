@@ -140,3 +140,20 @@ browser still needs internet. Browser-dependent map PNG screenshots are skipped.
 Pushes, pull requests, and manual runs trigger `.github/workflows/examples.yml`.
 Download charts and HTML maps from its `example-outputs` artifact after a successful
 run. The checked-in notebook is an exploratory companion; CI runs the Python scripts.
+
+### Refresh the saved notebook outputs
+
+```bash
+python -X utf8 scripts/execute_notebook.py
+```
+
+This clears saved outputs in memory and executes every cell in a fresh Python
+kernel. The notebook is replaced only after all cells pass, so a failed run cannot
+publish a partially executed notebook. Temporary copies of the input CSVs and any
+local caches keep generated files separate from the source files. The notebook's
+observed-stock charts query UNHCR and Eurostat; this full refresh needs internet,
+unlike the offline Python-script checks above. Parquet cache support and notebook
+execution dependencies are included in `requirements.txt`.
+
+The examples use Matplotlib, Folium, and Jupyter widgets. This repository does not
+include a Plotly Dash application.
