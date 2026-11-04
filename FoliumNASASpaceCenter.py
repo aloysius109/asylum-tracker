@@ -37,10 +37,16 @@ title_html = f'<h1 style="position:absolute;z-index:100000;left:40vw" >{map_titl
 site_map.get_root().html.add_child(folium.Element(title_html))
 # Save the map as HTML
 site_map.save('NASA_JSC.html')
-#%% Convert HTML map to png
-import io
-from PIL import Image
-site_map_data = site_map._to_png(5)
-img = Image.open(io.BytesIO(site_map_data))
-img.save('NASA_JSC.png')
+print("Interactive map successfully saved to 'NASA_JSC.html'.")
+
+#%% Convert HTML map to png (optional, requires selenium & browser webdriver)
+try:
+    import io
+    from PIL import Image
+    site_map_data = site_map._to_png(5)
+    img = Image.open(io.BytesIO(site_map_data))
+    img.save('NASA_JSC.png')
+    print("Static map image successfully saved to 'NASA_JSC.png'.")
+except Exception as e:
+    print(f"Note: PNG export skipped ({e}). Interactive HTML map is available at 'NASA_JSC.html'.")
 #%% Done!
