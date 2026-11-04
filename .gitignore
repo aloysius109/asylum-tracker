@@ -50,3 +50,6 @@ _publication/
 
 # Additional origin charts are generated and cached during publication
 quarto-preview/assets/origins/additional/
+
+# Temporary libraries produced by Quarto browser rendering
+quarto-preview/site_libs/

@@ -2,6 +2,7 @@
 title: "Explore a country"
 subtitle: "Applications, decisions, and outcomes over time."
 toc: false
+page-layout: full
 ---
 
 Choose a receiving country from the dropdown. You can type while the dropdown is focused to jump to a country. Keep **persons** and **cases** separate: a case may include more than one person. The chart updates in your browser.
@@ -71,6 +72,8 @@ outcomeRows = rows.flatMap(d => core.outcomes
 }
 ```
 
+[Browse the Top 20 receiving-country gallery below](#top-20-gallery).
+
 ## Applications and recorded decisions
 
 ```{ojs}
@@ -78,7 +81,8 @@ outcomeRows = rows.flatMap(d => core.outcomes
 {
   if (!observed.length) return null;
   return Plot.plot({
-    width: Math.min(width, 1000), height: 430,
+    width: Math.min(width, 1100), height: 470,
+    style: {background: "white", color: "#20383b", fontFamily: "Segoe UI, sans-serif", fontSize: "13px"},
     marginLeft: 85, marginBottom: 45,
     ariaLabel: "Recorded applications and decisions for " + selected.name,
     x: {type: "band", label: "Year", tickFormat: d => d % 5 === 0 || d === data.metadata.year_to_available ? String(d) : ""},
@@ -89,9 +93,9 @@ outcomeRows = rows.flatMap(d => core.outcomes
         x: "year", y: "value", fill: "outcome",
         title: d => d.year + " · " + d.outcome + ": " + d.value.toLocaleString("en-GB")
       })),
-      Plot.lineY(rows, {x: "year", y: "applications", stroke: "#153b40", strokeWidth: 2.5}),
+      Plot.lineY(rows, {x: "year", y: "applications", stroke: "#164b63", strokeWidth: 3}),
       Plot.dot(rows.filter(d => d.applications != null), {
-        x: "year", y: "applications", fill: "#153b40", r: 3,
+        x: "year", y: "applications", fill: "#164b63", r: 4,
         title: d => d.year + " · Applications: " + d.applications.toLocaleString("en-GB")
       }),
       Plot.ruleY([0])
@@ -100,7 +104,7 @@ outcomeRows = rows.flatMap(d => core.outcomes
 }
 ```
 
-**Dark line and dots:** applications. **Stacked bars:** recorded decision outcomes. Hover over a dot or bar for its value. Decisions can relate to applications made in earlier years. A gap means no value is available in the selected source/unit, not a confirmed zero.
+**Blue line and dots:** applications. **Stacked bars:** recorded decision outcomes. Hover over a dot or bar for its value. Decisions can relate to applications made in earlier years. A gap means no value is available in the selected source/unit, not a confirmed zero.
 
 ## How are decisions recorded?
 
@@ -119,7 +123,8 @@ outcomeRows = rows.flatMap(d => core.outcomes
     year: d.year, share: d[key] / d.decisions, outcome, count: d[key]
   })));
   return Plot.plot({
-    width: Math.min(width, 1000), height: 300, marginLeft: 65,
+    width: Math.min(width, 1100), height: 350, marginLeft: 75,
+    style: {background: "white", color: "#20383b", fontFamily: "Segoe UI, sans-serif", fontSize: "13px"},
     ariaLabel: "Annual decision-outcome shares for " + selected.name,
     x: {type: "band", label: "Year", tickFormat: d => d % 5 === 0 || d === data.metadata.year_to_available ? String(d) : ""},
     y: {domain: [0, 1], tickFormat: d => Math.round(d * 100) + "%", label: "Share of recorded decisions", grid: true},
@@ -133,6 +138,8 @@ outcomeRows = rows.flatMap(d => core.outcomes
 ```
 
 These are annual outcome shares, including administrative closures in the denominator—not cohort success probabilities or substantive-decision recognition rates. Years without a complete, positive, reconciled outcome total are omitted from this percentage chart. [Definitions and limitations](methods.qmd#decision-rates).
+
+{{< include _receiving-gallery.qmd >}}
 
 ## Source links and downloads
 

@@ -1,8 +1,8 @@
 export const outcomes = [
-  ["recognised", "Recognised refugee status", "#008a53"],
-  ["other_protection", "Other protection", "#d6a500"],
-  ["rejected", "Rejected", "#b74a43"],
-  ["closed", "Otherwise closed", "#7a7a7a"]
+  ["recognised", "Recognised refugee status", "#00a98f"],
+  ["other_protection", "Other protection", "#f4c542"],
+  ["rejected", "Rejected", "#ef6655"],
+  ["closed", "Otherwise closed", "#8574bd"]
 ];
 
 export function countryYears(data, country, unit) {

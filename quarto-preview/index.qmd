@@ -23,7 +23,7 @@ This chapter asks three questions: **how has reported application volume changed
 **A note about units.** The application and decision charts use records reported as **persons**. Records reported as **cases** are excluded, rather than converted using an assumed family size. An application event is still not necessarily a unique person: the source includes new claims, repeats, and appeals.
 :::
 
-**Explore the coloured country profiles:** [Origins & destinations](origins.qmd) shows all 20 country-of-origin charts.
+**Explore the coloured country profiles:** [Origins & destinations](origins.qmd) features the Top 20 reported origins by application volume (2000?2025), plus a dropdown for all recorded origins.
 
 **Choose a receiving country:** [Open the interactive country explorer](explore.qmd) for applications, decisions, source downloads, and its latest refresh date.
 
@@ -31,7 +31,7 @@ This chapter asks three questions: **how has reported application volume changed
 
 {{< include _flow-reading.qmd >}}
 
-The bars separate application types, while the adjacent decisions show the volume recorded in the same year. They do not link the people applying with the people receiving decisions. A claim filed in one year may be decided in another.
+The bars separate application types, while the blue decisions line shows the volume recorded in the same year. They do not link the people applying with the people receiving decisions. A claim filed in one year may be decided in another.
 
 ![Worldwide persons-reported applications by type alongside annual recorded decisions, from 2000 to 2025.](assets/applications-and-decisions.png){fig-alt="Worldwide persons-reported applications by type alongside annual recorded decisions, from 2000 to 2025." #fig-flows fig-cap="Applications and decisions are annual flows, not matched cohorts. Application bars include new, repeat, appeal, and other or unspecified types. Persons-reported records only; source coverage varies over time."}
 
