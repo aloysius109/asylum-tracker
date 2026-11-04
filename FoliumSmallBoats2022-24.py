@@ -23,6 +23,7 @@ import pandas as pd
 # https://www.gov.uk/government/statistics/statistics-relating-to-the-illegal-migration-bill
 ODS_FILE = "statistics-relating-to-the-illegal-migration-act-data-tables-to-apr-2024.ods"
 COORD_FILE = "country-coord.csv"
+GEOJSON_FILE = "world-countries.json"
 
 # Fallback reference dataset (UK Home Office IMB_01b small boat arrivals Jan 2022 - Apr 2024)
 FALLBACK_ARRIVALS = [
@@ -92,10 +93,23 @@ else:
     small_boats_merge = small_boats
 
 #%% Source the polygon shapes for each country
-url = 'https://raw.githubusercontent.com/python-visualization/folium/master/examples/data'
-country_shapes = f'{url}/world-countries.json'
-response = urlopen(country_shapes)
-data_json = json.loads(response.read())
+remote_url = 'https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json'
+
+if os.path.exists(GEOJSON_FILE):
+    with open(GEOJSON_FILE, 'r', encoding='utf-8') as f:
+        data_json = json.load(f)
+    geo_shapes = GEOJSON_FILE
+else:
+    try:
+        response = urlopen(remote_url, timeout=30)
+        data_json = json.loads(response.read())
+        geo_shapes = remote_url
+    except Exception as e:
+        raise RuntimeError(
+            f"Could not load world-countries GeoJSON from local file '{GEOJSON_FILE}' "
+            f"or remote URL '{remote_url}': {e}"
+        )
+
 df = pd.json_normalize(data_json['features'])
 
 #%% And now plot
@@ -103,7 +117,7 @@ SmallBoats = folium.Map(location=(30, 10), zoom_start=3, tiles='Esri.WorldShaded
 
 # Add the Choropleth layer
 folium.Choropleth(
-    geo_data=country_shapes,
+    geo_data=geo_shapes,
     data=small_boats_merge,
     columns=['Country', 'Total'],
     key_on='feature.properties.name',

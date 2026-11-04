@@ -50,16 +50,29 @@ Interactive map visualizations created using **Folium**, **Leaflet**, and geospa
 
 ```text
 Python Charts/
-??? UNHCRData.py                  # Automated UNHCR API ingestion & Matplotlib chart generation
+??? UNHCRData.py                  # Automated UNHCR API ingestion & Matplotlib chart generation (supports offline mode)
 ??? UNHCRData.ipynb               # Interactive Jupyter Notebook for exploratory analysis
 ??? FoliumSmallBoats2022-24.py     # Interactive Choropleth map for UK migration statistics
 ??? FoliumNASASpaceCenter.py      # Interactive location map for NASA JSC
+??? asylum-applications.csv       # Bundled UNHCR asylum applications export (for clean/offline environments)
+??? asylum-decisions.csv          # Bundled UNHCR asylum decisions export (for clean/offline environments)
+??? world-countries.json          # GeoJSON polygon boundaries for country mapping
+??? unhcr_and_geojson_data.zip    # Bundled archive containing the offline datasets
 ??? footnotes.csv                 # Reference metadata and footnotes for multiplier rules
 ??? persons_of_concern.csv        # Supplementary population statistics
 ??? requirements.txt              # Project dependencies
 ??? .gitignore                    # Git ignore configuration
 ??? README.md                     # Project documentation & visual showcase
 ```
+
+---
+
+## Offline & Clean Environment Support
+
+All scripts in this repository support zero-network / offline execution:
+* **UNHCR Data Scripts (`UNHCRData.py`, `UNHCRData.ipynb`):** Check for local CSV exports (`asylum-applications.csv`, `asylum-decisions.csv`) and cached datasets before attempting live API calls.
+* **Folium Mapping (`FoliumSmallBoats2022-24.py`):** Bundles `world-countries.json` locally and provides built-in fallback data for UK migration statistics.
+* **Archive Distribution:** `unhcr_and_geojson_data.zip` is provided as an all-in-one package containing the applications, decisions, and GeoJSON datasets.
 
 ---
 
