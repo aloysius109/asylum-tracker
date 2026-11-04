@@ -25,3 +25,12 @@ The Origins & destinations page shows all 20 coloured country-of-origin profiles
 Regenerate its figures from the verified notebook using:
 
     python scripts/prepare_origin_gallery.py
+
+To populate the dropdown for additional origins, run:
+
+    python scripts/prepare_origin_gallery.py
+    python scripts/prepare_additional_origins.py
+
+The first additional-profile build renders 195 images and can take a few minutes.
+Subsequent builds reuse validated cached images. The dropdown covers all 215
+origins in the fixed notebook edition, including the original gallery profiles.

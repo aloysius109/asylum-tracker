@@ -47,3 +47,6 @@ quarto-preview/.quarto/
 
 # Combined deployment staging
 _publication/
+
+# Additional origin charts are generated and cached during publication
+quarto-preview/assets/origins/additional/

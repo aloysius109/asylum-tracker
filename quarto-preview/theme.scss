@@ -53,3 +53,12 @@ body:has(.explorer-status) .reading-note { margin-block:1rem; font-size:.8rem; }
 .origin-card img { width:100%;height:auto; }
 .origin-card > p { font-size:.8rem; }
 @media (max-width: 850px) { .origin-gallery { grid-template-columns: 1fr; } }
+
+.origin-picker { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-block: 1.5rem .6rem; }
+.origin-picker label { font-size: .9rem; font-weight: 600; }
+.origin-picker select { width: 100%; max-width: 36rem; min-width: 0; padding: .5rem .7rem; font: inherit; font-size: .9rem; color: #20383b; border: 1px solid #bccdc0; border-radius: 3px; background: white; }
+.origin-selection-status { color: #526767; font-size: .85rem; }
+.origin-selected-profile { max-width: 1080px; margin: 1.5rem auto 3rem; padding: 1rem; border: 1px solid #d8e2da; background: white; }
+.origin-selected-profile img { display: block; width: 100%; height: auto; }
+.origin-selected-profile[hidden], .origin-selected-profile img[hidden] { display: none !important; }
+.origin-selected-profile p { font-size: .85rem; margin-bottom: 0; }
