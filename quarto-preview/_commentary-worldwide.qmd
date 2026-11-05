@@ -1,0 +1,10 @@
+## The worldwide pattern: growth, peaks and processing pressure {#worldwide-commentary}
+
+Reported applications rose from **2,245,518 in 2019 to 3,343,203 in 2025**. Applications in 2025 were 49% higher than in 2019 (2,245,518). The recent expansion was not a continuous rise: the series peaked at **3,848,894 in 2023**. Applications in 2025 were 2.3% lower than in 2024 (3,421,776). This distinction matters: a high level of demand and a growing unresolved caseload can coexist with a fall in new applications.
+
+In 2025, **2,836,187 decisions** were recorded against **3,343,203 applications**: 85 decisions per 100 applications. Applications exceeded decisions in **16 of the 26 years**. Persistent shortfalls indicate processing pressure, although the difference is not an observed backlog. The separate end-year stock series is the appropriate evidence for unresolved claims; see [what remains unresolved](#pending).
+
+**The stock of unresolved claims has also expanded.** The separately reported end-year asylum-seeker population rose from **4,148,141 in 2019 to 8,998,097 in 2025** (117% higher), including a 7.7% rise from 2024. Unlike the mixed-unit application totals, this stock is reported in persons. It is not obtained by summing annual flow gaps.
+
+**Read the changes as reported activity.** The series combines persons and cases, application types and procedures, and changing source coverage. It counts application events rather than unique people. Growth in these totals cannot on its own identify the causes of migration, demonstrate onward movement, or establish that future pressure must increase.
+

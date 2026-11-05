@@ -1,0 +1,102 @@
+## Closures: changes over time and differences between countries {#closure-trends}
+
+**Closure share = otherwise-closed decisions ÷ all recorded decisions.** Closures are processing outcomes without a substantive grant or refusal. They deserve a separate view from recognition rates.
+
+UNHCR's “otherwise closed” category can include withdrawal and abandonment, but also inadmissibility, death, or transfers under European procedures. It does **not** identify how many claimants abandoned a claim while remaining in-country. Differences can reflect procedure and reporting as well as claimant behaviour. [UNHCR reporting definitions](https://popdata.unhcr.org/ASR_instructions.pdf).
+
+### The selected country's closure trend
+
+The country dropdown above controls this chart. The scale is fixed at 0–100% so different countries remain comparable. Hover for the percentage, closure count, and decision denominator.
+
+```{ojs}
+//| echo: false
+{
+  const valid = rows.filter(d => d.valid);
+  const panel = document.createElement("div");
+  if (!valid.length) { panel.textContent = "No complete decision totals are available for this country's closure trend."; return panel; }
+  const first = valid[0], latest = valid[valid.length-1];
+  const difference = (latest.closed_share-first.closed_share)*100;
+  const note = document.createElement("p"); note.className="explorer-status";
+  note.textContent = selected.name + ": " + percent(latest.closed_share) + " in " + latest.year +
+    " (" + latest.closed.toLocaleString("en-GB") + " closures / " + latest.decisions.toLocaleString("en-GB") +
+    " recorded decisions). Change since " + first.year + ": " + (difference>0?"+":"") + difference.toFixed(1) + " percentage points. Overall eligible-period share: " + percent(total.closed_share) + ".";
+  panel.append(note,Plot.plot({
+    width:Math.min(width,1100),height:330,marginLeft:70,
+    ariaLabel:"Closure share over time for "+selected.name,
+    x:{label:"Year",ticks:rows.filter(d=>d.year%5===0||d.year===data.metadata.year_to_available).map(d=>d.year),tickFormat:String},
+    y:{domain:[0,1],label:"Closures / all recorded decisions",tickFormat:d=>Math.round(d*100)+"%",grid:true},
+    marks:[Plot.lineY(rows,{x:"year",y:d=>d.valid?d.closed_share:null,stroke:"#8574bd",strokeWidth:3}),
+      Plot.dot(valid,{x:"year",y:"closed_share",fill:"#8574bd",r:4,title:d=>d.year+": "+percent(d.closed_share)+" · "+d.closed.toLocaleString("en-GB")+" closures / "+d.decisions.toLocaleString("en-GB")+" decisions"})]
+  }));
+  return panel;
+}
+```
+
+### Top 20 receiving countries: the same year, side by side
+
+Choose a year to compare the **same denominator and calendar year** across the Top 20 receiving countries. Countries with unavailable or unreconciled totals are omitted from the bars and marked unavailable in the table. Small decision totals can produce volatile percentages; counts are shown in the table and hover labels.
+
+```{ojs}
+//| echo: false
+viewof closureYear = Inputs.select(Array.from({length:data.metadata.year_to_available-data.metadata.year_from+1},(_,i)=>data.metadata.year_from+i),{label:"Comparison year",value:data.metadata.year_to_available,format:String})
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+closureName = country => ({GBR:"United Kingdom",USA:"United States",TUR:"Türkiye",RUS:"Russia"}[country.iso] || country.name)
+closureHistory = topCountries.flatMap(country => core.countryYears(data,country.iso).map(grants.rates).map(row=>({...row,name:closureName(country)})))
+closureComparison = closureHistory.filter(d=>d.year===closureYear).sort((a,b)=>(b.closed_share??-1)-(a.closed_share??-1))
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width:Math.min(width,1100),height:620,marginLeft:Math.min(220,width*.32),marginRight:45,
+  ariaLabel:"Closure shares across Top 20 receiving countries in "+closureYear,
+  x:{domain:[0,1],label:"Closures as a share of all recorded decisions",tickFormat:d=>Math.round(d*100)+"%",grid:true},
+  y:{domain:closureComparison.filter(d=>d.valid).map(d=>d.name),label:null},
+  marks:[Plot.barX(closureComparison.filter(d=>d.valid),{x:"closed_share",y:"name",fill:"#8574bd",title:d=>d.name+" · "+percent(d.closed_share)+" · "+d.closed.toLocaleString("en-GB")+" closures / "+d.decisions.toLocaleString("en-GB")+" decisions"}),
+    Plot.text(closureComparison.filter(d=>d.valid),{x:"closed_share",y:"name",text:d=>percent(d.closed_share),dx:6,textAnchor:"start",fontSize:11})]
+})
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(closureComparison,{
+ columns:["name","closed","decisions","closed_share"],
+ header:{name:"Receiving country",closed:"Otherwise closed",decisions:"All decisions",closed_share:"Closure share"},
+ format:{closed_share:percent},rows:20
+})
+```
+
+### Top 20 closure shares through time
+
+Read across a row to see change within a country, or down a column to compare countries in the same year. The colour scale is fixed at **0–100%**. Grey cells mean unavailable, not zero. Country selection is based on period-wide application volume, not closure rates.
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width:Math.min(width,1100),height:570,marginLeft:Math.min(220,width*.32),marginBottom:50,
+  ariaLabel:"Annual closure-share heatmap for Top 20 receiving countries",
+  x:{type:"band",domain:Array.from({length:data.metadata.year_to_available-data.metadata.year_from+1},(_,i)=>data.metadata.year_from+i),label:"Year",tickFormat:d=>d%5===0||d===data.metadata.year_to_available?String(d):""},
+  y:{domain:topCountries.map(closureName),label:null},
+  color:{type:"linear",domain:[0,1],range:["#f0edf6","#573795"],legend:true,label:"Closure share",tickFormat:d=>Math.round(d*100)+"%"},
+  marks:[Plot.cell(closureHistory,{x:"year",y:"name",fill:"#e4e5e2",inset:.5}),
+    Plot.cell(closureHistory.filter(d=>d.valid),{x:"year",y:"name",fill:"closed_share",inset:.5,title:d=>d.name+" · "+d.year+": "+percent(d.closed_share)+" · "+d.closed.toLocaleString("en-GB")+" closures / "+d.decisions.toLocaleString("en-GB")+" decisions"})]
+})
+```
+
+```{ojs}
+//| echo: false
+{
+  const link=document.createElement("a");
+  const fields=["country","name","year","unit","closed","decisions","closed_share","valid"];
+  const csv=fields.join(",")+"\r\n"+closureHistory.map(row=>fields.map(key=>row[key]==null?"":'"'+String(row[key]).replaceAll('"','""')+'"').join(",")).join("\r\n");
+  const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));
+  link.href=url;link.download="top-20-closure-shares.csv";link.textContent="Download all Top 20 annual closure counts, denominators and unrounded shares (CSV)";
+  invalidation.then(()=>URL.revokeObjectURL(url));return link;
+}
+```
+
+The charts use the same dated explorer snapshot, combined reporting units, and complete-year eligibility checks as the grant-rate comparisons. Gaps remain gaps. Overall shares use summed counts across eligible years; changes between annual shares are expressed in **percentage points**, not percent growth.

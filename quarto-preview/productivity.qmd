@@ -23,6 +23,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 [Download all chart values (CSV)](data/processing-productivity.csv) · [Methods and source definitions](methods.qmd)
 
+{{< include _processing-assessment.qmd >}}
+
 ## Top 20 receiving-country profiles
 
 :::: {.origin-gallery .productivity-gallery}
@@ -30,6 +32,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### United States
 
 ![United States: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/usa.png){loading="lazy"}
+
+{{< include _commentary-receiving-usa.qmd >}}
 
 [Open full-size chart](assets/productivity/usa.png)
 :::
@@ -39,6 +43,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Germany: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/deu.png){loading="lazy"}
 
+{{< include _commentary-receiving-deu.qmd >}}
+
 [Open full-size chart](assets/productivity/deu.png)
 :::
 
@@ -46,6 +52,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### France
 
 ![France: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/fra.png){loading="lazy"}
+
+{{< include _commentary-receiving-fra.qmd >}}
 
 [Open full-size chart](assets/productivity/fra.png)
 :::
@@ -55,6 +63,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![United Kingdom: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/gbr.png){loading="lazy"}
 
+{{< include _commentary-receiving-gbr.qmd >}}
+
 [Open full-size chart](assets/productivity/gbr.png)
 :::
 
@@ -62,6 +72,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### South Africa
 
 ![South Africa: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/zaf.png){loading="lazy"}
+
+{{< include _commentary-receiving-zaf.qmd >}}
 
 [Open full-size chart](assets/productivity/zaf.png)
 :::
@@ -71,6 +83,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Italy: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/ita.png){loading="lazy"}
 
+{{< include _commentary-receiving-ita.qmd >}}
+
 [Open full-size chart](assets/productivity/ita.png)
 :::
 
@@ -78,6 +92,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Canada
 
 ![Canada: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/can.png){loading="lazy"}
+
+{{< include _commentary-receiving-can.qmd >}}
 
 [Open full-size chart](assets/productivity/can.png)
 :::
@@ -87,6 +103,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Egypt: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/egy.png){loading="lazy"}
 
+{{< include _commentary-receiving-egy.qmd >}}
+
 [Open full-size chart](assets/productivity/egy.png)
 :::
 
@@ -94,6 +112,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Sweden
 
 ![Sweden: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/swe.png){loading="lazy"}
+
+{{< include _commentary-receiving-swe.qmd >}}
 
 [Open full-size chart](assets/productivity/swe.png)
 :::
@@ -103,6 +123,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Spain: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/esp.png){loading="lazy"}
 
+{{< include _commentary-receiving-esp.qmd >}}
+
 [Open full-size chart](assets/productivity/esp.png)
 :::
 
@@ -110,6 +132,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Greece
 
 ![Greece: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/grc.png){loading="lazy"}
+
+{{< include _commentary-receiving-grc.qmd >}}
 
 [Open full-size chart](assets/productivity/grc.png)
 :::
@@ -119,6 +143,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Türkiye: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/tur.png){loading="lazy"}
 
+{{< include _commentary-receiving-tur.qmd >}}
+
 [Open full-size chart](assets/productivity/tur.png)
 :::
 
@@ -126,6 +152,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Austria
 
 ![Austria: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/aut.png){loading="lazy"}
+
+{{< include _commentary-receiving-aut.qmd >}}
 
 [Open full-size chart](assets/productivity/aut.png)
 :::
@@ -135,6 +163,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Belgium: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/bel.png){loading="lazy"}
 
+{{< include _commentary-receiving-bel.qmd >}}
+
 [Open full-size chart](assets/productivity/bel.png)
 :::
 
@@ -142,6 +172,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Mexico
 
 ![Mexico: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/mex.png){loading="lazy"}
+
+{{< include _commentary-receiving-mex.qmd >}}
 
 [Open full-size chart](assets/productivity/mex.png)
 :::
@@ -151,6 +183,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Russian Federation: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/rus.png){loading="lazy"}
 
+{{< include _commentary-receiving-rus.qmd >}}
+
 [Open full-size chart](assets/productivity/rus.png)
 :::
 
@@ -158,6 +192,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Switzerland
 
 ![Switzerland: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/che.png){loading="lazy"}
+
+{{< include _commentary-receiving-che.qmd >}}
 
 [Open full-size chart](assets/productivity/che.png)
 :::
@@ -167,6 +203,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Peru: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/per.png){loading="lazy"}
 
+{{< include _commentary-receiving-per.qmd >}}
+
 [Open full-size chart](assets/productivity/per.png)
 :::
 
@@ -174,6 +212,8 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 ### Kenya
 
 ![Kenya: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/ken.png){loading="lazy"}
+
+{{< include _commentary-receiving-ken.qmd >}}
 
 [Open full-size chart](assets/productivity/ken.png)
 :::
@@ -183,7 +223,11 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 ![Netherlands: annual decisions per 100 applications and a three-year centred mean, 2000–2025.](assets/productivity/nld.png){loading="lazy"}
 
+{{< include _commentary-receiving-nld.qmd >}}
+
 [Open full-size chart](assets/productivity/nld.png)
 :::
 
 ::::
+
+{{< include _processing-gap-detail.qmd >}}

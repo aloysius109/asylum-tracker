@@ -6,6 +6,12 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import os
+
+os.environ.setdefault("MPLBACKEND", "Agg")
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+import pandas as pd
 
 import nbformat
 
@@ -64,6 +70,38 @@ def main():
         raise ValueError("Origin profiles contain duplicate country codes.")
     assets = DEST / "assets/origins"
     assets.mkdir(parents=True, exist_ok=True)
+    applications = pd.read_csv(ROOT / "asylum-applications.csv")
+    applications = applications.loc[applications.Year.between(2000, 2025)]
+    volumes = applications.groupby("Country of origin (ISO)")["applied"].sum()
+    selected = volumes.reindex([row[0] for row in table.rows])
+    if selected.isna().any() or set(selected.index) != set(volumes.nlargest(20).index):
+        raise ValueError("Gallery origins must match the source Top 20 application volumes.")
+    for code, name, saved_total in table.rows:
+        if int(float(saved_total.replace(",", ""))) != int(volumes.loc[code]):
+            raise ValueError(f"Saved gallery volume differs from the input snapshot: {code}")
+    summary = pd.DataFrame({"origin": selected.index,
+                            "name": [row[1] for row in table.rows],
+                            "applications": selected.to_numpy()})
+    summary["share_of_all_applications_percent"] = summary.applications / volumes.sum() * 100
+    summary.to_csv(assets / "application-volumes.csv", index=False)
+    from style_origin_volumes import main as style_origin_volumes
+    style_origin_volumes()
+    total = int(selected.sum())
+    share = total / volumes.sum()
+    leader = table.rows[0][1]
+    overview = f'''## How large are these application flows?
+
+::: {{.snapshot}}
+<div><span class="value">{total/1e6:.1f}m</span><span class="label">reported applications from<br>the Top 20 origins, 2000–2025</span></div>
+<div><span class="value">{share:.0%}</span><span class="label">of all reported applications<br>in the same saved extract</span></div>
+<div><span class="value">{int(selected.iloc[0]):,}</span><span class="label">from {escape(leader)}<br>the largest recorded origin</span></div>
+:::
+
+![Ranked reported application totals for the same 20 origins shown in the gallery, 2000–2025.](assets/origins/application-volumes.png){{fig-alt="Horizontal bars showing all 20 origins in descending application volume, with exact totals labelled." fig-cap="Period totals sum original persons- and case-reported applications without conversion. They count reported application activity, not unique people. Unknown origin is included where recorded. These colours distinguish known and unknown origin, not receiving destinations."}}
+
+[See these origins on a map](maps.qmd#origin-map) ? [Download exact volumes and shares (CSV)](assets/origins/application-volumes.csv)
+
+'''
     country_links = "\n".join(
         f'<a href="#origin-{code.lower()}">{escape(name)}</a>'
         for code, name, _ in sorted(table.rows, key=lambda row: row[1]))
@@ -86,6 +124,7 @@ The figures reproduce the **2000–2025 notebook edition**. They combine origina
 
 <nav class="origin-jump" aria-label="Choose a country of origin">
 ''' + country_links + '\n</nav>\n\n:::: {.origin-gallery}\n']
+    parts[0] = parts[0].replace('::: {.callout-note', overview + '::: {.callout-note', 1)
     manifest = []
     for (code, name, _), image in zip(table.rows, images):
         filename = code.lower() + ".png"

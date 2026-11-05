@@ -1,20 +1,20 @@
 ---
 title: "How to read the data"
-subtitle: "Sources, reporting units, and the choices behind this sample chapter."
+subtitle: "Sources, reporting units, and measures of asylum processing pressure."
 toc-title: "Methods"
 ---
 
 ## Sources and scope
 
-The chapter uses the repository's saved UNHCR application and decision CSVs for 2000–2025. Three figures are extracted from the verified notebook; the coverage chart is calculated from the same CSV snapshots.
+The chapter uses the repository's saved UNHCR application and decision CSVs for 2000–2025. Application, decision-outcome, processing-ratio, and reporting-coverage charts are calculated from those pinned CSV snapshots. The observed pending-stock chart is generated from a separately saved UNHCR worldwide annual population-API response.
 
-The pending-stock figure comes from the notebook's saved UNHCR population-API output. Its retrieval time is recorded below. It should not be assumed to have the same revision date as the historical CSVs.
+The pending-stock figure uses worldwide annual aggregates retrieved on 5 November 2026. Its end-2025 total reconciles to the headline: 8,998,097 persons. [Download the exact annual stock response and retrieval metadata](data/pending-stock-series.json). This is a separately dated snapshot from the application and decision CSVs. Stock provenance in the notebook fingerprint table below describes the original notebook edition, rather than this refreshed chart.
 
 {{< include _provenance.qmd >}}
 
 ## Persons, cases, and events
 
-The application and decision series include only rows whose reporting unit is **P (persons)**. Rows marked **C (cases)** are excluded; no case-size multiplier is applied. A country can change units between years, changing which records enter the subset.
+Application and decision series combine original **P (persons)** and **C (cases)** values without conversion or a case-size multiplier. They represent mixed-unit reported activity, not unique people or harmonised case counts. Reporting-unit mixes can differ between flows, countries, and years, affecting ratios and comparisons. The source notebook retains its original persons-only worldwide charts; the website now uses a combined-unit presentation calculated from the same pinned inputs.
 
 Application events are not a count of unique individuals across the study period. The source distinguishes new applications, repeats, appeals, and other types. Missing type codes are retained as Other / unspecified.
 
@@ -36,7 +36,7 @@ Definitions follow the [UNHCR asylum statistics explainer](https://www.unhcr.org
 
 ## Reporting coverage
 
-The coverage chart counts distinct receiving-country ISO codes with at least one persons-reported row in each file and year. It counts presence, not completeness. It does not verify that every reporter submitted all procedures or a complete annual return.
+The coverage chart counts distinct receiving-country ISO codes with at least one persons- or case-reported row in each file and year. It counts presence, not completeness. It does not verify that every reporter submitted all procedures or a complete annual return.
 
 Codes are not necessarily a fixed set over time. Records can describe historical or special entities; the chart therefore uses “receiving-country codes.”
 
@@ -55,9 +55,10 @@ Codes are not necessarily a fixed set over time. Records can describe historical
 Run these commands from the python-charts repository:
 
     python scripts/prepare_quarto_preview.py
+    python scripts/style_publication_charts.py
     quarto preview quarto-preview
 
-Preparation reads the executed notebook and local CSVs, checks their identities, extracts three figures, and generates the coverage figure and supporting text. It does not download fresh data or rerun the notebook.
+Preparation reads the executed notebook and local CSVs, checks their identities, preserves the pending-stock image, and generates the combined-unit flow, outcome, processing-ratio, and coverage figures and supporting text. It does not download fresh data or rerun the notebook.
 
 For a new analytical edition, first refresh and verify the notebook using its execution script. Review changes in coverage and source revisions before refreshing this publication.
 
@@ -84,3 +85,15 @@ No smoothing or case-to-person conversion is applied in the explorer.
 Download time records retrieval, not the source release date. A latest available
 year may be incomplete. UNHCR links retrieve current country data, which can differ
 from the stored snapshot. The chart CSV and source ZIP identify the displayed data.
+
+## Processing output relative to applications
+
+Decisions per 100 applications = 100 x recorded decisions / reported applications in the same year. The numerator includes administrative closures. Values below 100 indicate lower recorded output than inflow; these differences do not by themselves establish backlog changes. Ratios do not measure resource-adjusted staff productivity, quality, or waiting times. No ratio is calculated with a zero or unavailable application denominator.
+
+## Display rounding
+
+Percentages are displayed as whole numbers, with one decimal for values below 10%. Non-zero shares below 0.1% are shown as <0.1%. Rounded percentages may not add to 100%. Headline totals in millions use one decimal; exact counts remain whole numbers. CSV downloads retain their original precision.
+
+### Annual decision-outcome pies
+
+The front-page yearly pies include only positive decision records with all four outcomes present and summing exactly to their recorded decision total. Each card shows the included count and its share of all reported decisions for that year. This avoids silently normalising inconsistent outcome totals into a full circle. The headline totals retain all reported records. The annual pie CSV includes both denominators and unrounded shares.

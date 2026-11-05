@@ -1,0 +1,151 @@
+---
+title: "Grant Rates"
+subtitle: "Overall decision outcomes and annual percentages for receiving countries."
+toc: false
+page-layout: full
+---
+
+Explore the **overall decision-outcome pies** for the Top 20 receiving countries, or choose any receiving country below for its overall and annual figures.
+
+::: {.reading-note}
+**Two denominators, two questions.** Pie slices show refugee status, other protection, rejection, and closure as percentages of **all recorded decisions**. The **refugee recognition rate** is refugee status divided by substantive decisions (refugee status + other protection + rejection). The **total protection rate** includes refugee status and other protection in its numerator. Both substantive rates exclude administrative closures.
+
+Overall percentages divide summed outcomes by summed decision counts, rather than averaging annual percentages. Only years with complete, positive, reconciled decision totals contribute; unavailable values are not zero. Percentages describe decisions, not the eventual success of an application cohort.
+
+Original persons- and case-reported counts are combined without conversion, as on the Country Explorer. Different unit mixes, procedures, and reporting coverage affect comparisons. These are exploratory rates, not harmonised person-based estimates. [Methods and definitions](methods.qmd#decision-rates).
+:::
+
+```{ojs}
+//| echo: false
+//| output: false
+data = FileAttachment("data/explorer.json").json()
+core = import((await FileAttachment("assets/explorer-core.js").url()) + "?v=combined-units-2")
+grants = import((await FileAttachment("assets/grant-rates.js").url()) + "?v=grant-rates-rounded-3")
+ranking = FileAttachment("data/processing-productivity.csv").csv()
+topCodes = Array.from(new Set(ranking.map(d => d.country)))
+topCountries = topCodes.map(iso => ({iso, name: data.countries.find(d => d.iso === iso)?.name || iso}))
+```
+
+```{ojs}
+//| echo: false
+{
+  const p = document.createElement("p");
+  p.className = "reading-note";
+  p.textContent = "Decision data: " + data.metadata.year_from + "–" + data.metadata.year_to_available +
+    ". Snapshot downloaded: " + (data.metadata.downloaded_at_utc
+      ? new Date(data.metadata.downloaded_at_utc).toLocaleString("en-GB", {day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"UTC", hour12:false}) + " UTC"
+      : "bundled snapshot; no new download") +
+    ". Latest years may be incomplete. Top 20 selection matches the fixed 2000–2025 application-volume ranking used elsewhere on this site.";
+  return p;
+}
+```
+
+[Grants and refusals excluding closures](#substantive-outcomes) | [Yearly application origins and grant recipients](#yearly-origins) | [Closure trends and country comparisons](#closure-trends) | [Compare outcomes by applicant origin and year](#origin-outcomes).
+
+{{< include _commentary-grants.qmd >}}
+
+## Find a country
+
+```{ojs}
+//| echo: false
+viewof selected = Inputs.select(data.countries, {
+  label: "Receiving country", format: d => d.name + " (" + d.iso + ")",
+  value: data.countries.find(d => d.iso === "GBR") || data.countries[0]
+})
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+rows = selected ? core.countryYears(data, selected.iso).map(grants.rates) : []
+total = grants.overall(rows)
+percent = grants.percent
+```
+
+```{ojs}
+//| echo: false
+{
+  const section = document.createElement("section");
+  const title = document.createElement("h3"); title.textContent = selected.name + " — overall outcomes";
+  const note = document.createElement("p");
+  note.className = "explorer-status";
+  note.textContent = "Refugee recognition rate: " + percent(total.refugee_rate) +
+    " · Total protection rate: " + percent(total.protection_rate) +
+    " · Closure share (all decisions): " + percent(total.closed_share) +
+    " · Eligible years: " + total.years + (total.years ? " (" + total.from + "–" + total.to + ")" : "") +
+    ". These two rates exclude closures; pie percentages include them.";
+  section.append(title, note, grants.pie(total, selected.name));
+  return section;
+}
+```
+
+{{< include _substantive-outcomes.qmd >}}
+
+{{< include _origin-year-selection.qmd >}}
+
+{{< include _closure-comparisons.qmd >}}
+
+### Annual outcome percentages
+
+```{ojs}
+//| echo: false
+{
+  const shares = rows.filter(d => d.valid).flatMap(d => core.outcomes.map(([key, outcome]) => ({year: d.year, outcome, share: d[key + "_share"]})));
+  if (!shares.length) return "No complete annual decision totals are available.";
+  return Plot.plot({
+    width: Math.min(width,1100), height: 350, marginLeft: 70,
+    ariaLabel: "Annual decision-outcome percentages for " + selected.name,
+    x: {type: "band", domain: rows.map(d => d.year), label: "Year", tickFormat: d => d%5===0 || d===data.metadata.year_to_available ? String(d) : ""},
+    y: {domain: [0,1], grid: true, label: "Share of all recorded decisions", tickFormat: d => Math.round(d*100)+"%"},
+    color: {domain: core.outcomes.map(d=>d[1]), range: core.outcomes.map(d=>d[2]), legend: true},
+    marks: [Plot.barY(shares,Plot.stackY({x:"year", y:"share", fill:"outcome", title:d=>d.year+" · "+d.outcome+": "+percent(d.share)}))]
+  });
+}
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(rows.filter(d => d.decisions != null), {
+  columns: ["year", "decisions", "recognised_share", "other_protection_share", "rejected_share", "closed_share", "refugee_rate", "protection_rate"],
+  header: {year:"Year", decisions:"All decisions", recognised_share:"Refugee status / all", other_protection_share:"Other protection / all", rejected_share:"Rejected / all", closed_share:"Closed / all", refugee_rate:"Refugee / substantive", protection_rate:"Protection / substantive"},
+  format: {year:String, recognised_share:percent, other_protection_share:percent, rejected_share:percent, closed_share:percent, refugee_rate:percent, protection_rate:percent},
+  rows: 10
+})
+```
+
+```{ojs}
+//| echo: false
+{
+  const links = document.createElement("div"); links.className = "explorer-links";
+  const a = document.createElement("a");
+  const url = URL.createObjectURL(new Blob([grants.csv(rows)],{type:"text/csv;charset=utf-8"}));
+  a.href = url; a.download = selected.iso+"-grant-rates-combined.csv"; a.textContent = "Download annual counts and rates (CSV)";
+  const source = document.createElement("a"); source.href = core.sourceLink("asylum-decisions",selected.iso,data.metadata); source.textContent = "Current UNHCR decisions download";
+  links.append(a,source); invalidation.then(()=>URL.revokeObjectURL(url)); return links;
+}
+```
+
+CSV rates are fractions (0–1); the page displays percentages. Empty fields indicate unavailable rates.
+
+## Overall outcomes: Top 20 receiving countries
+
+The same Top 20 application-volume selection as Country Explorer. Each pie shows **all-decision shares**, including closures. The figures underneath give the two substantive grant rates and the number of eligible years. Small slices retain their exact percentages in the legend. Hover over slices for counts.
+
+```{ojs}
+//| echo: false
+{
+  const grid = document.createElement("div"); grid.className = "grant-facets";
+  for (const country of topCountries) {
+    const result = grants.overall(core.countryYears(data,country.iso));
+    const card = document.createElement("section"); card.className = "grant-facet";
+    const heading = document.createElement("h3"); heading.textContent = country.name;
+    const detail = document.createElement("p");
+    detail.textContent = "Refugee recognition: " + percent(result.refugee_rate) + " · Total protection: " + percent(result.protection_rate) + " (substantive decisions) | Closures: " + percent(result.closed_share) + " of all decisions. " + result.years + " eligible years.";
+    card.append(heading,grants.pie(result,country.name),detail,originCards.overallOrigins(originYearData.overall_applications[country.iso]||[],originYearData.origins,originYearData.metadata)); grid.append(card);
+  }
+  return grid;
+}
+```
+
+
+{{< include _origin-outcome-detail.qmd >}}

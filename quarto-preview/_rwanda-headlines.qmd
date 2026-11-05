@@ -1,0 +1,5 @@
+::: {.snapshot}
+<div><span class="value">1,835</span><span class="label">reported applications in Rwanda<br>2025 · all procedures</span></div>
+<div><span class="value">777</span><span class="label">recorded decisions in Rwanda<br>2025 · all outcomes</span></div>
+<div><span class="value">42</span><span class="label">decisions per 100 applications<br>Rwanda · 2025 recorded flows</span></div>
+:::

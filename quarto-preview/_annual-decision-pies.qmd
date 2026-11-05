@@ -1,0 +1,191 @@
+<div class="annual-pie-intro"><span class="eyebrow">Recorded decision outcomes · 2000–2025</span><p>One year, one picture. Each ring divides that year's decisions into four outcomes; the centre shows the included decision count. Only source records whose four outcomes reconcile to their recorded total are included; coverage is shown on each card.</p></div>
+
+::: {.annual-pie-grid}
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2000">
+<h3>2000</h3>
+<img src="assets/annual-outcomes/2000.png" alt="2000: Refugee status 19%; Other protection 8.7%; Rejected 50%; Otherwise closed 22%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>19%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.7%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>50%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>22%</strong></li></ul>
+<p class="annual-pie-total">1,076,202 decisions included<br>of 1,090,296 reported (99%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2001">
+<h3>2001</h3>
+<img src="assets/annual-outcomes/2001.png" alt="2001: Refugee status 18%; Other protection 8.4%; Rejected 48%; Otherwise closed 26%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>18%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.4%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>48%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>26%</strong></li></ul>
+<p class="annual-pie-total">927,283 decisions included<br>of 946,486 reported (98%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2002">
+<h3>2002</h3>
+<img src="assets/annual-outcomes/2002.png" alt="2002: Refugee status 16%; Other protection 6.2%; Rejected 52%; Otherwise closed 26%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>16%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>6.2%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>52%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>26%</strong></li></ul>
+<p class="annual-pie-total">1,005,992 decisions included<br>of 1,010,251 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2003">
+<h3>2003</h3>
+<img src="assets/annual-outcomes/2003.png" alt="2003: Refugee status 15%; Other protection 4.9%; Rejected 52%; Otherwise closed 28%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>15%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>4.9%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>52%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>28%</strong></li></ul>
+<p class="annual-pie-total">998,490 decisions included<br>of 1,002,084 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2004">
+<h3>2004</h3>
+<img src="assets/annual-outcomes/2004.png" alt="2004: Refugee status 14%; Other protection 5.7%; Rejected 50%; Otherwise closed 30%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>14%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>5.7%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>50%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>30%</strong></li></ul>
+<p class="annual-pie-total">891,116 decisions included<br>of 891,175 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2005">
+<h3>2005</h3>
+<img src="assets/annual-outcomes/2005.png" alt="2005: Refugee status 18%; Other protection 6.2%; Rejected 44%; Otherwise closed 32%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>18%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>6.2%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>44%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>32%</strong></li></ul>
+<p class="annual-pie-total">829,228 decisions included<br>of 829,228 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2006">
+<h3>2006</h3>
+<img src="assets/annual-outcomes/2006.png" alt="2006: Refugee status 20%; Other protection 7.5%; Rejected 44%; Otherwise closed 28%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>20%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>7.5%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>44%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>28%</strong></li></ul>
+<p class="annual-pie-total">679,851 decisions included<br>of 692,537 reported (98%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2007">
+<h3>2007</h3>
+<img src="assets/annual-outcomes/2007.png" alt="2007: Refugee status 23%; Other protection 9.3%; Rejected 40%; Otherwise closed 27%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>23%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>9.3%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>40%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>27%</strong></li></ul>
+<p class="annual-pie-total">642,729 decisions included<br>of 644,001 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2008">
+<h3>2008</h3>
+<img src="assets/annual-outcomes/2008.png" alt="2008: Refugee status 22%; Other protection 9.1%; Rejected 47%; Otherwise closed 22%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>22%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>9.1%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>47%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>22%</strong></li></ul>
+<p class="annual-pie-total">697,502 decisions included<br>of 706,269 reported (99%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2009">
+<h3>2009</h3>
+<img src="assets/annual-outcomes/2009.png" alt="2009: Refugee status 30%; Other protection 6.6%; Rejected 42%; Otherwise closed 21%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>30%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>6.6%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>42%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>21%</strong></li></ul>
+<p class="annual-pie-total">760,868 decisions included<br>of 762,119 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2010">
+<h3>2010</h3>
+<img src="assets/annual-outcomes/2010.png" alt="2010: Refugee status 24%; Other protection 6.5%; Rejected 49%; Otherwise closed 21%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>24%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>6.5%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>49%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>21%</strong></li></ul>
+<p class="annual-pie-total">727,845 decisions included<br>of 730,596 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2011">
+<h3>2011</h3>
+<img src="assets/annual-outcomes/2011.png" alt="2011: Refugee status 23%; Other protection 5.8%; Rejected 46%; Otherwise closed 25%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>23%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>5.8%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>46%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>25%</strong></li></ul>
+<p class="annual-pie-total">754,172 decisions included<br>of 768,675 reported (98%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2012">
+<h3>2012</h3>
+<img src="assets/annual-outcomes/2012.png" alt="2012: Refugee status 24%; Other protection 5.7%; Rejected 48%; Otherwise closed 23%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>24%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>5.7%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>48%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>23%</strong></li></ul>
+<p class="annual-pie-total">893,398 decisions included<br>of 913,275 reported (98%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2013">
+<h3>2013</h3>
+<img src="assets/annual-outcomes/2013.png" alt="2013: Refugee status 24%; Other protection 8.2%; Rejected 43%; Otherwise closed 25%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>24%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.2%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>43%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>25%</strong></li></ul>
+<p class="annual-pie-total">880,516 decisions included<br>of 880,516 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2014">
+<h3>2014</h3>
+<img src="assets/annual-outcomes/2014.png" alt="2014: Refugee status 20%; Other protection 24%; Rejected 31%; Otherwise closed 25%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>20%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>24%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>31%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>25%</strong></li></ul>
+<p class="annual-pie-total">1,393,642 decisions included<br>of 1,393,642 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2015">
+<h3>2015</h3>
+<img src="assets/annual-outcomes/2015.png" alt="2015: Refugee status 27%; Other protection 14%; Rejected 30%; Otherwise closed 28%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>27%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>14%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>30%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>28%</strong></li></ul>
+<p class="annual-pie-total">1,647,628 decisions included<br>of 1,647,628 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2016">
+<h3>2016</h3>
+<img src="assets/annual-outcomes/2016.png" alt="2016: Refugee status 20%; Other protection 12%; Rejected 21%; Otherwise closed 47%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>20%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>12%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>21%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>47%</strong></li></ul>
+<p class="annual-pie-total">2,844,805 decisions included<br>of 2,844,805 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2017">
+<h3>2017</h3>
+<img src="assets/annual-outcomes/2017.png" alt="2017: Refugee status 24%; Other protection 12%; Rejected 38%; Otherwise closed 26%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>24%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>12%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>38%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>26%</strong></li></ul>
+<p class="annual-pie-total">2,006,176 decisions included<br>of 2,006,176 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2018">
+<h3>2018</h3>
+<img src="assets/annual-outcomes/2018.png" alt="2018: Refugee status 21%; Other protection 9.0%; Rejected 38%; Otherwise closed 31%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>21%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>9.0%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>38%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>31%</strong></li></ul>
+<p class="annual-pie-total">1,646,871 decisions included<br>of 1,647,261 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2019">
+<h3>2019</h3>
+<img src="assets/annual-outcomes/2019.png" alt="2019: Refugee status 26%; Other protection 7.2%; Rejected 38%; Otherwise closed 29%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>26%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>7.2%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>38%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>29%</strong></li></ul>
+<p class="annual-pie-total">1,715,050 decisions included<br>of 1,730,880 reported (99%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2020">
+<h3>2020</h3>
+<img src="assets/annual-outcomes/2020.png" alt="2020: Refugee status 25%; Other protection 8.1%; Rejected 39%; Otherwise closed 28%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>25%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.1%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>39%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>28%</strong></li></ul>
+<p class="annual-pie-total">1,349,286 decisions included<br>of 1,381,088 reported (98%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2021">
+<h3>2021</h3>
+<img src="assets/annual-outcomes/2021.png" alt="2021: Refugee status 27%; Other protection 8.0%; Rejected 37%; Otherwise closed 28%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>27%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.0%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>37%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>28%</strong></li></ul>
+<p class="annual-pie-total">1,422,047 decisions included<br>of 1,422,047 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2022">
+<h3>2022</h3>
+<img src="assets/annual-outcomes/2022.png" alt="2022: Refugee status 26%; Other protection 8.8%; Rejected 28%; Otherwise closed 37%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>26%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.8%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>28%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>37%</strong></li></ul>
+<p class="annual-pie-total">2,057,838 decisions included<br>of 2,057,838 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2023">
+<h3>2023</h3>
+<img src="assets/annual-outcomes/2023.png" alt="2023: Refugee status 25%; Other protection 8.4%; Rejected 23%; Otherwise closed 44%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>25%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>8.4%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>23%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>44%</strong></li></ul>
+<p class="annual-pie-total">2,498,303 decisions included<br>of 2,498,303 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2024">
+<h3>2024</h3>
+<img src="assets/annual-outcomes/2024.png" alt="2024: Refugee status 25%; Other protection 10%; Rejected 29%; Otherwise closed 35%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>25%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>10%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>29%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>35%</strong></li></ul>
+<p class="annual-pie-total">2,164,386 decisions included<br>of 2,164,386 reported (100%)</p>
+</section>
+
+<section class="annual-pie-card" aria-label="Decision outcomes in 2025">
+<h3>2025</h3>
+<img src="assets/annual-outcomes/2025.png" alt="2025: Refugee status 18%; Other protection 5.8%; Rejected 33%; Otherwise closed 43%" width="435" height="391" loading="lazy">
+<ul><li><span class="annual-outcome-label"><i style="background:#00a98f"></i>Refugee status</span><strong>18%</strong></li><li><span class="annual-outcome-label"><i style="background:#f4c542"></i>Other protection</span><strong>5.8%</strong></li><li><span class="annual-outcome-label"><i style="background:#ef6655"></i>Rejected</span><strong>33%</strong></li><li><span class="annual-outcome-label"><i style="background:#8574bd"></i>Otherwise closed</span><strong>43%</strong></li></ul>
+<p class="annual-pie-total">2,836,187 decisions included<br>of 2,836,187 reported (100%)</p>
+</section>
+
+:::
+
+Each percentage uses **all decisions in the included, reconciled records for that year**, including administrative closures. Source records with missing outcomes, inconsistent totals, or no positive decision total are excluded; the inclusion percentage compares eligible decision totals with all reported decision totals. The headline application and decision totals still use the full extract. Original persons- and case-reported counts are combined without conversion. Rounded percentages may not sum to 100%. Coverage and procedure mix can change between years; these are not application-cohort success rates.
+
+[Download annual decision counts and unrounded shares (CSV)](data/annual-decision-outcomes.csv)

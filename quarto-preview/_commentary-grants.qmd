@@ -1,0 +1,116 @@
+## How protection rates differ and change {#grant-commentary}
+
+**An overall rate mixes policy, procedure and the claims being decided.** A change can arise because the nationalities or types of claims changed, because older claims were decided, or because decision practices changed. The descriptive comparisons below establish differences, not their causes. Closures are excluded from substantive rates and shown separately on this page.
+
+### Largest recent changes in the Top 20
+
+These are the five largest absolute 2024–2025 changes among the fixed Top 20 receiving countries with complete, reconciled annual totals and at least 500 substantive decisions in **both** years. Selection by change is descriptive; it is not a statistical significance test. Missing or unreconciled years are excluded.
+
+- **United States:** protection rate 58% in 2024 → 23% in 2025 (-34.2 percentage points); substantive decisions 61,911 → 148,216.
+
+- **Netherlands:** protection rate 76% in 2024 → 48% in 2025 (-27.7 percentage points); substantive decisions 21,154 → 15,397.
+
+- **Germany:** protection rate 53% in 2024 → 34% in 2025 (-19.5 percentage points); substantive decisions 263,789 → 279,201.
+
+- **Belgium:** protection rate 45% in 2024 → 27% in 2025 (-17.8 percentage points); substantive decisions 37,782 → 34,718.
+
+- **Austria:** protection rate 80% in 2024 → 63% in 2025 (-16.7 percentage points); substantive decisions 30,963 → 18,622.
+
+### Comparing the same recorded origin
+
+These examples cover known origins among the eight largest recorded origins by period application volume, where at least two destinations meet the denominator rule. The comparisons hold recorded origin and calendar year constant. They show the lowest and highest protection rates among eligible Top 20 destinations, requiring at least 500 substantive decisions in each country–origin cell. They still do not hold individual circumstances, procedure, reporting unit or claim vintage constant.
+
+- **Afghanistan, 2025:** among 13 eligible Top 20 destinations, the protection rate ranged from 36% in Belgium (4,535 substantive decisions) to 97% in Greece (16,097).
+- **Venezuela, Bolivarian Republic of, 2025:** among 9 eligible Top 20 destinations, the protection rate ranged from 2.0% in Peru (1,709 substantive decisions) to 100% in Spain (56,416).
+- **Syrian Arab Republic, 2025:** among 9 eligible Top 20 destinations, the protection rate ranged from 5.0% in Germany (12,374 substantive decisions) to 100% in Russian Federation (3,507).
+- **Iraq, 2025:** among 8 eligible Top 20 destinations, the protection rate ranged from 13% in Netherlands (776 substantive decisions) to 61% in Italy (648).
+- **Sudan, 2025:** among 6 eligible Top 20 destinations, the protection rate ranged from 58% in France (6,125 substantive decisions) to 100% in Kenya (723).
+- **Congo, The Democratic Republic of the, 2025:** among 6 eligible Top 20 destinations, the protection rate ranged from 14% in Belgium (2,285 substantive decisions) to 100% in Kenya (4,537).
+- **Somalia, 2025:** among 10 eligible Top 20 destinations, the protection rate ranged from 30% in Belgium (1,318 substantive decisions) to 100% in Kenya (5,874).
+
+### Reading each receiving country's change
+
+The following profiles use the same refreshed decision snapshot and annual reconciliation rules as the interactive charts. Each compares its latest eligible year with the preceding year where available, otherwise five years earlier. A latest eligible year before 2025 is identified explicitly.
+
+::: {.callout-note collapse="true" title="United States: grant-rate commentary"}
+In 2025, the substantive protection rate was 23%, across 148,216 grants and refusals; closures accounted for 75% of all recorded decisions. That protection rate was 34.2 percentage points lower than in 2024 (58%).
+:::
+
+::: {.callout-note collapse="true" title="Germany: grant-rate commentary"}
+In 2025, the substantive protection rate was 34%, across 279,201 grants and refusals; closures accounted for 33% of all recorded decisions. That protection rate was 19.5 percentage points lower than in 2024 (53%).
+:::
+
+::: {.callout-note collapse="true" title="France: grant-rate commentary"}
+In 2025, the substantive protection rate was 37%, across 206,819 grants and refusals; closures accounted for 1.3% of all recorded decisions. That protection rate was 3.2 percentage points higher than in 2024 (34%).
+:::
+
+::: {.callout-note collapse="true" title="United Kingdom: grant-rate commentary"}
+In 2025, the substantive protection rate was 40%, across 156,735 grants and refusals; closures accounted for 20% of all recorded decisions. That protection rate was 7.6 percentage points lower than in 2024 (47%).
+:::
+
+::: {.callout-note collapse="true" title="South Africa: grant-rate commentary"}
+In 2025, the substantive protection rate was 17%, across 12,129 grants and refusals; closures accounted for 45% of all recorded decisions. That protection rate was 5.0 percentage points higher than in 2024 (12%).
+:::
+
+::: {.callout-note collapse="true" title="Italy: grant-rate commentary"}
+In 2025, the substantive protection rate was 17%, across 104,547 grants and refusals; closures accounted for 0.6% of all recorded decisions. That protection rate was 4.7 percentage points lower than in 2024 (21%).
+:::
+
+::: {.callout-note collapse="true" title="Canada: grant-rate commentary"}
+In 2025, the substantive protection rate was 67%, across 78,997 grants and refusals; closures accounted for 18% of all recorded decisions. That protection rate was 3.1 percentage points lower than in 2024 (70%).
+:::
+
+::: {.callout-note collapse="true" title="Egypt: grant-rate commentary"}
+In 2025, the substantive protection rate was 97%, across 17,024 grants and refusals; closures accounted for 69% of all recorded decisions. That protection rate was 9.8 percentage points higher than in 2024 (87%).
+:::
+
+::: {.callout-note collapse="true" title="Sweden: grant-rate commentary"}
+In 2025, the substantive protection rate was 21%, across 13,942 grants and refusals; closures accounted for 18% of all recorded decisions. That protection rate was 1.2 percentage points lower than in 2024 (23%).
+:::
+
+::: {.callout-note collapse="true" title="Spain: grant-rate commentary"}
+In 2025, the substantive protection rate was 52%, across 143,577 grants and refusals; closures accounted for 11% of all recorded decisions. That protection rate was 4.6 percentage points lower than in 2024 (57%).
+:::
+
+::: {.callout-note collapse="true" title="Greece: grant-rate commentary"}
+In 2025, the substantive protection rate was 56%, across 48,472 grants and refusals; closures accounted for 32% of all recorded decisions. That protection rate was 12.8 percentage points lower than in 2024 (69%).
+:::
+
+::: {.callout-note collapse="true" title="Türkiye: grant-rate commentary"}
+In 2023, the substantive protection rate was 46%, across 21,753 grants and refusals; closures accounted for 73% of all recorded decisions. That protection rate was 5.8 percentage points lower than in 2022 (52%). No eligible 2025 rate is available; 2023 is the latest reconciled year.
+:::
+
+::: {.callout-note collapse="true" title="Austria: grant-rate commentary"}
+In 2025, the substantive protection rate was 63%, across 18,622 grants and refusals; closures accounted for 10% of all recorded decisions. That protection rate was 16.7 percentage points lower than in 2024 (80%).
+:::
+
+::: {.callout-note collapse="true" title="Belgium: grant-rate commentary"}
+In 2025, the substantive protection rate was 27%, across 34,718 grants and refusals; closures accounted for 9.4% of all recorded decisions. That protection rate was 17.8 percentage points lower than in 2024 (45%).
+:::
+
+::: {.callout-note collapse="true" title="Mexico: grant-rate commentary"}
+In 2025, the substantive protection rate was 80%, across 21,912 grants and refusals; closures accounted for 78% of all recorded decisions. That protection rate was 0.5 percentage points higher than in 2024 (79%).
+:::
+
+::: {.callout-note collapse="true" title="Russian Federation: grant-rate commentary"}
+In 2025, the substantive protection rate was 100%, across 7,889 grants and refusals; closures accounted for 12% of all recorded decisions. That protection rate was 0.0 percentage points higher than in 2024 (100%).
+:::
+
+::: {.callout-note collapse="true" title="Switzerland: grant-rate commentary"}
+In 2025, the substantive protection rate was 59%, across 20,128 grants and refusals; closures accounted for 36% of all recorded decisions. That protection rate was 11.4 percentage points lower than in 2024 (71%).
+:::
+
+::: {.callout-note collapse="true" title="Peru: grant-rate commentary"}
+In 2025, the substantive protection rate was 3.1%, across 1,792 grants and refusals; closures accounted for 5.5% of all recorded decisions. That protection rate was 12.4 percentage points lower than in 2024 (15%).
+:::
+
+::: {.callout-note collapse="true" title="Kenya: grant-rate commentary"}
+In 2025, the substantive protection rate was 100%, across 15,622 grants and refusals; closures accounted for 54% of all recorded decisions. That protection rate was 0.0 percentage points higher than in 2024 (100%).
+:::
+
+::: {.callout-note collapse="true" title="Netherlands: grant-rate commentary"}
+In 2025, the substantive protection rate was 48%, across 15,397 grants and refusals; closures accounted for 33% of all recorded decisions. That protection rate was 27.7 percentage points lower than in 2024 (76%).
+:::
+
+[Source definitions and eligibility](methods.qmd#decision-rates). Rates are weighted by decision counts, not averaged across years.
+

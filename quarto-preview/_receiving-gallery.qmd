@@ -1,6 +1,6 @@
 ## Gallery: Top 20 receiving countries {#top-20-gallery}
 
-The 20 receiving countries with the largest **combined reported application volume, 2000–2025**, in the fixed notebook edition. Reported applications and decisions combine persons and cases without conversion; they are **not counts of unique people**. The dropdown above uses its own dated, refreshed dataset and lets you examine units separately.
+The 20 receiving countries with the largest **combined reported application volume, 2000–2025**, in the fixed notebook edition. Reported applications and decisions combine persons and cases without conversion; they are **not counts of unique people**. The dropdown above uses its own dated, refreshed dataset and also combines the reported units.
 
 **Colours show decision outcomes; the blue line shows applications.** Decisions can concern earlier applications. Gaps indicate unavailable records, not confirmed zeros. Click a chart to enlarge it.
 
@@ -11,6 +11,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![United States: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/usa.png){loading="lazy"}
 
+{{< include _commentary-receiving-usa.qmd >}}
+
 [Open full-size chart](assets/receiving/usa.png) · **USA**
 :::
 
@@ -18,6 +20,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 2. Germany
 
 ![Germany: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/deu.png){loading="lazy"}
+
+{{< include _commentary-receiving-deu.qmd >}}
 
 [Open full-size chart](assets/receiving/deu.png) · **DEU**
 :::
@@ -27,6 +31,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![France: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/fra.png){loading="lazy"}
 
+{{< include _commentary-receiving-fra.qmd >}}
+
 [Open full-size chart](assets/receiving/fra.png) · **FRA**
 :::
 
@@ -34,6 +40,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 4. United Kingdom
 
 ![United Kingdom: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/gbr.png){loading="lazy"}
+
+{{< include _commentary-receiving-gbr.qmd >}}
 
 [Open full-size chart](assets/receiving/gbr.png) · **GBR**
 :::
@@ -43,6 +51,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![South Africa: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/zaf.png){loading="lazy"}
 
+{{< include _commentary-receiving-zaf.qmd >}}
+
 [Open full-size chart](assets/receiving/zaf.png) · **ZAF**
 :::
 
@@ -50,6 +60,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 6. Italy
 
 ![Italy: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/ita.png){loading="lazy"}
+
+{{< include _commentary-receiving-ita.qmd >}}
 
 [Open full-size chart](assets/receiving/ita.png) · **ITA**
 :::
@@ -59,6 +71,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Canada: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/can.png){loading="lazy"}
 
+{{< include _commentary-receiving-can.qmd >}}
+
 [Open full-size chart](assets/receiving/can.png) · **CAN**
 :::
 
@@ -66,6 +80,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 8. Egypt
 
 ![Egypt: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/egy.png){loading="lazy"}
+
+{{< include _commentary-receiving-egy.qmd >}}
 
 [Open full-size chart](assets/receiving/egy.png) · **EGY**
 :::
@@ -75,6 +91,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Sweden: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/swe.png){loading="lazy"}
 
+{{< include _commentary-receiving-swe.qmd >}}
+
 [Open full-size chart](assets/receiving/swe.png) · **SWE**
 :::
 
@@ -82,6 +100,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 10. Spain
 
 ![Spain: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/esp.png){loading="lazy"}
+
+{{< include _commentary-receiving-esp.qmd >}}
 
 [Open full-size chart](assets/receiving/esp.png) · **ESP**
 :::
@@ -91,6 +111,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Greece: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/grc.png){loading="lazy"}
 
+{{< include _commentary-receiving-grc.qmd >}}
+
 [Open full-size chart](assets/receiving/grc.png) · **GRC**
 :::
 
@@ -98,6 +120,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 12. Türkiye
 
 ![Türkiye: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/tur.png){loading="lazy"}
+
+{{< include _commentary-receiving-tur.qmd >}}
 
 [Open full-size chart](assets/receiving/tur.png) · **TUR**
 :::
@@ -107,6 +131,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Austria: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/aut.png){loading="lazy"}
 
+{{< include _commentary-receiving-aut.qmd >}}
+
 [Open full-size chart](assets/receiving/aut.png) · **AUT**
 :::
 
@@ -114,6 +140,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 14. Belgium
 
 ![Belgium: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/bel.png){loading="lazy"}
+
+{{< include _commentary-receiving-bel.qmd >}}
 
 [Open full-size chart](assets/receiving/bel.png) · **BEL**
 :::
@@ -123,6 +151,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Mexico: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/mex.png){loading="lazy"}
 
+{{< include _commentary-receiving-mex.qmd >}}
+
 [Open full-size chart](assets/receiving/mex.png) · **MEX**
 :::
 
@@ -130,6 +160,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 16. Russian Federation
 
 ![Russian Federation: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/rus.png){loading="lazy"}
+
+{{< include _commentary-receiving-rus.qmd >}}
 
 [Open full-size chart](assets/receiving/rus.png) · **RUS**
 :::
@@ -139,6 +171,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Switzerland: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/che.png){loading="lazy"}
 
+{{< include _commentary-receiving-che.qmd >}}
+
 [Open full-size chart](assets/receiving/che.png) · **CHE**
 :::
 
@@ -146,6 +180,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 18. Peru
 
 ![Peru: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/per.png){loading="lazy"}
+
+{{< include _commentary-receiving-per.qmd >}}
 
 [Open full-size chart](assets/receiving/per.png) · **PER**
 :::
@@ -155,6 +191,8 @@ The 20 receiving countries with the largest **combined reported application volu
 
 ![Kenya: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/ken.png){loading="lazy"}
 
+{{< include _commentary-receiving-ken.qmd >}}
+
 [Open full-size chart](assets/receiving/ken.png) · **KEN**
 :::
 
@@ -162,6 +200,8 @@ The 20 receiving countries with the largest **combined reported application volu
 ### 20. Netherlands
 
 ![Netherlands: annual reported applications and decision outcomes, persons and cases combined, 2000–2025.](assets/receiving/nld.png){loading="lazy"}
+
+{{< include _commentary-receiving-nld.qmd >}}
 
 [Open full-size chart](assets/receiving/nld.png) · **NLD**
 :::

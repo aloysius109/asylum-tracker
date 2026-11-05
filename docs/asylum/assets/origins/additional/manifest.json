@@ -1,0 +1,1299 @@
+{
+  "render_key": "3d739f6a156f1063dc74021dcc164525a1f1f2ba42a75e2a2fb43f018eae06a4",
+  "period": [
+    2000,
+    2025
+  ],
+  "profiles": [
+    {
+      "origin": "AFG",
+      "name": "Afghanistan",
+      "file": "assets/origins/additional/afg.png",
+      "sha256": "51116a3584c4f7a2c43f9b48dc212c8ff02001c574e92156b164dfb9681dfcb6"
+    },
+    {
+      "origin": "AGO",
+      "name": "Angola",
+      "file": "assets/origins/additional/ago.png",
+      "sha256": "0b16ad24391e8e883ea8049aed85d124ab1e3545a54a0276591f5a1fa8bb745f"
+    },
+    {
+      "origin": "AIA",
+      "name": "Anguilla",
+      "file": "assets/origins/additional/aia.png",
+      "sha256": "91ebf683f010ba7e1afde5175863fc491fc4f7291d9c857502bc355a8a2950ec"
+    },
+    {
+      "origin": "ALB",
+      "name": "Albania",
+      "file": "assets/origins/additional/alb.png",
+      "sha256": "dca268a1c28fe616257c5a1b2624fbb9fc357d33557c699ede847e4ca887a470"
+    },
+    {
+      "origin": "AND",
+      "name": "Andorra",
+      "file": "assets/origins/additional/and.png",
+      "sha256": "4d56d3a8c7996a86221f150033d83e7f81ebe9c1f0c16924e9e6bf2a55f9fd8d"
+    },
+    {
+      "origin": "ARE",
+      "name": "United Arab Emirates",
+      "file": "assets/origins/additional/are.png",
+      "sha256": "e67566dde2c9d28e1d1a45b9b7eb3b07fbecb7653582131aacda0c1770626b05"
+    },
+    {
+      "origin": "ARG",
+      "name": "Argentina",
+      "file": "assets/origins/additional/arg.png",
+      "sha256": "37c4757032f938ec9d9c9c33d139f9ea8dd29e1c83987682dcb41c2657112ced"
+    },
+    {
+      "origin": "ARM",
+      "name": "Armenia",
+      "file": "assets/origins/additional/arm.png",
+      "sha256": "c92a098182c79759492dbeecd9c5cb1809bec765a9fbf9c45f3d1cd348f51305"
+    },
+    {
+      "origin": "ATG",
+      "name": "Antigua and Barbuda",
+      "file": "assets/origins/additional/atg.png",
+      "sha256": "4c9a8856ff52458dbd1cf56ef1e281a94466bdcb17e97ff55063281589bcf571"
+    },
+    {
+      "origin": "AUS",
+      "name": "Australia",
+      "file": "assets/origins/additional/aus.png",
+      "sha256": "55325a07b777ebd1ba405954236cded387ab578de2bf31b5f979db559cfa96b5"
+    },
+    {
+      "origin": "AUT",
+      "name": "Austria",
+      "file": "assets/origins/additional/aut.png",
+      "sha256": "60af892add4f8de9d341c03a4074dbb8e49115967a4fdd9d17c87f1a6a4cbfbd"
+    },
+    {
+      "origin": "AZE",
+      "name": "Azerbaijan",
+      "file": "assets/origins/additional/aze.png",
+      "sha256": "3eb4779e6df0ecea0531ab6bc81b4f27face17575087b96303359de40be72b42"
+    },
+    {
+      "origin": "BDI",
+      "name": "Burundi",
+      "file": "assets/origins/additional/bdi.png",
+      "sha256": "25c10e94716922d21fbc4b16c18b84bdf412e337e630a0ec680718163665ad2d"
+    },
+    {
+      "origin": "BEL",
+      "name": "Belgium",
+      "file": "assets/origins/additional/bel.png",
+      "sha256": "49d94e77ba26e824296a04a670de99f6a1298d9dd366395474730bd56070f022"
+    },
+    {
+      "origin": "BEN",
+      "name": "Benin",
+      "file": "assets/origins/additional/ben.png",
+      "sha256": "f8d76a7013cf947e7716a2e7ccc4e5faab6cddc9fc04e3e68b45c0430aa8654a"
+    },
+    {
+      "origin": "BES",
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "file": "assets/origins/additional/bes.png",
+      "sha256": "378bdbe1cf2d7ec50de1a725a7861c27bb1d0014d3a0db9315baedd0f9461031"
+    },
+    {
+      "origin": "BFA",
+      "name": "Burkina Faso",
+      "file": "assets/origins/additional/bfa.png",
+      "sha256": "601d3f3764b63b3466e0aa78d5de1f0e98ca9b805bd7f8ad93fa6a694ded8e74"
+    },
+    {
+      "origin": "BGD",
+      "name": "Bangladesh",
+      "file": "assets/origins/additional/bgd.png",
+      "sha256": "e175529af66b140d6b152e60375abaf825ddee29199b203b0d868c94154c8163"
+    },
+    {
+      "origin": "BGR",
+      "name": "Bulgaria",
+      "file": "assets/origins/additional/bgr.png",
+      "sha256": "7c053dae97600bfc6e7fe95df96d521c0fadbf968a1d2e8ea4542b202af5ac51"
+    },
+    {
+      "origin": "BHR",
+      "name": "Bahrain",
+      "file": "assets/origins/additional/bhr.png",
+      "sha256": "40390e45b6e6eaecb789bafb70f97303ed80639b96f3a063ba6202091d28c695"
+    },
+    {
+      "origin": "BHS",
+      "name": "Bahamas",
+      "file": "assets/origins/additional/bhs.png",
+      "sha256": "d508b4547686cb3c2f6c2dc0fd4cdac22db13aac7dde72fb356f1d86bf4b81e4"
+    },
+    {
+      "origin": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "file": "assets/origins/additional/bih.png",
+      "sha256": "d920fc45f34615f84912e288f3da21b99b86bdcd38b683b6e56378be50a8b293"
+    },
+    {
+      "origin": "BLR",
+      "name": "Belarus",
+      "file": "assets/origins/additional/blr.png",
+      "sha256": "75194edb6f4db9146e7feb2c11ab34b4d0fd9adcb5dbdc6117ed439e5918d850"
+    },
+    {
+      "origin": "BLZ",
+      "name": "Belize",
+      "file": "assets/origins/additional/blz.png",
+      "sha256": "613d3fb20b648d45ffb7eef6c0c3020106dcb623dede7b317b3b5bfb4cb7aef4"
+    },
+    {
+      "origin": "BMU",
+      "name": "Bermuda",
+      "file": "assets/origins/additional/bmu.png",
+      "sha256": "01bfba3405dc5f3351323d3bf039dde1733ee4471d3d9715526ada99828a57d9"
+    },
+    {
+      "origin": "BOL",
+      "name": "Bolivia, Plurinational State of",
+      "file": "assets/origins/additional/bol.png",
+      "sha256": "ccd2bda8a2a5feb8268421cede8bbd5683a49a3d85939091a3d3db43fac07e98"
+    },
+    {
+      "origin": "BRA",
+      "name": "Brazil",
+      "file": "assets/origins/additional/bra.png",
+      "sha256": "ec09fcb8a84c545a361e179d8ad0db44bd79c7decfe09b059b9a5eff54791de5"
+    },
+    {
+      "origin": "BRB",
+      "name": "Barbados",
+      "file": "assets/origins/additional/brb.png",
+      "sha256": "15d6360e63c19756fde8b9cde407b0227dfb28069ebb9fd02c1f2331b32441e3"
+    },
+    {
+      "origin": "BRN",
+      "name": "Brunei Darussalam",
+      "file": "assets/origins/additional/brn.png",
+      "sha256": "cfcd40e8a5ea8e71b5551545cc480a8888b48e12ea1af9eb2ae68bb29a3b5fcb"
+    },
+    {
+      "origin": "BTN",
+      "name": "Bhutan",
+      "file": "assets/origins/additional/btn.png",
+      "sha256": "a4b3ff34024f5a7f673cdc488e1b78489a68683f61f9037d9facabb529ed5f89"
+    },
+    {
+      "origin": "BWA",
+      "name": "Botswana",
+      "file": "assets/origins/additional/bwa.png",
+      "sha256": "165268bd725e851ba637a3f6f242bf11bc1716b3b368b7bf34c1dd98af1573b1"
+    },
+    {
+      "origin": "CAF",
+      "name": "Central African Republic",
+      "file": "assets/origins/additional/caf.png",
+      "sha256": "38801664147da2d486b6a424212b9455b95c4245e80939ef0c0f260d2245c33f"
+    },
+    {
+      "origin": "CAN",
+      "name": "Canada",
+      "file": "assets/origins/additional/can.png",
+      "sha256": "0048e3bf8479a9b6df28dd298a1203a289519ed0ffa2db3afb64b70ac1a22a46"
+    },
+    {
+      "origin": "CHE",
+      "name": "Switzerland",
+      "file": "assets/origins/additional/che.png",
+      "sha256": "b27467d140cafb69f81e40c7bea6dab49caf026591ab68d4ae4de3bb3e961e92"
+    },
+    {
+      "origin": "CHL",
+      "name": "Chile",
+      "file": "assets/origins/additional/chl.png",
+      "sha256": "66cff6b7b5b378e7a04032d0acc4e522b61e2430a6c0eeb7e0b032d24d43f789"
+    },
+    {
+      "origin": "CHN",
+      "name": "China",
+      "file": "assets/origins/additional/chn.png",
+      "sha256": "07467a890fa828c4ffd4b4ddd250d4b7d696ccbc9b052751cf8872a1cab93e4a"
+    },
+    {
+      "origin": "CIV",
+      "name": "Côte d'Ivoire",
+      "file": "assets/origins/additional/civ.png",
+      "sha256": "6ea70b4aec7efd2c0cc96d0a209be308dd94a51f563a9fd4fa090d25cabc0d31"
+    },
+    {
+      "origin": "CMR",
+      "name": "Cameroon",
+      "file": "assets/origins/additional/cmr.png",
+      "sha256": "e44fbda0dcdb89f940a62d99197346362bbe86fa6007646e177f96c71b0519f8"
+    },
+    {
+      "origin": "COD",
+      "name": "Congo, The Democratic Republic of the",
+      "file": "assets/origins/additional/cod.png",
+      "sha256": "6f71396e263c0f5e5ad8eb0bafb099a9ceb6b2e247f8d111d5deb9441ec0070d"
+    },
+    {
+      "origin": "COG",
+      "name": "Congo",
+      "file": "assets/origins/additional/cog.png",
+      "sha256": "d6c1bc3951b29d8f905ef4ea81b37c2498a47b8e1984a3344090da2bf79f3507"
+    },
+    {
+      "origin": "COK",
+      "name": "Cook Islands",
+      "file": "assets/origins/additional/cok.png",
+      "sha256": "2f0ee7e711631aa8ba1a352141d4f907a2df724782fe49c32cd239b2916c8472"
+    },
+    {
+      "origin": "COL",
+      "name": "Colombia",
+      "file": "assets/origins/additional/col.png",
+      "sha256": "450a8ff2df6ea61c5902281aa54725a2864623c6c413ec1d4309ba1692e781aa"
+    },
+    {
+      "origin": "COM",
+      "name": "Comoros",
+      "file": "assets/origins/additional/com.png",
+      "sha256": "710cab532edc1b61af95c63389b3cf4f017c77b5a3baf556385506546e47c32e"
+    },
+    {
+      "origin": "CPV",
+      "name": "Cabo Verde",
+      "file": "assets/origins/additional/cpv.png",
+      "sha256": "14581cbef202347af64be0d8764f54a6a06690a3b58658df0b4d53c4ef967cf3"
+    },
+    {
+      "origin": "CRI",
+      "name": "Costa Rica",
+      "file": "assets/origins/additional/cri.png",
+      "sha256": "e4d9b4a4edc4a3aae02eab20c3a0252897382be05a6d45331aa52c15023df9a2"
+    },
+    {
+      "origin": "CUB",
+      "name": "Cuba",
+      "file": "assets/origins/additional/cub.png",
+      "sha256": "8221dbaef56f06a61edc4b4ce0bfeb709cc2513aba50d6b494ef9add7d41572a"
+    },
+    {
+      "origin": "CUW",
+      "name": "Curaçao",
+      "file": "assets/origins/additional/cuw.png",
+      "sha256": "78acd7452043df9cc3b9016827102e274315ee9fb70e21b811c8728f0f5d9d28"
+    },
+    {
+      "origin": "CYM",
+      "name": "Cayman Islands",
+      "file": "assets/origins/additional/cym.png",
+      "sha256": "f8c6b0c023bb62ccd1c95bef46cce8b342d7e9a7e175e9d2ed5b02c8733fa9b2"
+    },
+    {
+      "origin": "CYP",
+      "name": "Cyprus",
+      "file": "assets/origins/additional/cyp.png",
+      "sha256": "32dd684b4c6cafba8e0291735da9651b83d37c0260cd670be51033e0e252ca6c"
+    },
+    {
+      "origin": "CZE",
+      "name": "Czechia",
+      "file": "assets/origins/additional/cze.png",
+      "sha256": "1f051a35c996eabf8f818a623a483cf2dad39fa5fa5da7caba6c9e292d79ecb7"
+    },
+    {
+      "origin": "DEU",
+      "name": "Germany",
+      "file": "assets/origins/additional/deu.png",
+      "sha256": "3c677fbdfc52ac6fd5b2aa5c9a0caa2eeb0fd4c84b52e016caa633a44746ff17"
+    },
+    {
+      "origin": "DJI",
+      "name": "Djibouti",
+      "file": "assets/origins/additional/dji.png",
+      "sha256": "cabedde0b6610cd8542b0b1f57e2c80d67b189d9bfeab344f6cca802eed2c380"
+    },
+    {
+      "origin": "DMA",
+      "name": "Dominica",
+      "file": "assets/origins/additional/dma.png",
+      "sha256": "56580e2b87493870fb09e0aae8abdae227f8a5dffb63c1f213bf93a279efaab7"
+    },
+    {
+      "origin": "DNK",
+      "name": "Denmark",
+      "file": "assets/origins/additional/dnk.png",
+      "sha256": "4aba2f4c591db25f605f92d6b8759fd62c2637b08752128649e53748d6d6d8e3"
+    },
+    {
+      "origin": "DOM",
+      "name": "Dominican Republic",
+      "file": "assets/origins/additional/dom.png",
+      "sha256": "48c755f73ba14f2f90b2306836e5130390739ae589b27072e801a4983bf5714f"
+    },
+    {
+      "origin": "DZA",
+      "name": "Algeria",
+      "file": "assets/origins/additional/dza.png",
+      "sha256": "3083615bc02c2bcae5ce04a3cd62b940e69a5dd81defea958eaafcc5ddd04611"
+    },
+    {
+      "origin": "ECU",
+      "name": "Ecuador",
+      "file": "assets/origins/additional/ecu.png",
+      "sha256": "854e7e91ffa7384a2313d69f74ae1d4acfa20a7ba21bb7a35dd27b9b23c82a63"
+    },
+    {
+      "origin": "EGY",
+      "name": "Egypt",
+      "file": "assets/origins/additional/egy.png",
+      "sha256": "546bf9526228512842cd4b9053a7590890365bd332c0cb6ed5d4f3ebed97a21e"
+    },
+    {
+      "origin": "ERI",
+      "name": "Eritrea",
+      "file": "assets/origins/additional/eri.png",
+      "sha256": "e6a79e5182dc1feb763a9190f2bffa8829c1ee87e7d12011ff70b4b8476675e7"
+    },
+    {
+      "origin": "ESH",
+      "name": "Western Sahara",
+      "file": "assets/origins/additional/esh.png",
+      "sha256": "e27fc44dabc4fb3477f32cf899f5393cbe6b58337108c5142355ed95e9b15861"
+    },
+    {
+      "origin": "ESP",
+      "name": "Spain",
+      "file": "assets/origins/additional/esp.png",
+      "sha256": "ace195cdf3b6f02aeb3bf449c28b8a5636241d84fa925eed097e6ab5f4fd192d"
+    },
+    {
+      "origin": "EST",
+      "name": "Estonia",
+      "file": "assets/origins/additional/est.png",
+      "sha256": "7cdc51b4e8decebe1db28bad6484fadeee989b9230f978bc514f44f065860ea2"
+    },
+    {
+      "origin": "ETH",
+      "name": "Ethiopia",
+      "file": "assets/origins/additional/eth.png",
+      "sha256": "75bc8a4fa64e36afcd24e99f596980cd225d5ec545a67bfdc6521a3ad7db3493"
+    },
+    {
+      "origin": "FIN",
+      "name": "Finland",
+      "file": "assets/origins/additional/fin.png",
+      "sha256": "a67ce13f5c4113a94f1114f3649c45c2a46e161f680896ed49a218d68513a856"
+    },
+    {
+      "origin": "FJI",
+      "name": "Fiji",
+      "file": "assets/origins/additional/fji.png",
+      "sha256": "ee66223c1f184ef9adccd061c725dba4feeb84daf7fe10966c851372a1e89bab"
+    },
+    {
+      "origin": "FRA",
+      "name": "France",
+      "file": "assets/origins/additional/fra.png",
+      "sha256": "3206b5a3fc1afec09e4358e69db594b095c931865abf1be51cff8306eae5cab0"
+    },
+    {
+      "origin": "FSM",
+      "name": "Micronesia, Federated States of",
+      "file": "assets/origins/additional/fsm.png",
+      "sha256": "16cf7ca15ca157227c273fccb523f53bdc2b448afd516ac77e32d2e2a5aeae84"
+    },
+    {
+      "origin": "GAB",
+      "name": "Gabon",
+      "file": "assets/origins/additional/gab.png",
+      "sha256": "1f241baa558113aef6d988b3622f8c9ca106842d0bd301fe7c1d007738ee43c7"
+    },
+    {
+      "origin": "GBR",
+      "name": "United Kingdom",
+      "file": "assets/origins/additional/gbr.png",
+      "sha256": "f4c93af894d9a9d5320209a3017c80bc576d76cbe08ce39453beb1520966f441"
+    },
+    {
+      "origin": "GEO",
+      "name": "Georgia",
+      "file": "assets/origins/additional/geo.png",
+      "sha256": "d065169d81a6042ab818997e698d556aab0948c7d016bf6f47e2de3f285b0650"
+    },
+    {
+      "origin": "GHA",
+      "name": "Ghana",
+      "file": "assets/origins/additional/gha.png",
+      "sha256": "394ff4c02e651c7a48c0a268ae63fe35d87ec284cc812c38dcce4a1f57ee049f"
+    },
+    {
+      "origin": "GIB",
+      "name": "Gibraltar",
+      "file": "assets/origins/additional/gib.png",
+      "sha256": "ac4fcf7885b9c915c648466ed8f8ff669ca3d89eee443cc703b7ba5f763be241"
+    },
+    {
+      "origin": "GIN",
+      "name": "Guinea",
+      "file": "assets/origins/additional/gin.png",
+      "sha256": "d101bef325c408ba5a00734323fd411b67805643c959d7f705ab666afca3ace2"
+    },
+    {
+      "origin": "GLP",
+      "name": "Guadeloupe",
+      "file": "assets/origins/additional/glp.png",
+      "sha256": "8966c85ac97a78859f3562fb23efacaaac96f8e1b34df74a581d3ef23a02ad67"
+    },
+    {
+      "origin": "GMB",
+      "name": "Gambia",
+      "file": "assets/origins/additional/gmb.png",
+      "sha256": "5ad4755bf7d66ed5c8e52701fedc78d5ad37bbe7f6abefd2ea960f6edd4f6832"
+    },
+    {
+      "origin": "GNB",
+      "name": "Guinea-Bissau",
+      "file": "assets/origins/additional/gnb.png",
+      "sha256": "b75ad91e7dc4758a85a26da3b8f06d9d68bfd90a970f031b852db96d9efcab34"
+    },
+    {
+      "origin": "GNQ",
+      "name": "Equatorial Guinea",
+      "file": "assets/origins/additional/gnq.png",
+      "sha256": "255e4a1a0be008897f936587a288dbcc944a532b4494ae9e16a9441f9ec2a278"
+    },
+    {
+      "origin": "GRC",
+      "name": "Greece",
+      "file": "assets/origins/additional/grc.png",
+      "sha256": "c08e4c1eae8ba810ff90252f6872489eed986cae498da12b9390c6f0f99fb67a"
+    },
+    {
+      "origin": "GRD",
+      "name": "Grenada",
+      "file": "assets/origins/additional/grd.png",
+      "sha256": "3c9872f69e20b36a6360104907fb1dc69375f3ba7a61e60fdddb1049a7bea660"
+    },
+    {
+      "origin": "GTM",
+      "name": "Guatemala",
+      "file": "assets/origins/additional/gtm.png",
+      "sha256": "dfa373ee850fe6f52b49d2aa5c76eb2b4d69b6f5f0af52fa2adfdbf1ce759b48"
+    },
+    {
+      "origin": "GUF",
+      "name": "French Guiana",
+      "file": "assets/origins/additional/guf.png",
+      "sha256": "3130dacd8e86f6000cb43de7ef449bb1abdb7a8252566a55c0458619d022de37"
+    },
+    {
+      "origin": "GUY",
+      "name": "Guyana",
+      "file": "assets/origins/additional/guy.png",
+      "sha256": "efd98f4e13dff75f399c6c1abbf9ed85fd8a80f1959bbe92f0e88a0a34287429"
+    },
+    {
+      "origin": "HKG",
+      "name": "Hong Kong",
+      "file": "assets/origins/additional/hkg.png",
+      "sha256": "a85b645840db49768a7f36167d080693bcd4844bcff8242ac0c465fa37ee9e7e"
+    },
+    {
+      "origin": "HND",
+      "name": "Honduras",
+      "file": "assets/origins/additional/hnd.png",
+      "sha256": "0ff14d66d018743f4c43b947a6060b3f5c9acf4c544b5668852bb578cc804c6b"
+    },
+    {
+      "origin": "HRV",
+      "name": "Croatia",
+      "file": "assets/origins/additional/hrv.png",
+      "sha256": "6e97e3f754b21b2df0bee971d218bfa464956746061e7645303631e0d9043a81"
+    },
+    {
+      "origin": "HTI",
+      "name": "Haiti",
+      "file": "assets/origins/additional/hti.png",
+      "sha256": "de8420e5abddec515df7884eb26ccb654999e893329c6a3565deaa7b2a4fddf2"
+    },
+    {
+      "origin": "HUN",
+      "name": "Hungary",
+      "file": "assets/origins/additional/hun.png",
+      "sha256": "e07d9a01719cac6378b9a766313b9d3c87474983a9cdb4cfe8dfb0ef49591f60"
+    },
+    {
+      "origin": "IDN",
+      "name": "Indonesia",
+      "file": "assets/origins/additional/idn.png",
+      "sha256": "8f5c851c0525cbfc009c3d1b7b2eb1e4e01cf44ac9bd3b00bc24051ded106e60"
+    },
+    {
+      "origin": "IND",
+      "name": "India",
+      "file": "assets/origins/additional/ind.png",
+      "sha256": "64fe18965617d662673431a807ccba50e06b4d3562531e843fccbe8a7f1f25cf"
+    },
+    {
+      "origin": "IRL",
+      "name": "Ireland",
+      "file": "assets/origins/additional/irl.png",
+      "sha256": "563c9e421d63332e7dc091e9319bc7ff2ff911306af0a1822727ad5b631998d1"
+    },
+    {
+      "origin": "IRN",
+      "name": "Iran, Islamic Republic of",
+      "file": "assets/origins/additional/irn.png",
+      "sha256": "718cca8b29da61502d9472bca223eef2d9f08e573e021240eddbb873d09be79f"
+    },
+    {
+      "origin": "IRQ",
+      "name": "Iraq",
+      "file": "assets/origins/additional/irq.png",
+      "sha256": "8d469c9b5afaeca8c05c24343fe9269e13990a842d75478c25282e86376a6546"
+    },
+    {
+      "origin": "ISL",
+      "name": "Iceland",
+      "file": "assets/origins/additional/isl.png",
+      "sha256": "6b58418b968aa74c0b8f4aa3551887d77ee5d5c01feec898d8187b8f5aaea18b"
+    },
+    {
+      "origin": "ISR",
+      "name": "Israel",
+      "file": "assets/origins/additional/isr.png",
+      "sha256": "223dcf6bfa725a1b8934f8fd202888add13e490d50739e6c0feaa9961c6666e4"
+    },
+    {
+      "origin": "ITA",
+      "name": "Italy",
+      "file": "assets/origins/additional/ita.png",
+      "sha256": "c7f4302f505e6d59124f52ccf59738a5fd90421745f2b54b0f3f748ba9972c1c"
+    },
+    {
+      "origin": "JAM",
+      "name": "Jamaica",
+      "file": "assets/origins/additional/jam.png",
+      "sha256": "88d288146850d004b8bf4b2ea1a189910d98decfbf3cfdf372593e908a913590"
+    },
+    {
+      "origin": "JOR",
+      "name": "Jordan",
+      "file": "assets/origins/additional/jor.png",
+      "sha256": "9cefeaa0f9cec72476e37685f90332285f6a7a702ad5fc532708e3db060accdf"
+    },
+    {
+      "origin": "JPN",
+      "name": "Japan",
+      "file": "assets/origins/additional/jpn.png",
+      "sha256": "45f2c661b7364c4776df1aa855165a14daa761c344e733fac9087683f181886e"
+    },
+    {
+      "origin": "KAZ",
+      "name": "Kazakhstan",
+      "file": "assets/origins/additional/kaz.png",
+      "sha256": "f69881f5be1247d93dbe571cda9f4de29bb39b7760ce041f866c41d0cf7cebe6"
+    },
+    {
+      "origin": "KEN",
+      "name": "Kenya",
+      "file": "assets/origins/additional/ken.png",
+      "sha256": "4317a77bff5584ff05e73057ac28b2115efc0dd168c7119862e1bd874bf3e5a4"
+    },
+    {
+      "origin": "KGZ",
+      "name": "Kyrgyzstan",
+      "file": "assets/origins/additional/kgz.png",
+      "sha256": "2925a58df14e6fba7a5b1309c9c24d91eead5e7252ac6f8f5d6e1ffc022f0d4b"
+    },
+    {
+      "origin": "KHM",
+      "name": "Cambodia",
+      "file": "assets/origins/additional/khm.png",
+      "sha256": "36c4a503416386566c51065864f11ddc6385feb85edbac02659c245b8613716d"
+    },
+    {
+      "origin": "KIR",
+      "name": "Kiribati",
+      "file": "assets/origins/additional/kir.png",
+      "sha256": "2f7854f9816a35d9ead3f2b869b1476ca6bbee17c501e6d83dc41f5c549b0d66"
+    },
+    {
+      "origin": "KNA",
+      "name": "Saint Kitts and Nevis",
+      "file": "assets/origins/additional/kna.png",
+      "sha256": "c9b394919c344035897d99757c19a2bd3148370735cdc13b7afce932e5751e80"
+    },
+    {
+      "origin": "KOR",
+      "name": "Korea, Republic of",
+      "file": "assets/origins/additional/kor.png",
+      "sha256": "2ddf216a4ca79298a6ddd5bc615d3633206b2bf3c92af0f9f06d3692ddeba0c9"
+    },
+    {
+      "origin": "KWT",
+      "name": "Kuwait",
+      "file": "assets/origins/additional/kwt.png",
+      "sha256": "90d29beb5d64ee9eb7b0cf1fd2a39d0b8b3739b8d5d00982378ed3ba69add14e"
+    },
+    {
+      "origin": "LAO",
+      "name": "Lao People's Democratic Republic",
+      "file": "assets/origins/additional/lao.png",
+      "sha256": "70a954d1693d1448fb6b0d66e666c8fb7aa9660e6e1040e16f442fcd83a0d598"
+    },
+    {
+      "origin": "LBN",
+      "name": "Lebanon",
+      "file": "assets/origins/additional/lbn.png",
+      "sha256": "2650ba738f4c4c052ab350b754e88d64c88da54276e4cded73f00dc70696652c"
+    },
+    {
+      "origin": "LBR",
+      "name": "Liberia",
+      "file": "assets/origins/additional/lbr.png",
+      "sha256": "434d7c335511a8f158df4299cb7d75dc8948a3b4340ae64691cf5d669c72683c"
+    },
+    {
+      "origin": "LBY",
+      "name": "Libya",
+      "file": "assets/origins/additional/lby.png",
+      "sha256": "2b76630b4a8dd1cf4b06cca8ecc35d6d2921bcaa2c6ce4d20a1786847e51dd07"
+    },
+    {
+      "origin": "LCA",
+      "name": "Saint Lucia",
+      "file": "assets/origins/additional/lca.png",
+      "sha256": "9e3a67c69030acfd3c5281b7c670b64ad0d95d7407be040eff5a00bea65f690a"
+    },
+    {
+      "origin": "LIE",
+      "name": "Liechtenstein",
+      "file": "assets/origins/additional/lie.png",
+      "sha256": "d02cb6019a10b10972f73b1e44eae51c292bc2caa4c5618af4a685911b89c4e5"
+    },
+    {
+      "origin": "LKA",
+      "name": "Sri Lanka",
+      "file": "assets/origins/additional/lka.png",
+      "sha256": "2b19131ef1a2849fc4984db154508248a96b39acbc97ce0a45216d445b79bfec"
+    },
+    {
+      "origin": "LSO",
+      "name": "Lesotho",
+      "file": "assets/origins/additional/lso.png",
+      "sha256": "28f9e5b80d9670bcc8b9f879d570ed22d3be3b50341dd3dbba7852a1ffe3775e"
+    },
+    {
+      "origin": "LTU",
+      "name": "Lithuania",
+      "file": "assets/origins/additional/ltu.png",
+      "sha256": "56349577a0b2b47f8651d81778c8243738aafb65d3c095f57f0cad82b64bc6fd"
+    },
+    {
+      "origin": "LUX",
+      "name": "Luxembourg",
+      "file": "assets/origins/additional/lux.png",
+      "sha256": "8c368d62774cd8e768f65f410d2aeed6349d98708db8a98c916adbbadbdc5468"
+    },
+    {
+      "origin": "LVA",
+      "name": "Latvia",
+      "file": "assets/origins/additional/lva.png",
+      "sha256": "9d0ed5e3ca32890273d6842667e4748036a6e27890e9a25ef3d4565a92230fee"
+    },
+    {
+      "origin": "MAC",
+      "name": "Macao",
+      "file": "assets/origins/additional/mac.png",
+      "sha256": "d0ff6b79742c213c4f0dcac38a243887e236354a84e462513a9f1c87e250e7f8"
+    },
+    {
+      "origin": "MAF",
+      "name": "Saint Martin (French part)",
+      "file": "assets/origins/additional/maf.png",
+      "sha256": "0a8963abfda2f8905efb3cdc522d8c0d2921ee6ac4794f50efaeb28524875ce7"
+    },
+    {
+      "origin": "MAR",
+      "name": "Morocco",
+      "file": "assets/origins/additional/mar.png",
+      "sha256": "521712059169d6bf6e944f8c628aa9758e0264a12508698f5cf7df88ae0280a1"
+    },
+    {
+      "origin": "MCO",
+      "name": "Monaco",
+      "file": "assets/origins/additional/mco.png",
+      "sha256": "236e6e478ef50f737f6d2ff55252c6db0dfca27680df424005f8b3d536bb6b26"
+    },
+    {
+      "origin": "MDA",
+      "name": "Moldova, Republic of",
+      "file": "assets/origins/additional/mda.png",
+      "sha256": "97f4d8b80b7d08872e3ae5154db6610b19518eda93b22adceeb96c62b81b84c1"
+    },
+    {
+      "origin": "MDG",
+      "name": "Madagascar",
+      "file": "assets/origins/additional/mdg.png",
+      "sha256": "4b33d551a8c3e2119962268416b19603ceaeac979ef030dbc7411b7514580e6b"
+    },
+    {
+      "origin": "MDV",
+      "name": "Maldives",
+      "file": "assets/origins/additional/mdv.png",
+      "sha256": "b819f53f2fcdaf2895a98339bb8eff3db2770c0c729fba0bbe0c936ffbe2efcb"
+    },
+    {
+      "origin": "MEX",
+      "name": "Mexico",
+      "file": "assets/origins/additional/mex.png",
+      "sha256": "2ad8728f632cf18f5a2d65265b965208cb1a5ec3f5641e1bccca8f5a208335ca"
+    },
+    {
+      "origin": "MHL",
+      "name": "Marshall Islands",
+      "file": "assets/origins/additional/mhl.png",
+      "sha256": "6809ff2be1d2339ddad0580d1c7138d2e6e46879a0a86d7bc7377d2e17f42c92"
+    },
+    {
+      "origin": "MKD",
+      "name": "North Macedonia",
+      "file": "assets/origins/additional/mkd.png",
+      "sha256": "a17421585a20f3a97e5f916c50d678f5aacd265d83f4e453c664cda4c1a085f3"
+    },
+    {
+      "origin": "MLI",
+      "name": "Mali",
+      "file": "assets/origins/additional/mli.png",
+      "sha256": "65999b4bf05fcae23f6ea21cc5d3b34447d9af31ec08451ae5d819666ff3765a"
+    },
+    {
+      "origin": "MLT",
+      "name": "Malta",
+      "file": "assets/origins/additional/mlt.png",
+      "sha256": "802722cd2d6452883521d529eac4df9da9ea79be021df26917da707523759dfc"
+    },
+    {
+      "origin": "MMR",
+      "name": "Myanmar",
+      "file": "assets/origins/additional/mmr.png",
+      "sha256": "4fb039c72839ef4b4e10229559e3e2ed083844b37bc79145d8e0f5c0fce81a3e"
+    },
+    {
+      "origin": "MNE",
+      "name": "Montenegro",
+      "file": "assets/origins/additional/mne.png",
+      "sha256": "3969e367977f2fe40553aec82c27e80e2691fa0517d8072a49839eddcdbde71d"
+    },
+    {
+      "origin": "MNG",
+      "name": "Mongolia",
+      "file": "assets/origins/additional/mng.png",
+      "sha256": "a5095600cab4b1d2ecf980416b51ee82025c61d34825fdf1f7da7876623bb038"
+    },
+    {
+      "origin": "MOZ",
+      "name": "Mozambique",
+      "file": "assets/origins/additional/moz.png",
+      "sha256": "5fac8a48fee5cfcd14d30e2c5dbce50a5d463279614eaf5e112d3ab8653041be"
+    },
+    {
+      "origin": "MRT",
+      "name": "Mauritania",
+      "file": "assets/origins/additional/mrt.png",
+      "sha256": "f0c1512273495a9e056037ca84053e0a880b2e2e73b368d6faf0876f03e2f152"
+    },
+    {
+      "origin": "MTQ",
+      "name": "Martinique",
+      "file": "assets/origins/additional/mtq.png",
+      "sha256": "bcc4e7c11ed76bc1563e3f724618fcac2ebd4e54751111749a0c235bb72f379e"
+    },
+    {
+      "origin": "MUS",
+      "name": "Mauritius",
+      "file": "assets/origins/additional/mus.png",
+      "sha256": "ae33701a340dcd65424026894599865644603fe41554445d7a2f5d16de3b27e6"
+    },
+    {
+      "origin": "MWI",
+      "name": "Malawi",
+      "file": "assets/origins/additional/mwi.png",
+      "sha256": "d126c7ad5c5cfedcbb4de3c83a1c669afa9beccd9e72632ef41f1579df61cb4f"
+    },
+    {
+      "origin": "MYS",
+      "name": "Malaysia",
+      "file": "assets/origins/additional/mys.png",
+      "sha256": "5a60473968b172c2071c149756eaad29dfcd36b4db63b22e57efddb199deed73"
+    },
+    {
+      "origin": "NAM",
+      "name": "Namibia",
+      "file": "assets/origins/additional/nam.png",
+      "sha256": "6471ed1708389c6e374a4ab5f0c9fa4ec834fcbce610c531e164cb04a69af30e"
+    },
+    {
+      "origin": "NER",
+      "name": "Niger",
+      "file": "assets/origins/additional/ner.png",
+      "sha256": "bf3d01d3c38367ce2d962901cf402485569019b42ef662f9e2ce9378fc74d326"
+    },
+    {
+      "origin": "NGA",
+      "name": "Nigeria",
+      "file": "assets/origins/additional/nga.png",
+      "sha256": "d17d00438a52c5c288d2f05a6bee825ea3e5b3f009cf943fd1e8302a49e818c8"
+    },
+    {
+      "origin": "NIC",
+      "name": "Nicaragua",
+      "file": "assets/origins/additional/nic.png",
+      "sha256": "59f4fcac9241de9a7722cd4e2bf3f1293d3b55360e0486a20f991ca96e1b3fc4"
+    },
+    {
+      "origin": "NIU",
+      "name": "Niue",
+      "file": "assets/origins/additional/niu.png",
+      "sha256": "03e86152984d6c5541f610f54e04d7cff163602d46e75225fe64ef46fc33734a"
+    },
+    {
+      "origin": "NLD",
+      "name": "Netherlands",
+      "file": "assets/origins/additional/nld.png",
+      "sha256": "48aa47e5e30bdc61ea80fad9a2bb446620887388b168b3495fb83940f8cbdab2"
+    },
+    {
+      "origin": "NOR",
+      "name": "Norway",
+      "file": "assets/origins/additional/nor.png",
+      "sha256": "ad047641e8353c6992fdda6f3183c352c8937d9fbbf98de99ce7cf93919f7f52"
+    },
+    {
+      "origin": "NPL",
+      "name": "Nepal",
+      "file": "assets/origins/additional/npl.png",
+      "sha256": "3a7b5bc9e1d421269922638adfd52ac8a29dc8f4c1d0b7ce63a62caed0a5fe05"
+    },
+    {
+      "origin": "NRU",
+      "name": "Nauru",
+      "file": "assets/origins/additional/nru.png",
+      "sha256": "c68167ecb6dfa68c498095bd949d5c44278629ed5e04060764a17e6d500ad1b8"
+    },
+    {
+      "origin": "NZL",
+      "name": "New Zealand",
+      "file": "assets/origins/additional/nzl.png",
+      "sha256": "bd9f609caa624b4f259b16be67f774e33578d4b12d03e01acc5c62add74b5d27"
+    },
+    {
+      "origin": "OMN",
+      "name": "Oman",
+      "file": "assets/origins/additional/omn.png",
+      "sha256": "f22e5b1923606b2b888c1dc0ad74161e12f07ddadaebdb065f74139a2fc8caa2"
+    },
+    {
+      "origin": "PAK",
+      "name": "Pakistan",
+      "file": "assets/origins/additional/pak.png",
+      "sha256": "3eee8af9738f3736510f95c20e499bf0198d8c562d5601016ebace2ae364b183"
+    },
+    {
+      "origin": "PAN",
+      "name": "Panama",
+      "file": "assets/origins/additional/pan.png",
+      "sha256": "f3ed427fd66324bec83aad1807e57e5aa59737ab7f95328ccc568a963af4e095"
+    },
+    {
+      "origin": "PER",
+      "name": "Peru",
+      "file": "assets/origins/additional/per.png",
+      "sha256": "c85f24123ca5928fc647a5140f28b2cef289c16672e3dd64de56d81d3bada758"
+    },
+    {
+      "origin": "PHL",
+      "name": "Philippines",
+      "file": "assets/origins/additional/phl.png",
+      "sha256": "3ce96eea99da1c9460e8b7b7f13117188d48253668aef7459da997b4313b1e5a"
+    },
+    {
+      "origin": "PLW",
+      "name": "Palau",
+      "file": "assets/origins/additional/plw.png",
+      "sha256": "ad66eeaee8522ebbca8aa7137a4d29dac2c012cad504b84aa1be08579a1845f3"
+    },
+    {
+      "origin": "PNG",
+      "name": "Papua New Guinea",
+      "file": "assets/origins/additional/png.png",
+      "sha256": "9dab8f1401bbeebb64d81afa749c57733d3f504ff7027ba76a4ac49deca5da7c"
+    },
+    {
+      "origin": "POL",
+      "name": "Poland",
+      "file": "assets/origins/additional/pol.png",
+      "sha256": "36aa926f5f6b0161ed5f9295049511eb3568997b58d3f6ab4d943743f216c6b4"
+    },
+    {
+      "origin": "PRI",
+      "name": "Puerto Rico",
+      "file": "assets/origins/additional/pri.png",
+      "sha256": "4c51799846e1eb5360fd438d48d776536946d14fa8a5b44822904a82f98c78de"
+    },
+    {
+      "origin": "PRK",
+      "name": "Korea, Democratic People's Republic of",
+      "file": "assets/origins/additional/prk.png",
+      "sha256": "349fea6598f0af319b3d1e5cc63a4a3b847872ebfee6f833434d6365b93f3ba9"
+    },
+    {
+      "origin": "PRT",
+      "name": "Portugal",
+      "file": "assets/origins/additional/prt.png",
+      "sha256": "a49ddd756589b085842c890f9fc1e069d9b4adc316f74737136099091adb41cc"
+    },
+    {
+      "origin": "PRY",
+      "name": "Paraguay",
+      "file": "assets/origins/additional/pry.png",
+      "sha256": "1a9b3f23349fddf79d5ed4a3cbd1815763a968782a899df8cdb799840f19e4c8"
+    },
+    {
+      "origin": "PSE",
+      "name": "Palestine, State of",
+      "file": "assets/origins/additional/pse.png",
+      "sha256": "91d99f397170b2992924f3347cb6be7fbfd4103301330d326791c160c7aaef65"
+    },
+    {
+      "origin": "QAT",
+      "name": "Qatar",
+      "file": "assets/origins/additional/qat.png",
+      "sha256": "c106f5ee51577c07d3148cdcd26db1c3480f9fd94e5f83a1c89856add9e3dc96"
+    },
+    {
+      "origin": "ROU",
+      "name": "Romania",
+      "file": "assets/origins/additional/rou.png",
+      "sha256": "ee976a2637b86e1e20057a2afe4e818e711085f698b43e007aea1483a064be47"
+    },
+    {
+      "origin": "RUS",
+      "name": "Russian Federation",
+      "file": "assets/origins/additional/rus.png",
+      "sha256": "466e7d703f06a4746ab7dd73b7bab99b0cb029a9ec0fabf0116416a2872f9149"
+    },
+    {
+      "origin": "RWA",
+      "name": "Rwanda",
+      "file": "assets/origins/additional/rwa.png",
+      "sha256": "d6aff3e65848fe3f0eb60219944b561d9d2f5840736e40655e39ef3196ae012e"
+    },
+    {
+      "origin": "SAU",
+      "name": "Saudi Arabia",
+      "file": "assets/origins/additional/sau.png",
+      "sha256": "e945955a64da3a06dda7048899cbf10bb5650895248f098b456a220bba88b175"
+    },
+    {
+      "origin": "SDN",
+      "name": "Sudan",
+      "file": "assets/origins/additional/sdn.png",
+      "sha256": "706e9e7897abcc5dc8f177bc797ab0f8dce5e4bd522d8e59fdebdeee865c5cd5"
+    },
+    {
+      "origin": "SEN",
+      "name": "Senegal",
+      "file": "assets/origins/additional/sen.png",
+      "sha256": "7bc684bcb2b1bdbb59a94fbbbf7a3f3d055722e14e2c8d304b2b11b0f1947553"
+    },
+    {
+      "origin": "SGP",
+      "name": "Singapore",
+      "file": "assets/origins/additional/sgp.png",
+      "sha256": "ce02e6eef964426b54278b7911480c2cfb5e6848bcce2eb77c1314dc6a91e78e"
+    },
+    {
+      "origin": "SLB",
+      "name": "Solomon Islands",
+      "file": "assets/origins/additional/slb.png",
+      "sha256": "50df231109a6046361cf0d460fe4bd659b25855cdbc939e3ff693d9d55ced3c3"
+    },
+    {
+      "origin": "SLE",
+      "name": "Sierra Leone",
+      "file": "assets/origins/additional/sle.png",
+      "sha256": "4c81f6777e2c7f1d69d3f7c86fccbd4c64fd2aeef21110edbee934e5d3678acc"
+    },
+    {
+      "origin": "SLV",
+      "name": "El Salvador",
+      "file": "assets/origins/additional/slv.png",
+      "sha256": "360bf36354fe7abd058be9282b430ba7a69ad64ea12ec2d7edb8b0dc7b410820"
+    },
+    {
+      "origin": "SMR",
+      "name": "San Marino",
+      "file": "assets/origins/additional/smr.png",
+      "sha256": "5415d8e46a93e669e6f4f780a907757a6c4bef8a97dc7c3298e0a26ab3efb790"
+    },
+    {
+      "origin": "SOM",
+      "name": "Somalia",
+      "file": "assets/origins/additional/som.png",
+      "sha256": "7fc6289bab2d994c6e4bfc7ea4d42ea12537464a130d818a2d510b3d972220c5"
+    },
+    {
+      "origin": "SRB",
+      "name": "Serbia",
+      "file": "assets/origins/additional/srb.png",
+      "sha256": "a34e18007cf812a022c5d4a1e6a8543c9de6a316eb6f91ebea3a96870cae6710"
+    },
+    {
+      "origin": "SSD",
+      "name": "South Sudan",
+      "file": "assets/origins/additional/ssd.png",
+      "sha256": "0e58d1c6dd3b299a2a118c03d680b967b766ece79a173991c2541a6758600c4f"
+    },
+    {
+      "origin": "STP",
+      "name": "Sao Tome and Principe",
+      "file": "assets/origins/additional/stp.png",
+      "sha256": "2a62179d2f8407a18825fe3f4fa1a005f4d3730b58261da98e4099271625c01c"
+    },
+    {
+      "origin": "SUR",
+      "name": "Suriname",
+      "file": "assets/origins/additional/sur.png",
+      "sha256": "fba21beece013a707e9b53f454e0f4fae5f7f65a5fbbac27306ca0476a5db919"
+    },
+    {
+      "origin": "SVK",
+      "name": "Slovakia",
+      "file": "assets/origins/additional/svk.png",
+      "sha256": "b97610133b3a2c4060da35f45740689aafffdb8fcad5d042a5449add1aae2627"
+    },
+    {
+      "origin": "SVN",
+      "name": "Slovenia",
+      "file": "assets/origins/additional/svn.png",
+      "sha256": "2e76e34741fe9c680dc50fd5c7033f8e29f36f3fa8802b77c18495aff1fc9768"
+    },
+    {
+      "origin": "SWE",
+      "name": "Sweden",
+      "file": "assets/origins/additional/swe.png",
+      "sha256": "71d0f17936e3cc5343ec8ef6ec299869f589ca9955a02c68ea6119b0ecd3fa80"
+    },
+    {
+      "origin": "SWZ",
+      "name": "Eswatini",
+      "file": "assets/origins/additional/swz.png",
+      "sha256": "48d49d3561dd05b4450d0401c834782ff2a106a56bcce654d7e064dd1b880ad0"
+    },
+    {
+      "origin": "SYC",
+      "name": "Seychelles",
+      "file": "assets/origins/additional/syc.png",
+      "sha256": "b5b0dedef6f59ab6ddf25e6e28c86e4b459cecfb7fad5ea375e0446faeb82edf"
+    },
+    {
+      "origin": "SYR",
+      "name": "Syrian Arab Republic",
+      "file": "assets/origins/additional/syr.png",
+      "sha256": "25e1868aee22318735f0b1a94788f35da89df6e5c4a4a943390101fedf5cadd2"
+    },
+    {
+      "origin": "TCA",
+      "name": "Turks and Caicos Islands",
+      "file": "assets/origins/additional/tca.png",
+      "sha256": "8c8859bf00d5b9a04231b696b4047219848be4e1496e43c71e45a1f2d9227068"
+    },
+    {
+      "origin": "TCD",
+      "name": "Chad",
+      "file": "assets/origins/additional/tcd.png",
+      "sha256": "6f995738b4886395df66fa0e4e70e674dbe736990c2d0fa026bdbaa66ea45918"
+    },
+    {
+      "origin": "TGO",
+      "name": "Togo",
+      "file": "assets/origins/additional/tgo.png",
+      "sha256": "554f91516f6fd20a20f0cc2088cf82a26f904973c87d717836d049588d56b8f6"
+    },
+    {
+      "origin": "THA",
+      "name": "Thailand",
+      "file": "assets/origins/additional/tha.png",
+      "sha256": "50b35abb580cee16c9c42f4ffba34278e6a73fc2f32e1d75a178e955eb2e24a8"
+    },
+    {
+      "origin": "TIB",
+      "name": "Tibetan",
+      "file": "assets/origins/additional/tib.png",
+      "sha256": "eadfd99f0e1dc7ae6308b1ba872f037731bf5dd561d751a4edab8512590aa5f9"
+    },
+    {
+      "origin": "TJK",
+      "name": "Tajikistan",
+      "file": "assets/origins/additional/tjk.png",
+      "sha256": "b4f57d1fb790b49708fbd3fdfb2287febc20fd3d0a4c40a5feebd0b6584cb8b8"
+    },
+    {
+      "origin": "TKM",
+      "name": "Turkmenistan",
+      "file": "assets/origins/additional/tkm.png",
+      "sha256": "a76332519495bc6a5c555f9382fe9bfde9afd13ae5fd0e57f00d4fbb168282a1"
+    },
+    {
+      "origin": "TLS",
+      "name": "Timor-Leste",
+      "file": "assets/origins/additional/tls.png",
+      "sha256": "84e70148eca8c21f74ac87404f3a5671214a1eb78f089aab64620fbb84f60dba"
+    },
+    {
+      "origin": "TON",
+      "name": "Tonga",
+      "file": "assets/origins/additional/ton.png",
+      "sha256": "c1655486b479500348dcce6be49275e1adb5b2d2046bf93655fa95bbade47d94"
+    },
+    {
+      "origin": "TTO",
+      "name": "Trinidad and Tobago",
+      "file": "assets/origins/additional/tto.png",
+      "sha256": "95f9bf6f9296e05bce9776aba43953036e8a8de313188e7bfc6f2627a7840f37"
+    },
+    {
+      "origin": "TUN",
+      "name": "Tunisia",
+      "file": "assets/origins/additional/tun.png",
+      "sha256": "e164b5eeb04773cc6d9478cb6ce4873027b7fa80c71d4e0e3ae81da6f2b04914"
+    },
+    {
+      "origin": "TUR",
+      "name": "Türkiye",
+      "file": "assets/origins/additional/tur.png",
+      "sha256": "5f6bdacd5375b204c0cd1e3c63441f78501f86fc77bc3c7c4f3d878bd68012f2"
+    },
+    {
+      "origin": "TUV",
+      "name": "Tuvalu",
+      "file": "assets/origins/additional/tuv.png",
+      "sha256": "d6d77d31517054de5120af67d8ea1ed9f6d88a4cc81c68130be46a86a4924af3"
+    },
+    {
+      "origin": "TZA",
+      "name": "Tanzania, United Republic of",
+      "file": "assets/origins/additional/tza.png",
+      "sha256": "bd83d78d24ca7098c585baca4095fc80cc1e0810495fe5d8b586fa0465218a48"
+    },
+    {
+      "origin": "UGA",
+      "name": "Uganda",
+      "file": "assets/origins/additional/uga.png",
+      "sha256": "0d5d43bc8ec32b4d8c80c22dfbf22e5047a609f9ee4254308c3765c51027ccac"
+    },
+    {
+      "origin": "UKR",
+      "name": "Ukraine",
+      "file": "assets/origins/additional/ukr.png",
+      "sha256": "a67995d16fde35e9bd7a564d246f77eda90d1801d67af4ffaa8af0f290d3dd26"
+    },
+    {
+      "origin": "UNK",
+      "name": "Unknown",
+      "file": "assets/origins/additional/unk.png",
+      "sha256": "5bc92e55817749a4f24037e73df184ba11335697ad943ad5ae6268bca5c46402"
+    },
+    {
+      "origin": "URY",
+      "name": "Uruguay",
+      "file": "assets/origins/additional/ury.png",
+      "sha256": "73883058378d3e3e529a557e68be6921b363ee1f5918abd75b9b72ddfb4f4701"
+    },
+    {
+      "origin": "USA",
+      "name": "United States",
+      "file": "assets/origins/additional/usa.png",
+      "sha256": "b5b24c10b4918f435dfebefcf56658f6509756ddc50bd0b184c774ebc71c4ee7"
+    },
+    {
+      "origin": "UZB",
+      "name": "Uzbekistan",
+      "file": "assets/origins/additional/uzb.png",
+      "sha256": "f1e1f645efd5c6b0e23b8ea3231a26184b743e17b122c424cfb56a05e375117d"
+    },
+    {
+      "origin": "VAT",
+      "name": "Holy See (Vatican City State)",
+      "file": "assets/origins/additional/vat.png",
+      "sha256": "5af3fd99bfaca60404a18fce3102f3a238da00c4a171ce4afd75599033aaee3b"
+    },
+    {
+      "origin": "VCT",
+      "name": "Saint Vincent and the Grenadines",
+      "file": "assets/origins/additional/vct.png",
+      "sha256": "6362777228ece99764c37a1f165b2ed1a762a7a685382c4611000d8e960c3831"
+    },
+    {
+      "origin": "VEN",
+      "name": "Venezuela, Bolivarian Republic of",
+      "file": "assets/origins/additional/ven.png",
+      "sha256": "e1188700e4328ac0a6d9c6272cc9ad544b3f09c2c2b4d27971ecc2d8a0b51b84"
+    },
+    {
+      "origin": "VNM",
+      "name": "Viet Nam",
+      "file": "assets/origins/additional/vnm.png",
+      "sha256": "a5611bacc8acfb8f49c2480e067738442329e0e35a4f41a9af2b8e3cdaa3bf0d"
+    },
+    {
+      "origin": "VUT",
+      "name": "Vanuatu",
+      "file": "assets/origins/additional/vut.png",
+      "sha256": "a5b27128aa497445dbb13a5bd736f19cbcfc318b6b9c6efbb6b1999076efb995"
+    },
+    {
+      "origin": "WSM",
+      "name": "Samoa",
+      "file": "assets/origins/additional/wsm.png",
+      "sha256": "bb7d6bea7680b177b9e370d0648c3ffaf14cf8ba466cbc104d5ed605e0e103f4"
+    },
+    {
+      "origin": "XXA",
+      "name": "Stateless",
+      "file": "assets/origins/additional/xxa.png",
+      "sha256": "e984b4536139ef9badb84fe470b15db2ca7d4b2a33c8e05d8915fa01fb846822"
+    },
+    {
+      "origin": "YEM",
+      "name": "Yemen",
+      "file": "assets/origins/additional/yem.png",
+      "sha256": "a916773b3d35c0f498a36213ff6dc63c7bfac305b9abe6992280f36e3d834739"
+    },
+    {
+      "origin": "ZAF",
+      "name": "South Africa",
+      "file": "assets/origins/additional/zaf.png",
+      "sha256": "76dcaa8fa9b43ef1b3c74a7ddfe908ff246328eae4c03e04c7af6e5d91ccc0e6"
+    },
+    {
+      "origin": "ZMB",
+      "name": "Zambia",
+      "file": "assets/origins/additional/zmb.png",
+      "sha256": "c8413bd0e5afad346d853320f2da6755e55b8b4d710b6433b2a6c496779ab4b2"
+    },
+    {
+      "origin": "ZWE",
+      "name": "Zimbabwe",
+      "file": "assets/origins/additional/zwe.png",
+      "sha256": "ddb06747d78221783102df8b74e31f122ac8e30f771d8784f6e84c79a20dec5e"
+    }
+  ]
+}

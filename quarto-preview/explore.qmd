@@ -5,13 +5,14 @@ toc: false
 page-layout: full
 ---
 
-Choose a receiving country from the dropdown. You can type while the dropdown is focused to jump to a country. Keep **persons** and **cases** separate: a case may include more than one person. The chart updates in your browser.
+Choose a receiving country from the dropdown. You can type while the dropdown is focused to jump to a country. **Reported applications and decisions combine persons and cases without conversion; they are not counts of unique people.** A case can include more than one person, and reporting-unit mixes can vary between countries and years. The chart updates in your browser.
 
 ```{ojs}
 //| echo: false
 //| output: false
 data = FileAttachment("data/explorer.json").json()
-core = import(await FileAttachment("assets/explorer-core.js").url())
+formatting = import((await FileAttachment("assets/grant-rates.js").url()) + "?v=grant-rates-rounded-3")
+core = import((await FileAttachment("assets/explorer-core.js").url()) + "?v=combined-units-2")
 ```
 
 ```{ojs}
@@ -21,7 +22,7 @@ core = import(await FileAttachment("assets/explorer-core.js").url())
   p.className = "reading-note";
   const m = data.metadata;
   const stamp = m.downloaded_at_utc
-    ? new Date(m.downloaded_at_utc).toLocaleString("en-GB", {timeZone: "UTC"}) + " UTC"
+    ? new Date(m.downloaded_at_utc).toLocaleString("en-GB", {day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"UTC", hour12:false}) + " UTC"
     : "Bundled snapshot; no new API download";
   p.textContent = "Data downloaded: " + stamp + ". Requested coverage: " + m.year_from +
     "–" + m.requested_year_to + ". Latest year present in both sources: " +
@@ -37,15 +38,13 @@ viewof selected = Inputs.select(data.countries, {
   format: d => d.name + " (" + d.iso + ")",
   value: data.countries.find(d => d.iso === "GBR") || data.countries[0]
 })
-viewof unit = Inputs.radio(new Map([["Persons (reported)", "P"], ["Cases (reported)", "C"]]), {
-  label: "Reporting unit", value: "P"
-})
+
 ```
 
 ```{ojs}
 //| echo: false
 //| output: false
-rows = selected ? core.countryYears(data, selected.iso, unit) : []
+rows = selected ? core.countryYears(data, selected.iso) : []
 observed = rows.filter(d => d.applications != null || d.decisions != null)
 outcomeRows = rows.flatMap(d => core.outcomes
   .filter(([key]) => d[key] != null)
@@ -58,15 +57,14 @@ outcomeRows = rows.flatMap(d => core.outcomes
   const p = document.createElement("p");
   p.className = "explorer-status";
   if (!selected) p.textContent = "No countries match that search. Try another name or ISO code.";
-  else if (!observed.length) p.textContent = "No " + (unit === "P" ? "persons" : "cases") +
-    "-reported observations are available for " + selected.name + ". Try the other reporting unit.";
+  else if (!observed.length) p.textContent = "No reported observations are available for " + selected.name + ".";
   else {
     const latest = observed[observed.length - 1];
     const number = value => value == null ? "not reported" : value.toLocaleString("en-GB");
     p.textContent = selected.name + " · Latest observed year: " + latest.year +
       " · Applications: " + number(latest.applications) +
       " · Decisions: " + number(latest.decisions) +
-      " · Unit: " + (unit === "P" ? "persons" : "cases") + ".";
+      " · Reporting: persons and cases combined.";
   }
   return p;
 }
@@ -86,7 +84,7 @@ outcomeRows = rows.flatMap(d => core.outcomes
     marginLeft: 85, marginBottom: 45,
     ariaLabel: "Recorded applications and decisions for " + selected.name,
     x: {type: "band", label: "Year", tickFormat: d => d % 5 === 0 || d === data.metadata.year_to_available ? String(d) : ""},
-    y: {label: unit === "P" ? "Reported persons" : "Reported cases", grid: true},
+    y: {label: "Reported applications / decisions", grid: true},
     color: {domain: core.outcomes.map(d => d[1]), range: core.outcomes.map(d => d[2]), legend: true},
     marks: [
       Plot.barY(outcomeRows, Plot.stackY({
@@ -104,7 +102,7 @@ outcomeRows = rows.flatMap(d => core.outcomes
 }
 ```
 
-**Blue line and dots:** applications. **Stacked bars:** recorded decision outcomes. Hover over a dot or bar for its value. Decisions can relate to applications made in earlier years. A gap means no value is available in the selected source/unit, not a confirmed zero.
+**Blue line and dots:** applications. **Stacked bars:** recorded decision outcomes. Hover over a dot or bar for its value. Decisions can relate to applications made in earlier years. A gap means no value is available in the stored source data, not a confirmed zero.
 
 ## How are decisions recorded?
 
@@ -131,13 +129,15 @@ outcomeRows = rows.flatMap(d => core.outcomes
     color: {domain: core.outcomes.map(d => d[1]), range: core.outcomes.map(d => d[2])},
     marks: [Plot.barY(shares, Plot.stackY({
       x: "year", y: "share", fill: "outcome",
-      title: d => d.year + " · " + d.outcome + ": " + (d.share * 100).toFixed(1) + "% (" + d.count.toLocaleString("en-GB") + ")"
+      title: d => d.year + " · " + d.outcome + ": " + formatting.percent(d.share) + " (" + d.count.toLocaleString("en-GB") + ")"
     })), Plot.ruleY([0])]
   });
 }
 ```
 
 These are annual outcome shares, including administrative closures in the denominator—not cohort success probabilities or substantive-decision recognition rates. Years without a complete, positive, reconciled outcome total are omitted from this percentage chart. [Definitions and limitations](methods.qmd#decision-rates).
+
+{{< include _commentary-profile-guide.qmd >}}
 
 {{< include _receiving-gallery.qmd >}}
 
@@ -163,7 +163,7 @@ These are annual outcome shares, including administrative closures in the denomi
     const a = document.createElement("a");
     const url = URL.createObjectURL(new Blob([core.csvFor(rows)], {type: "text/csv;charset=utf-8"}));
     a.href = url;
-    a.download = selected.iso + "-" + unit + "-asylum-chart-data.csv";
+    a.download = selected.iso + "-combined-asylum-chart-data.csv";
     a.textContent = "Download this chart's data (CSV)";
     container.append(a);
     invalidation.then(() => URL.revokeObjectURL(url));
@@ -176,7 +176,7 @@ These are annual outcome shares, including administrative closures in the denomi
 }
 ```
 
-The CSV contains the selected country's annual aggregates in the selected reporting unit; empty fields mean unavailable values. The ZIP contains the full source CSVs and their download provenance. UNHCR's current downloads can contain later revisions and both reporting units, so they may differ from the stored chart data.
+The CSV contains the selected country's annual aggregates combining persons- and case-reported values without conversion (unit: P+C); empty fields mean unavailable values. The ZIP contains the full source CSVs and their download provenance. UNHCR's current downloads can contain later revisions and both reporting units, so they may differ from the stored chart data.
 
 ### Values behind the chart
 

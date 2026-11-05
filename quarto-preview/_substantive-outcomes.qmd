@@ -1,0 +1,29 @@
+## Grants and refusals, excluding closures {#substantive-outcomes}
+
+Here the denominator is **substantive decisions: refugee status + other protection + rejection**. It is not applications received, and it excludes “otherwise closed” outcomes. Applications in one year are not necessarily decided in that year. Closures remain visible in their own comparisons below.
+
+```{ojs}
+//| echo: false
+{
+  const panel=document.createElement("div");
+  const definitions=[["recognised","Refugee status","#00a98f"],["other_protection","Other protection","#f4c542"],["rejected","Refused","#ef6655"]];
+  const denominator=total.recognised+total.other_protection+total.rejected;
+  if (!total.valid || !(denominator>0)) {panel.textContent="No eligible substantive decisions are available for this selection.";return panel;}
+  const headline=document.createElement("p");headline.className="explorer-status";
+  headline.textContent=selected.name+" · Overall eligible period: "+definitions.map(([key,label])=>label+" "+percent(total[key]/denominator)).join(" · ")+" · Substantive decisions: "+denominator.toLocaleString("en-GB")+". Closures excluded from these percentages: "+total.closed.toLocaleString("en-GB")+".";
+  const values=rows.filter(d=>d.valid && d.recognised+d.other_protection+d.rejected>0).flatMap(d=>definitions.map(([key,label])=>({year:d.year,outcome:label,value:d[key]/(d.recognised+d.other_protection+d.rejected),count:d[key],denominator:d.recognised+d.other_protection+d.rejected})));
+  panel.append(headline,Plot.plot({
+    width:Math.min(width,1100),height:340,marginLeft:70,
+    ariaLabel:"Substantive decision outcomes excluding closures for "+selected.name,
+    x:{type:"band",domain:rows.map(d=>d.year),label:"Year",tickFormat:d=>d%5===0||d===data.metadata.year_to_available?String(d):""},
+    y:{domain:[0,1],label:"Share of substantive decisions",grid:true,tickFormat:d=>Math.round(d*100)+"%"},
+    color:{domain:definitions.map(d=>d[1]),range:definitions.map(d=>d[2]),legend:true},
+    marks:[Plot.barY(values,Plot.stackY({x:"year",y:"value",fill:"outcome",title:d=>d.year+" · "+d.outcome+": "+percent(d.value)+" ("+d.count.toLocaleString("en-GB")+" / "+d.denominator.toLocaleString("en-GB")+" substantive decisions)"}))]
+  }));
+  return panel;
+}
+```
+
+Overall percentages divide the summed outcomes by the summed substantive decisions across eligible years. The chart uses the same complete, reconciled country-year records as the grant-rate figures; unavailable years remain gaps. Refugee status and other protection together give the total-protection rate. Refusal is the remaining substantive outcome. Persons and cases remain combined without conversion in this international explorer.
+
+[Compare UK official initial-decision statistics with UNHCR](uk.qmd).

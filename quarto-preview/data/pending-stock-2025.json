@@ -1,0 +1,35 @@
+{
+  "source": "UNHCR population API, worldwide aggregate",
+  "url": "https://api.unhcr.org/population/v1/population/?yearFrom=2025&yearTo=2025&limit=100",
+  "retrieved_at_utc": "2026-11-05T08:44:31.686862+00:00",
+  "year": 2025,
+  "pending_persons": 8998097,
+  "response": {
+    "page": 1,
+    "short-url": "2WIBNj",
+    "maxPages": 1,
+    "total": [],
+    "items": [
+      {
+        "year": 2025,
+        "coo_id": "-",
+        "coo_name": "-",
+        "coo": "-",
+        "coo_iso": "-",
+        "coa_id": "-",
+        "coa_name": "-",
+        "coa": "-",
+        "coa_iso": "-",
+        "refugees": 28461306,
+        "asylum_seekers": 8998097,
+        "returned_refugees": 4362272,
+        "idps": 64239352,
+        "returned_idps": 10308567,
+        "stateless": 4477220,
+        "ooc": 2957025,
+        "oip": 7177473,
+        "hst": 26670162
+      }
+    ]
+  }
+}

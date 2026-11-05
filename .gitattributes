@@ -1,0 +1,2 @@
+# Preserve the exact reviewed bytes across Windows/Linux checkouts.
+docs/asylum/** -text

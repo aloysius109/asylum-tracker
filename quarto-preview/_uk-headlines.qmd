@@ -1,0 +1,7 @@
+::: {.snapshot}
+<div><span class="value">101,911</span><span class="label">people claiming asylum<br>Calendar year 2025</span></div>
+<div><span class="value">42%</span><span class="label">published initial grant rate<br>Main applicants · 2025</span></div>
+<div><span class="value">64,426</span><span class="label">people awaiting an initial decision<br>At end-2025</span></div>
+:::
+
+**Newer UK-only context:** in the year ending June 2026, the published main-applicant grant rate was **38%**, and **40,168 people** awaited an initial decision at the end of June. These rolling-year figures are not plotted as calendar 2026 or compared with UNHCR 2025.

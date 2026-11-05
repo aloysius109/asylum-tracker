@@ -1,0 +1,136 @@
+## Annual shortfalls and country waterfalls {#processing-gaps}
+
+**Coral:** applications exceed decisions. **Teal:** decisions exceed applications. The first panel shows each annual difference; the waterfall adds these differences from a zero opening balance in 2000. Missing annual reports remain gaps and stop cumulative calculations.
+
+### About the old “minimum backlog” figures
+
+The final panel is explicitly **illustrative**, not an observed backlog or a defensible lower bound on it. It follows balance[t] = max(0, balance[t−1] + applications[t] − decisions[t]), starting at zero. It assumes compatible flow units, scope, and timing and no other entries, exits, transfers, or reporting adjustments. The combined persons/cases records do not establish those assumptions. Compare actual unresolved caseloads using the separately observed UNHCR stocks on the front page.
+
+### What if the gap persists?
+
+If reported applications continue to exceed comparable recorded decisions, processing pressure will persist unless inflows fall or output rises. This is a conditional scenario, not a prediction that every country will worsen. The record includes years and countries where decisions exceeded applications. Resource needs, future inflows, and policy changes are not modelled here.
+
+[Download all annual flows and illustrative balances (CSV)](data/processing-gap-detail.csv). Fixed 2000–2025 inputs; persons and cases combined without conversion. Each panel uses its own scale to reveal its pattern.
+
+:::: {.origin-gallery}
+::: {.origin-card}
+### United States (USA)
+
+![United States: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/usa-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Germany (DEU)
+
+![Germany: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/deu-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### France (FRA)
+
+![France: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/fra-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### United Kingdom (GBR)
+
+![United Kingdom: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/gbr-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### South Africa (ZAF)
+
+![South Africa: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/zaf-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Italy (ITA)
+
+![Italy: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/ita-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Canada (CAN)
+
+![Canada: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/can-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Egypt (EGY)
+
+![Egypt: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/egy-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Sweden (SWE)
+
+![Sweden: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/swe-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Spain (ESP)
+
+![Spain: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/esp-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Greece (GRC)
+
+![Greece: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/grc-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Türkiye (TUR)
+
+![Türkiye: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/tur-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Austria (AUT)
+
+![Austria: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/aut-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Belgium (BEL)
+
+![Belgium: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/bel-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Mexico (MEX)
+
+![Mexico: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/mex-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Russian Federation (RUS)
+
+![Russian Federation: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/rus-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Switzerland (CHE)
+
+![Switzerland: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/che-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Peru (PER)
+
+![Peru: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/per-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Kenya (KEN)
+
+![Kenya: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/ken-pressure.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Netherlands (NLD)
+
+![Netherlands: annual shortfalls, cumulative flow waterfall, and illustrative zero-opening balance.](assets/detail/nld-pressure.png){loading="lazy"}
+:::
+
+::::

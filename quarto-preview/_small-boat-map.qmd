@@ -1,0 +1,42 @@
+### Where did people arriving by small boat come from? {#small-boats-origins}
+
+This map shows **recorded nationality** in the official Home Office small-boat arrivals dataset—not where a boat departed, a person's birthplace, or their route to the UK. It includes every nationality category with positive recorded arrivals for the chosen period; categories without a defensible map location remain in the totals and table.
+
+The nationality breakdown is quarterly and currently covers **January 2018–June 2026**. It is a different, older snapshot from the live daily panel above. Nationalities are not inferred for newer arrivals, and counts are not asylum applications or grant outcomes. Source: [Home Office illegal-entry detailed tables, IER_D01](https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables).
+
+```{ojs}
+//| echo: false
+//| output: false
+boatNationalities=FileAttachment("data/uk/small-boats/nationality-map.json").json()
+```
+
+```{ojs}
+//| echo: false
+viewof boatNationalityPeriod=Inputs.select(boatNationalities.periods,{label:"Nationality map period",format:d=>d.label,value:boatNationalities.periods.find(d=>d.id===boatNationalities.default_period)})
+```
+
+```{ojs}
+//| echo: false
+{
+ const panel=document.createElement("div");panel.className="small-boats-nationality-map";
+ const note=document.createElement("p");note.className="explorer-status";
+ const missing=boatNationalityPeriod.total-boatNationalityPeriod.mapped_arrivals;
+ note.textContent=boatNationalityPeriod.label+": "+boatNationalityPeriod.total.toLocaleString("en-GB")+" detected arrivals. "+boatNationalityPeriod.mapped_arrivals.toLocaleString("en-GB")+" can be plotted geographically; "+missing.toLocaleString("en-GB")+" remain unlocated or in non-geographic categories. Every category is retained below.";
+ const frame=document.createElement("iframe");frame.className="application-map";frame.title="Small-boat arrivals by recorded nationality: "+boatNationalityPeriod.label;frame.src="maps/small-boats-nationalities.html?period="+encodeURIComponent(boatNationalityPeriod.id);
+ const link=document.createElement("a");link.href=frame.src;link.target="_blank";link.rel="noopener";link.textContent="Open selected nationality map full-screen";
+ panel.append(note,frame,link);return panel;
+}
+```
+
+Hover over or click a circle for exact counts and its share of the selected period. Circle sizes use a common scale across periods, with a minimum visible size for small counts. Positions are approximate country/territory anchors; no lines or arrows imply individual journeys. For small countries absent from the boundary file, a World Bank country-location anchor is used where available. Special categories such as stateless, refugee, or unknown nationality are not assigned to a substitute country.
+
+```{ojs}
+//| echo: false
+Inputs.table(boatNationalityPeriod.rows,{columns:["nationality","arrivals","share","mapped"],header:{nationality:"Recorded nationality/category",arrivals:"Detected arrivals",share:"Share of all arrivals",mapped:"Plotted on map"},format:{share:d=>d>0&&d<.001?"<0.1%":(d*100).toFixed(d<.1?1:0)+"%",mapped:d=>d?"Yes":"No — retained in total"},rows:15})
+```
+
+[Download nationality totals for every selectable period (CSV)](data/uk/small-boats/nationality-map.csv) · [Exact official nationality workbook](data/uk/small-boats/nationalities-jun-2026.xlsx) · [Source URL, retrieval date and hash](data/uk/small-boats/nationalities-source.json).
+
+Nationality counts sum the source's separate age/sex rows once, filtering specifically to small-boat arrivals. Other entry routes are excluded. The latest 12-month period is July 2025–June 2026; calendar 2026 is explicitly labelled January–June only. These quarterly figures should not be expected to match newer provisional daily totals.
+
+CSV periods overlap: filter to one period before summing counts.

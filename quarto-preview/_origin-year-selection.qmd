@@ -1,0 +1,39 @@
+## Where did applicants come from—and who received grants? {#yearly-origins}
+
+The **receiving-country dropdown above** controls this section. Choose a year to see the country's annual grant rates and two different Top 3 lists. Origins are ranked by **counts**, not by the highest percentage: one list shows where reported applications originated, the other where grant recipients originated.
+
+```{ojs}
+//| echo: false
+//| output: false
+originYearData = FileAttachment("data/origin-year-explorer.json").json()
+originCards = import((await FileAttachment("assets/origin-year-cards.js").url()) + "?v=2")
+```
+
+```{ojs}
+//| echo: false
+viewof originYear = Inputs.select(Array.from({length:data.metadata.year_to_available-data.metadata.year_from+1},(_,i)=>data.metadata.year_from+i),{label:"Applications and grants year",value:data.metadata.year_to_available,format:String})
+viewof grantDefinition = Inputs.radio(new Map([["Refugee status only","refugee"],["Any protection: refugee status + other protection","protection"]]),{label:"Rank grant recipients by",value:"refugee"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const group=originYearData.groups[selected.iso]?.[String(originYear)];
+  const panel=document.createElement("div");panel.className="origin-year-selection";
+  const title=document.createElement("h3");title.textContent=selected.name+" · "+originYear;
+  const summary=document.createElement("p");summary.className="explorer-status origin-year-summary";
+  if (!group) summary.textContent="No application or decision records are available for this country and year.";
+  else {
+    const rate=grants.rates(group.summary);
+    const number=value=>value==null?"Unavailable":value.toLocaleString("en-GB");
+    summary.textContent="Applications: "+number(group.summary.applications)+" · Decisions: "+number(group.summary.decisions)+" · Refugee recognition rate: "+percent(rate.refugee_rate)+" · Total protection rate: "+percent(rate.protection_rate)+" · Closure share: "+percent(rate.closed_share)+".";
+  }
+  panel.append(title,summary,originCards.cards(group,originYearData.origins,grantDefinition,grants));return panel;
+}
+```
+
+Refugee and total-protection rates use substantive decisions; closure shares use all recorded decisions. Rates are unavailable where outcome counts do not reconcile to a positive decision total. Flags identify the **recorded country of origin**, not a verification of citizenship; unknown origins have no flag. Applications and grants are different annual flows: recipients may have applied in earlier years. Persons and cases are combined without conversion, and ranks do not estimate an individual's chance of success. Ties are resolved by origin code.
+
+This section uses the exact source ZIP behind the country explorer, with independently checked country-year totals. Its year selection is separate from the closure-comparison year below.
+
+Flag artwork is bundled locally from [FlagCDN](https://flagcdn.com/); names and ISO codes remain visible alongside each flag.
