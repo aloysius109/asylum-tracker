@@ -1,0 +1,693 @@
+period,period_label,nationality,arrivals,share,iso,mapped
+latest12,Year ending June 2026 · July 2025–June 2026,Eritrea,5875,0.17603523701084678,ERI,True
+latest12,Year ending June 2026 · July 2025–June 2026,Sudan,4191,0.12557679630850363,SDN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Afghanistan,4042,0.12111224306346258,AFG,True
+latest12,Year ending June 2026 · July 2025–June 2026,Somalia,3901,0.11688739737520225,SOM,True
+latest12,Year ending June 2026 · July 2025–June 2026,Iran,3657,0.10957631689339006,IRN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Ethiopia,1364,0.04087013843111404,ETH,True
+latest12,Year ending June 2026 · July 2025–June 2026,Iraq,1336,0.04003116198238149,IRQ,True
+latest12,Year ending June 2026 · July 2025–June 2026,Not currently recorded,1140,0.034158326841253674,,False
+latest12,Year ending June 2026 · July 2025–June 2026,Syria,1003,0.03005333493138371,SYR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Turkey,783,0.023461377119913706,TUR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Vietnam,723,0.02166357044405825,VNM,True
+latest12,Year ending June 2026 · July 2025–June 2026,Yemen,517,0.015491100856954515,YEM,True
+latest12,Year ending June 2026 · July 2025–June 2026,India,471,0.014112782405465332,IND,True
+latest12,Year ending June 2026 · July 2025–June 2026,Refugee,441,0.013213879067537604,,False
+latest12,Year ending June 2026 · July 2025–June 2026,Stateless,425,0.01273446395397615,,False
+latest12,Year ending June 2026 · July 2025–June 2026,Palestine,368,0.011026547611913465,PSE,True
+latest12,Year ending June 2026 · July 2025–June 2026,Egypt,354,0.010607059387547193,EGY,True
+latest12,Year ending June 2026 · July 2025–June 2026,South Sudan,346,0.010367351830766465,SSD,True
+latest12,Year ending June 2026 · July 2025–June 2026,Georgia,308,0.00922874093605801,GEO,True
+latest12,Year ending June 2026 · July 2025–June 2026,Sri Lanka,290,0.008689398933301373,LKA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Kuwait,258,0.007730568706178462,KWT,True
+latest12,Year ending June 2026 · July 2025–June 2026,Libya,246,0.007371007371007371,LBY,True
+latest12,Year ending June 2026 · July 2025–June 2026,Sierra Leone,214,0.006412177143884461,SLE,True
+latest12,Year ending June 2026 · July 2025–June 2026,Tanzania,183,0.005483310361359142,TZA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Albania,181,0.00542338347216396,ALB,True
+latest12,Year ending June 2026 · July 2025–June 2026,Pakistan,138,0.00413495535446755,PAK,True
+latest12,Year ending June 2026 · July 2025–June 2026,Tajikistan,119,0.0035656499071133217,TJK,True
+latest12,Year ending June 2026 · July 2025–June 2026,Other and unknown,79,0.002367112123209684,,False
+latest12,Year ending June 2026 · July 2025–June 2026,China,34,0.001018757116318092,CHN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Algeria,32,0.00095883022712291,DZA,True
+latest12,Year ending June 2026 · July 2025–June 2026,"Gambia, The",31,0.0009288667825253192,GMB,True
+latest12,Year ending June 2026 · July 2025–June 2026,Mali,27,0.0008090130041349553,MLI,True
+latest12,Year ending June 2026 · July 2025–June 2026,Guinea,26,0.0007790495595373644,GIN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Nigeria,25,0.0007490861149397735,NGA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Uganda,24,0.0007191226703421826,UGA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Chad,21,0.0006292323365494097,TCD,True
+latest12,Year ending June 2026 · July 2025–June 2026,Tunisia,21,0.0006292323365494097,TUN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Lebanon,19,0.0005693054473542279,LBN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Morocco,19,0.0005693054473542279,MAR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Jordan,16,0.000479415113561455,JOR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Senegal,14,0.00041948822436627315,SEN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Cameroon,10,0.00029963444597590937,CMR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Kenya,10,0.00029963444597590937,KEN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Russia,10,0.00029963444597590937,RUS,True
+latest12,Year ending June 2026 · July 2025–June 2026,Germany,8,0.0002397075567807275,DEU,True
+latest12,Year ending June 2026 · July 2025–June 2026,Ivory Coast,8,0.0002397075567807275,CIV,True
+latest12,Year ending June 2026 · July 2025–June 2026,Niger,8,0.0002397075567807275,NER,True
+latest12,Year ending June 2026 · July 2025–June 2026,Uzbekistan,7,0.00020974411218313658,UZB,True
+latest12,Year ending June 2026 · July 2025–June 2026,Azerbaijan,5,0.00014981722298795469,AZE,True
+latest12,Year ending June 2026 · July 2025–June 2026,Bangladesh,5,0.00014981722298795469,BGD,True
+latest12,Year ending June 2026 · July 2025–June 2026,Armenia,4,0.00011985377839036375,ARM,True
+latest12,Year ending June 2026 · July 2025–June 2026,Ghana,4,0.00011985377839036375,GHA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Liberia,4,0.00011985377839036375,LBR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Kosovo,3,8.989033379277282e-05,XKX,True
+latest12,Year ending June 2026 · July 2025–June 2026,Mauritania,3,8.989033379277282e-05,MRT,True
+latest12,Year ending June 2026 · July 2025–June 2026,Burundi,2,5.992688919518188e-05,BDI,True
+latest12,Year ending June 2026 · July 2025–June 2026,Congo (Democratic Republic),2,5.992688919518188e-05,COD,True
+latest12,Year ending June 2026 · July 2025–June 2026,Djibouti,2,5.992688919518188e-05,DJI,True
+latest12,Year ending June 2026 · July 2025–June 2026,Malawi,2,5.992688919518188e-05,MWI,True
+latest12,Year ending June 2026 · July 2025–June 2026,Zimbabwe,2,5.992688919518188e-05,ZWE,True
+latest12,Year ending June 2026 · July 2025–June 2026,Brazil,1,2.996344459759094e-05,BRA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Burkina Faso,1,2.996344459759094e-05,BFA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Central African Republic,1,2.996344459759094e-05,CAF,True
+latest12,Year ending June 2026 · July 2025–June 2026,Greece,1,2.996344459759094e-05,GRC,True
+latest12,Year ending June 2026 · July 2025–June 2026,Indonesia,1,2.996344459759094e-05,IDN,True
+latest12,Year ending June 2026 · July 2025–June 2026,Israel,1,2.996344459759094e-05,ISR,True
+latest12,Year ending June 2026 · July 2025–June 2026,Kyrgyzstan,1,2.996344459759094e-05,KGZ,True
+latest12,Year ending June 2026 · July 2025–June 2026,Latvia,1,2.996344459759094e-05,LVA,True
+latest12,Year ending June 2026 · July 2025–June 2026,Papua New Guinea,1,2.996344459759094e-05,PNG,True
+latest12,Year ending June 2026 · July 2025–June 2026,Philippines,1,2.996344459759094e-05,PHL,True
+latest12,Year ending June 2026 · July 2025–June 2026,Saudi Arabia,1,2.996344459759094e-05,SAU,True
+latest12,Year ending June 2026 · July 2025–June 2026,Sweden,1,2.996344459759094e-05,SWE,True
+latest12,Year ending June 2026 · July 2025–June 2026,Ukraine,1,2.996344459759094e-05,UKR,True
+2026,2026 · January–June only,Eritrea,1842,0.15499831706496128,ERI,True
+2026,2026 · January–June only,Sudan,1833,0.15424099629754293,SDN,True
+2026,2026 · January–June only,Somalia,1798,0.15129585997980477,SOM,True
+2026,2026 · January–June only,Afghanistan,1589,0.13370918882531135,AFG,True
+2026,2026 · January–June only,Iran,837,0.07043083136990912,IRN,True
+2026,2026 · January–June only,Not currently recorded,516,0.04341972399865365,,False
+2026,2026 · January–June only,Ethiopia,423,0.03559407606866375,ETH,True
+2026,2026 · January–June only,Iraq,413,0.03475260854931,IRQ,True
+2026,2026 · January–June only,Vietnam,313,0.026337933355772468,VNM,True
+2026,2026 · January–June only,Stateless,284,0.023897677549646584,,False
+2026,2026 · January–June only,India,221,0.01859643217771794,IND,True
+2026,2026 · January–June only,South Sudan,180,0.015146415348367553,SSD,True
+2026,2026 · January–June only,Turkey,174,0.014641534836755302,TUR,True
+2026,2026 · January–June only,Syria,169,0.014220801077078425,SYR,True
+2026,2026 · January–June only,Yemen,157,0.013211040053853922,YEM,True
+2026,2026 · January–June only,Egypt,126,0.010602490743857287,EGY,True
+2026,2026 · January–June only,Sri Lanka,108,0.009087849209020532,LKA,True
+2026,2026 · January–June only,Georgia,97,0.008162234937731404,GEO,True
+2026,2026 · January–June only,Tanzania,97,0.008162234937731404,TZA,True
+2026,2026 · January–June only,Sierra Leone,93,0.007825647929989903,SLE,True
+2026,2026 · January–June only,Palestine,87,0.007320767418377651,PSE,True
+2026,2026 · January–June only,Refugee,73,0.006142712891282397,,False
+2026,2026 · January–June only,Pakistan,72,0.006058566139347021,PAK,True
+2026,2026 · January–June only,Kuwait,59,0.0049646583641871425,KWT,True
+2026,2026 · January–June only,Libya,54,0.004543924604510266,LBY,True
+2026,2026 · January–June only,Tajikistan,51,0.00429148434870414,TJK,True
+2026,2026 · January–June only,Albania,40,0.003365870077415012,ALB,True
+2026,2026 · January–June only,Algeria,20,0.001682935038707506,DZA,True
+2026,2026 · January–June only,Nigeria,17,0.00143049478290138,NGA,True
+2026,2026 · January–June only,Uganda,14,0.0011780545270952542,UGA,True
+2026,2026 · January–June only,Chad,12,0.0010097610232245036,TCD,True
+2026,2026 · January–June only,Other and unknown,11,0.0009256142712891283,,False
+2026,2026 · January–June only,Guinea,10,0.000841467519353753,GIN,True
+2026,2026 · January–June only,Jordan,9,0.0007573207674183777,JOR,True
+2026,2026 · January–June only,Mali,9,0.0007573207674183777,MLI,True
+2026,2026 · January–June only,China,8,0.0006731740154830024,CHN,True
+2026,2026 · January–June only,"Gambia, The",7,0.0005890272635476271,GMB,True
+2026,2026 · January–June only,Lebanon,7,0.0005890272635476271,LBN,True
+2026,2026 · January–June only,Cameroon,6,0.0005048805116122518,CMR,True
+2026,2026 · January–June only,Kenya,6,0.0005048805116122518,KEN,True
+2026,2026 · January–June only,Tunisia,6,0.0005048805116122518,TUN,True
+2026,2026 · January–June only,Morocco,5,0.0004207337596768765,MAR,True
+2026,2026 · January–June only,Uzbekistan,5,0.0004207337596768765,UZB,True
+2026,2026 · January–June only,Russia,3,0.0002524402558061259,RUS,True
+2026,2026 · January–June only,Ivory Coast,2,0.0001682935038707506,CIV,True
+2026,2026 · January–June only,Liberia,2,0.0001682935038707506,LBR,True
+2026,2026 · January–June only,Malawi,2,0.0001682935038707506,MWI,True
+2026,2026 · January–June only,Mauritania,2,0.0001682935038707506,MRT,True
+2026,2026 · January–June only,Niger,2,0.0001682935038707506,NER,True
+2026,2026 · January–June only,Azerbaijan,1,8.41467519353753e-05,AZE,True
+2026,2026 · January–June only,Bangladesh,1,8.41467519353753e-05,BGD,True
+2026,2026 · January–June only,Burundi,1,8.41467519353753e-05,BDI,True
+2026,2026 · January–June only,Congo (Democratic Republic),1,8.41467519353753e-05,COD,True
+2026,2026 · January–June only,Djibouti,1,8.41467519353753e-05,DJI,True
+2026,2026 · January–June only,Germany,1,8.41467519353753e-05,DEU,True
+2026,2026 · January–June only,Ghana,1,8.41467519353753e-05,GHA,True
+2026,2026 · January–June only,Israel,1,8.41467519353753e-05,ISR,True
+2026,2026 · January–June only,Latvia,1,8.41467519353753e-05,LVA,True
+2026,2026 · January–June only,Senegal,1,8.41467519353753e-05,SEN,True
+2026,2026 · January–June only,Sweden,1,8.41467519353753e-05,SWE,True
+2026,2026 · January–June only,Ukraine,1,8.41467519353753e-05,UKR,True
+2026,2026 · January–June only,Zimbabwe,1,8.41467519353753e-05,ZWE,True
+2025,2025 · full calendar year,Eritrea,7583,0.18284625771604937,ERI,True
+2025,2025 · full calendar year,Afghanistan,4801,0.11576485339506173,AFG,True
+2025,2025 · full calendar year,Iran,4505,0.10862750771604938,IRN,True
+2025,2025 · full calendar year,Sudan,4447,0.1072289737654321,SDN,True
+2025,2025 · full calendar year,Somalia,3806,0.09177276234567901,SOM,True
+2025,2025 · full calendar year,Ethiopia,1745,0.042076581790123455,ETH,True
+2025,2025 · full calendar year,Iraq,1706,0.04113618827160494,IRQ,True
+2025,2025 · full calendar year,Syria,1531,0.0369164737654321,SYR,True
+2025,2025 · full calendar year,Vietnam,1440,0.034722222222222224,VNM,True
+2025,2025 · full calendar year,Yemen,1332,0.03211805555555555,YEM,True
+2025,2025 · full calendar year,Refugee,1256,0.030285493827160493,,False
+2025,2025 · full calendar year,Turkey,1158,0.027922453703703703,TUR,True
+2025,2025 · full calendar year,Not currently recorded,877,0.02114679783950617,,False
+2025,2025 · full calendar year,Libya,545,0.013141396604938271,LBY,True
+2025,2025 · full calendar year,Palestine,536,0.012924382716049383,PSE,True
+2025,2025 · full calendar year,Kuwait,526,0.012683256172839507,KWT,True
+2025,2025 · full calendar year,Egypt,493,0.011887538580246914,EGY,True
+2025,2025 · full calendar year,India,461,0.01111593364197531,IND,True
+2025,2025 · full calendar year,Georgia,367,0.008849344135802469,GEO,True
+2025,2025 · full calendar year,South Sudan,332,0.008005401234567902,SSD,True
+2025,2025 · full calendar year,Stateless,276,0.006655092592592593,,False
+2025,2025 · full calendar year,Sri Lanka,273,0.006582754629629629,LKA,True
+2025,2025 · full calendar year,Albania,264,0.00636574074074074,ALB,True
+2025,2025 · full calendar year,Sierra Leone,204,0.004918981481481482,SLE,True
+2025,2025 · full calendar year,Tanzania,179,0.00431616512345679,TZA,True
+2025,2025 · full calendar year,Pakistan,149,0.0035927854938271604,PAK,True
+2025,2025 · full calendar year,Other and unknown,118,0.0028452932098765433,,False
+2025,2025 · full calendar year,Tajikistan,85,0.0020495756172839506,TJK,True
+2025,2025 · full calendar year,"Gambia, The",44,0.0010609567901234567,GMB,True
+2025,2025 · full calendar year,Guinea,35,0.0008439429012345679,GIN,True
+2025,2025 · full calendar year,China,34,0.0008198302469135802,CHN,True
+2025,2025 · full calendar year,Senegal,31,0.0007474922839506172,SEN,True
+2025,2025 · full calendar year,Tunisia,26,0.000626929012345679,TUN,True
+2025,2025 · full calendar year,Chad,24,0.0005787037037037037,TCD,True
+2025,2025 · full calendar year,Algeria,23,0.000554591049382716,DZA,True
+2025,2025 · full calendar year,Mali,22,0.0005304783950617284,MLI,True
+2025,2025 · full calendar year,Lebanon,21,0.0005063657407407407,LBN,True
+2025,2025 · full calendar year,Nigeria,20,0.00048225308641975306,NGA,True
+2025,2025 · full calendar year,Morocco,19,0.0004581404320987654,MAR,True
+2025,2025 · full calendar year,Jordan,16,0.00038580246913580245,JOR,True
+2025,2025 · full calendar year,Russia,15,0.0003616898148148148,RUS,True
+2025,2025 · full calendar year,Uganda,14,0.00033757716049382714,UGA,True
+2025,2025 · full calendar year,Ivory Coast,13,0.0003134645061728395,CIV,True
+2025,2025 · full calendar year,Niger,12,0.00028935185185185184,NER,True
+2025,2025 · full calendar year,Azerbaijan,11,0.0002652391975308642,AZE,True
+2025,2025 · full calendar year,Kenya,9,0.00021701388888888888,KEN,True
+2025,2025 · full calendar year,Bangladesh,8,0.00019290123456790122,BGD,True
+2025,2025 · full calendar year,Uzbekistan,8,0.00019290123456790122,UZB,True
+2025,2025 · full calendar year,Cameroon,7,0.00016878858024691357,CMR,True
+2025,2025 · full calendar year,Germany,7,0.00016878858024691357,DEU,True
+2025,2025 · full calendar year,Dominica,6,0.00014467592592592592,DMA,True
+2025,2025 · full calendar year,Armenia,4,9.645061728395061e-05,ARM,True
+2025,2025 · full calendar year,Congo (Democratic Republic),4,9.645061728395061e-05,COD,True
+2025,2025 · full calendar year,Kosovo,4,9.645061728395061e-05,XKX,True
+2025,2025 · full calendar year,Mauritania,4,9.645061728395061e-05,MRT,True
+2025,2025 · full calendar year,Djibouti,3,7.233796296296296e-05,DJI,True
+2025,2025 · full calendar year,Ghana,3,7.233796296296296e-05,GHA,True
+2025,2025 · full calendar year,Liberia,2,4.8225308641975306e-05,LBR,True
+2025,2025 · full calendar year,Nepal,2,4.8225308641975306e-05,NPL,True
+2025,2025 · full calendar year,Philippines,2,4.8225308641975306e-05,PHL,True
+2025,2025 · full calendar year,Saudi Arabia,2,4.8225308641975306e-05,SAU,True
+2025,2025 · full calendar year,St Lucia,2,4.8225308641975306e-05,LCA,True
+2025,2025 · full calendar year,Thailand,2,4.8225308641975306e-05,THA,True
+2025,2025 · full calendar year,Western Sahara,2,4.8225308641975306e-05,ESH,True
+2025,2025 · full calendar year,Zimbabwe,2,4.8225308641975306e-05,ZWE,True
+2025,2025 · full calendar year,Brazil,1,2.4112654320987653e-05,BRA,True
+2025,2025 · full calendar year,Burkina Faso,1,2.4112654320987653e-05,BFA,True
+2025,2025 · full calendar year,Burundi,1,2.4112654320987653e-05,BDI,True
+2025,2025 · full calendar year,Central African Republic,1,2.4112654320987653e-05,CAF,True
+2025,2025 · full calendar year,Congo,1,2.4112654320987653e-05,COG,True
+2025,2025 · full calendar year,Greece,1,2.4112654320987653e-05,GRC,True
+2025,2025 · full calendar year,Indonesia,1,2.4112654320987653e-05,IDN,True
+2025,2025 · full calendar year,Kazakhstan,1,2.4112654320987653e-05,KAZ,True
+2025,2025 · full calendar year,Kyrgyzstan,1,2.4112654320987653e-05,KGZ,True
+2025,2025 · full calendar year,Mozambique,1,2.4112654320987653e-05,MOZ,True
+2025,2025 · full calendar year,Myanmar (Burma),1,2.4112654320987653e-05,MMR,True
+2025,2025 · full calendar year,Papua New Guinea,1,2.4112654320987653e-05,PNG,True
+2025,2025 · full calendar year,South Africa,1,2.4112654320987653e-05,ZAF,True
+2025,2025 · full calendar year,United States,1,2.4112654320987653e-05,USA,True
+2024,2024 · full calendar year,Afghanistan,6065,0.1647381573229031,AFG,True
+2024,2024 · full calendar year,Syria,4693,0.1274717514124294,SYR,True
+2024,2024 · full calendar year,Iran,4214,0.11446110386788352,IRN,True
+2024,2024 · full calendar year,Vietnam,3658,0.09935897435897435,VNM,True
+2024,2024 · full calendar year,Eritrea,3480,0.09452411994784876,ERI,True
+2024,2024 · full calendar year,Sudan,2748,0.07464146023468057,SDN,True
+2024,2024 · full calendar year,Iraq,2142,0.05818122555410691,IRQ,True
+2024,2024 · full calendar year,Turkey,1944,0.052803129074315516,TUR,True
+2024,2024 · full calendar year,Yemen,1300,0.03531073446327684,YEM,True
+2024,2024 · full calendar year,Not currently recorded,739,0.020072794437201218,,False
+2024,2024 · full calendar year,Refugee,697,0.01893198609300304,,False
+2024,2024 · full calendar year,Somalia,697,0.01893198609300304,SOM,True
+2024,2024 · full calendar year,Albania,635,0.01724793568013907,ALB,True
+2024,2024 · full calendar year,Ethiopia,508,0.013798348544111256,ETH,True
+2024,2024 · full calendar year,Kuwait,462,0.012548891786179921,KWT,True
+2024,2024 · full calendar year,Libya,382,0.010375923511516732,LBY,True
+2024,2024 · full calendar year,Egypt,378,0.010267275097783572,EGY,True
+2024,2024 · full calendar year,Sri Lanka,334,0.009072142546718818,LKA,True
+2024,2024 · full calendar year,South Sudan,328,0.008909169926119079,SSD,True
+2024,2024 · full calendar year,Georgia,316,0.0085832246849196,GEO,True
+2024,2024 · full calendar year,India,293,0.007958496305953933,IND,True
+2024,2024 · full calendar year,Stateless,138,0.0037483702737940027,,False
+2024,2024 · full calendar year,Pakistan,91,0.0024717514124293787,PAK,True
+2024,2024 · full calendar year,Tanzania,73,0.0019828335506301606,TZA,True
+2024,2024 · full calendar year,Palestine,72,0.001955671447196871,PSE,True
+2024,2024 · full calendar year,Sierra Leone,58,0.0015754019991308127,SLE,True
+2024,2024 · full calendar year,Nigeria,46,0.0012494567579313341,NGA,True
+2024,2024 · full calendar year,Algeria,31,0.0008420252064319861,DZA,True
+2024,2024 · full calendar year,Guinea,31,0.0008420252064319861,GIN,True
+2024,2024 · full calendar year,Chad,29,0.0007877009995654064,TCD,True
+2024,2024 · full calendar year,Morocco,28,0.0007605388961321165,MAR,True
+2024,2024 · full calendar year,Tunisia,23,0.0006247283789656671,TUN,True
+2024,2024 · full calendar year,China,18,0.0004889178617992178,CHN,True
+2024,2024 · full calendar year,"Gambia, The",16,0.000434593654932638,GMB,True
+2024,2024 · full calendar year,Lebanon,14,0.00038026944806605824,LBN,True
+2024,2024 · full calendar year,Other and unknown,13,0.00035310734463276836,,False
+2024,2024 · full calendar year,Tajikistan,13,0.00035310734463276836,TJK,True
+2024,2024 · full calendar year,Senegal,12,0.0003259452411994785,SEN,True
+2024,2024 · full calendar year,Kosovo,9,0.0002444589308996089,XKX,True
+2024,2024 · full calendar year,Bangladesh,8,0.000217296827466319,BGD,True
+2024,2024 · full calendar year,Niger,7,0.00019013472403302912,NER,True
+2024,2024 · full calendar year,Russia,7,0.00019013472403302912,RUS,True
+2024,2024 · full calendar year,Ivory Coast,5,0.00013581051716644936,CIV,True
+2024,2024 · full calendar year,Ukraine,5,0.00013581051716644936,UKR,True
+2024,2024 · full calendar year,Cameroon,4,0.0001086484137331595,CMR,True
+2024,2024 · full calendar year,Ghana,4,0.0001086484137331595,GHA,True
+2024,2024 · full calendar year,Kenya,4,0.0001086484137331595,KEN,True
+2024,2024 · full calendar year,Serbia,4,0.0001086484137331595,SRB,True
+2024,2024 · full calendar year,Dominica,3,8.148631029986962e-05,DMA,True
+2024,2024 · full calendar year,Jordan,3,8.148631029986962e-05,JOR,True
+2024,2024 · full calendar year,Uzbekistan,3,8.148631029986962e-05,UZB,True
+2024,2024 · full calendar year,Azerbaijan,2,5.432420686657975e-05,AZE,True
+2024,2024 · full calendar year,Benin,2,5.432420686657975e-05,BEN,True
+2024,2024 · full calendar year,Congo (Democratic Republic),2,5.432420686657975e-05,COD,True
+2024,2024 · full calendar year,Cyprus,2,5.432420686657975e-05,CYP,True
+2024,2024 · full calendar year,Indonesia,2,5.432420686657975e-05,IDN,True
+2024,2024 · full calendar year,Mali,2,5.432420686657975e-05,MLI,True
+2024,2024 · full calendar year,Saudi Arabia,2,5.432420686657975e-05,SAU,True
+2024,2024 · full calendar year,Belarus,1,2.7162103433289875e-05,BLR,True
+2024,2024 · full calendar year,Belgium,1,2.7162103433289875e-05,BEL,True
+2024,2024 · full calendar year,British overseas citizens,1,2.7162103433289875e-05,,False
+2024,2024 · full calendar year,Burundi,1,2.7162103433289875e-05,BDI,True
+2024,2024 · full calendar year,Djibouti,1,2.7162103433289875e-05,DJI,True
+2024,2024 · full calendar year,France,1,2.7162103433289875e-05,FRA,True
+2024,2024 · full calendar year,Germany,1,2.7162103433289875e-05,DEU,True
+2024,2024 · full calendar year,Greece,1,2.7162103433289875e-05,GRC,True
+2024,2024 · full calendar year,Israel,1,2.7162103433289875e-05,ISR,True
+2024,2024 · full calendar year,Kazakhstan,1,2.7162103433289875e-05,KAZ,True
+2024,2024 · full calendar year,Mauritania,1,2.7162103433289875e-05,MRT,True
+2024,2024 · full calendar year,Moldova,1,2.7162103433289875e-05,MDA,True
+2024,2024 · full calendar year,Nepal,1,2.7162103433289875e-05,NPL,True
+2024,2024 · full calendar year,Philippines,1,2.7162103433289875e-05,PHL,True
+2024,2024 · full calendar year,Poland,1,2.7162103433289875e-05,POL,True
+2024,2024 · full calendar year,Turkmenistan,1,2.7162103433289875e-05,TKM,True
+2024,2024 · full calendar year,Western Sahara,1,2.7162103433289875e-05,ESH,True
+2023,2023 · full calendar year,Afghanistan,5511,0.18721337092774398,AFG,True
+2023,2023 · full calendar year,Iran,3582,0.12168359547508238,IRN,True
+2023,2023 · full calendar year,Turkey,3058,0.10388286849882801,TUR,True
+2023,2023 · full calendar year,Eritrea,2666,0.09056629411964534,ERI,True
+2023,2023 · full calendar year,Iraq,2536,0.08615008322858987,IRQ,True
+2023,2023 · full calendar year,Syria,2275,0.0772836905934708,SYR,True
+2023,2023 · full calendar year,Sudan,1658,0.05632367428746136,SDN,True
+2023,2023 · full calendar year,Vietnam,1306,0.044365934028603456,VNM,True
+2023,2023 · full calendar year,India,1214,0.041240615551856506,IND,True
+2023,2023 · full calendar year,Not currently recorded,1036,0.03519380371641132,,False
+2023,2023 · full calendar year,Albania,927,0.031490980738526346,ALB,True
+2023,2023 · full calendar year,Egypt,810,0.02751639093657642,EGY,True
+2023,2023 · full calendar year,Georgia,572,0.019431327920644087,GEO,True
+2023,2023 · full calendar year,Kuwait,309,0.01049699357950878,KWT,True
+2023,2023 · full calendar year,Sri Lanka,296,0.010055372490403234,LKA,True
+2023,2023 · full calendar year,South Sudan,256,0.008696538370078473,SSD,True
+2023,2023 · full calendar year,Ethiopia,249,0.008458742399021639,ETH,True
+2023,2023 · full calendar year,Somalia,248,0.00842477154601352,SOM,True
+2023,2023 · full calendar year,Libya,223,0.007575500220810545,LBY,True
+2023,2023 · full calendar year,Pakistan,107,0.0036348812718687367,PAK,True
+2023,2023 · full calendar year,Yemen,91,0.0030913476237388322,YEM,True
+2023,2023 · full calendar year,Stateless,51,0.0017325135034140708,,False
+2023,2023 · full calendar year,Tunisia,47,0.0015966300913815945,TUN,True
+2023,2023 · full calendar year,Palestine,43,0.0014607466793491184,PSE,True
+2023,2023 · full calendar year,Guinea,41,0.0013928049733328803,GIN,True
+2023,2023 · full calendar year,Algeria,38,0.0012908924143085233,DZA,True
+2023,2023 · full calendar year,Chad,35,0.0011889798552841661,TCD,True
+2023,2023 · full calendar year,Nigeria,34,0.0011550090022760472,NGA,True
+2023,2023 · full calendar year,Morocco,27,0.0009172130312192139,MAR,True
+2023,2023 · full calendar year,"Gambia, The",23,0.0007813296191867378,GMB,True
+2023,2023 · full calendar year,Refugee,22,0.0007473587661786188,,False
+2023,2023 · full calendar year,Azerbaijan,12,0.0004076502360974284,AZE,True
+2023,2023 · full calendar year,Lebanon,12,0.0004076502360974284,LBN,True
+2023,2023 · full calendar year,Senegal,11,0.0003736793830893094,SEN,True
+2023,2023 · full calendar year,Tajikistan,11,0.0003736793830893094,TJK,True
+2023,2023 · full calendar year,Tanzania,11,0.0003736793830893094,TZA,True
+2023,2023 · full calendar year,Sierra Leone,10,0.00033970853008119035,SLE,True
+2023,2023 · full calendar year,Bangladesh,6,0.0002038251180487142,BGD,True
+2023,2023 · full calendar year,Ghana,6,0.0002038251180487142,GHA,True
+2023,2023 · full calendar year,Mali,5,0.00016985426504059517,MLI,True
+2023,2023 · full calendar year,China,4,0.00013588341203247614,CHN,True
+2023,2023 · full calendar year,Ivory Coast,4,0.00013588341203247614,CIV,True
+2023,2023 · full calendar year,Russia,4,0.00013588341203247614,RUS,True
+2023,2023 · full calendar year,Burkina Faso,3,0.0001019125590243571,BFA,True
+2023,2023 · full calendar year,Cameroon,3,0.0001019125590243571,CMR,True
+2023,2023 · full calendar year,Kosovo,3,0.0001019125590243571,XKX,True
+2023,2023 · full calendar year,Togo,3,0.0001019125590243571,TGO,True
+2023,2023 · full calendar year,Western Sahara,3,0.0001019125590243571,ESH,True
+2023,2023 · full calendar year,Cyprus (Northern part of),2,6.794170601623807e-05,,False
+2023,2023 · full calendar year,French Guiana (French),2,6.794170601623807e-05,,False
+2023,2023 · full calendar year,Germany,2,6.794170601623807e-05,DEU,True
+2023,2023 · full calendar year,Kazakhstan,2,6.794170601623807e-05,KAZ,True
+2023,2023 · full calendar year,Kenya,2,6.794170601623807e-05,KEN,True
+2023,2023 · full calendar year,Liberia,2,6.794170601623807e-05,LBR,True
+2023,2023 · full calendar year,Niger,2,6.794170601623807e-05,NER,True
+2023,2023 · full calendar year,Benin,1,3.3970853008119036e-05,BEN,True
+2023,2023 · full calendar year,Bulgaria,1,3.3970853008119036e-05,BGR,True
+2023,2023 · full calendar year,Burundi,1,3.3970853008119036e-05,BDI,True
+2023,2023 · full calendar year,Congo,1,3.3970853008119036e-05,COG,True
+2023,2023 · full calendar year,Congo (Democratic Republic),1,3.3970853008119036e-05,COD,True
+2023,2023 · full calendar year,Equatorial Guinea,1,3.3970853008119036e-05,GNQ,True
+2023,2023 · full calendar year,Finland,1,3.3970853008119036e-05,FIN,True
+2023,2023 · full calendar year,Guinea-Bissau,1,3.3970853008119036e-05,GNB,True
+2023,2023 · full calendar year,Israel,1,3.3970853008119036e-05,ISR,True
+2023,2023 · full calendar year,Italy,1,3.3970853008119036e-05,ITA,True
+2023,2023 · full calendar year,Jordan,1,3.3970853008119036e-05,JOR,True
+2023,2023 · full calendar year,Moldova,1,3.3970853008119036e-05,MDA,True
+2023,2023 · full calendar year,Nepal,1,3.3970853008119036e-05,NPL,True
+2023,2023 · full calendar year,North Macedonia,1,3.3970853008119036e-05,MKD,True
+2023,2023 · full calendar year,Other and unknown,1,3.3970853008119036e-05,,False
+2023,2023 · full calendar year,Papua New Guinea,1,3.3970853008119036e-05,PNG,True
+2023,2023 · full calendar year,Saudi Arabia,1,3.3970853008119036e-05,SAU,True
+2023,2023 · full calendar year,Thailand,1,3.3970853008119036e-05,THA,True
+2023,2023 · full calendar year,Ukraine,1,3.3970853008119036e-05,UKR,True
+2023,2023 · full calendar year,Uzbekistan,1,3.3970853008119036e-05,UZB,True
+2023,2023 · full calendar year,Zimbabwe,1,3.3970853008119036e-05,ZWE,True
+2022,2022 · full calendar year,Albania,12658,0.2765325293834928,ALB,True
+2022,2022 · full calendar year,Afghanistan,9088,0.19854065626775025,AFG,True
+2022,2022 · full calendar year,Iran,5841,0.12760519071962248,IRN,True
+2022,2022 · full calendar year,Iraq,4574,0.09992572202560406,IRQ,True
+2022,2022 · full calendar year,Syria,3006,0.0656704679512387,SYR,True
+2022,2022 · full calendar year,Eritrea,2020,0.04412985537641456,ERI,True
+2022,2022 · full calendar year,Sudan,1762,0.03849346790754577,SDN,True
+2022,2022 · full calendar year,Egypt,1233,0.026936688950058987,EGY,True
+2022,2022 · full calendar year,Turkey,1127,0.024620963865950102,TUR,True
+2022,2022 · full calendar year,India,748,0.016341154367107966,IND,True
+2022,2022 · full calendar year,Ethiopia,530,0.011578625420544414,ETH,True
+2022,2022 · full calendar year,Vietnam,505,0.01103246384410364,VNM,True
+2022,2022 · full calendar year,Kuwait,374,0.008170577183553983,KWT,True
+2022,2022 · full calendar year,Georgia,313,0.006837942937038493,GEO,True
+2022,2022 · full calendar year,Pakistan,216,0.0047188360204482895,PAK,True
+2022,2022 · full calendar year,Not currently recorded,200,0.004369292611526194,,False
+2022,2022 · full calendar year,Stateless,198,0.004325599685410932,,False
+2022,2022 · full calendar year,Sri Lanka,182,0.0039760562764888365,LKA,True
+2022,2022 · full calendar year,Yemen,160,0.0034954340892209552,YEM,True
+2022,2022 · full calendar year,Algeria,133,0.002905579586664919,DZA,True
+2022,2022 · full calendar year,Libya,133,0.002905579586664919,LBY,True
+2022,2022 · full calendar year,South Sudan,129,0.002818193734434395,SSD,True
+2022,2022 · full calendar year,Chad,95,0.002075413990474942,TCD,True
+2022,2022 · full calendar year,Somalia,86,0.0018787958229562634,SOM,True
+2022,2022 · full calendar year,Palestine,64,0.001398173635688382,PSE,True
+2022,2022 · full calendar year,Nigeria,50,0.0010923231528815484,NGA,True
+2022,2022 · full calendar year,Tunisia,50,0.0010923231528815484,TUN,True
+2022,2022 · full calendar year,Refugee,45,0.0009830908375933936,,False
+2022,2022 · full calendar year,Morocco,32,0.000699086817844191,MAR,True
+2022,2022 · full calendar year,Guinea,27,0.0005898545025560362,GIN,True
+2022,2022 · full calendar year,"Gambia, The",19,0.0004150827980949884,GMB,True
+2022,2022 · full calendar year,Lebanon,19,0.0004150827980949884,LBN,True
+2022,2022 · full calendar year,Kosovo,15,0.00032769694586446454,XKX,True
+2022,2022 · full calendar year,Tanzania,12,0.00026215755669157164,TZA,True
+2022,2022 · full calendar year,Burkina Faso,11,0.00024031109363394066,BFA,True
+2022,2022 · full calendar year,Sierra Leone,11,0.00024031109363394066,SLE,True
+2022,2022 · full calendar year,Mali,10,0.0002184646305763097,MLI,True
+2022,2022 · full calendar year,Bangladesh,9,0.00019661816751867872,BGD,True
+2022,2022 · full calendar year,Cameroon,9,0.00019661816751867872,CMR,True
+2022,2022 · full calendar year,Tajikistan,7,0.00015292524140341678,TJK,True
+2022,2022 · full calendar year,Senegal,6,0.00013107877834578582,SEN,True
+2022,2022 · full calendar year,Ghana,5,0.00010923231528815485,GHA,True
+2022,2022 · full calendar year,Ivory Coast,5,0.00010923231528815485,CIV,True
+2022,2022 · full calendar year,Jordan,5,0.00010923231528815485,JOR,True
+2022,2022 · full calendar year,Cyprus (Northern part of),4,8.738585223052388e-05,,False
+2022,2022 · full calendar year,North Macedonia,4,8.738585223052388e-05,MKD,True
+2022,2022 · full calendar year,China,3,6.553938917289291e-05,CHN,True
+2022,2022 · full calendar year,Mauritania,3,6.553938917289291e-05,MRT,True
+2022,2022 · full calendar year,Moldova,3,6.553938917289291e-05,MDA,True
+2022,2022 · full calendar year,Russia,3,6.553938917289291e-05,RUS,True
+2022,2022 · full calendar year,Azerbaijan,2,4.369292611526194e-05,AZE,True
+2022,2022 · full calendar year,Burundi,2,4.369292611526194e-05,BDI,True
+2022,2022 · full calendar year,Germany,2,4.369292611526194e-05,DEU,True
+2022,2022 · full calendar year,Liberia,2,4.369292611526194e-05,LBR,True
+2022,2022 · full calendar year,Montenegro,2,4.369292611526194e-05,MNE,True
+2022,2022 · full calendar year,Saudi Arabia,2,4.369292611526194e-05,SAU,True
+2022,2022 · full calendar year,Bahrain,1,2.184646305763097e-05,BHR,True
+2022,2022 · full calendar year,Benin,1,2.184646305763097e-05,BEN,True
+2022,2022 · full calendar year,Bolivia,1,2.184646305763097e-05,BOL,True
+2022,2022 · full calendar year,Bosnia and Herzegovina,1,2.184646305763097e-05,BIH,True
+2022,2022 · full calendar year,Central African Republic,1,2.184646305763097e-05,CAF,True
+2022,2022 · full calendar year,Guinea-Bissau,1,2.184646305763097e-05,GNB,True
+2022,2022 · full calendar year,Guyana,1,2.184646305763097e-05,GUY,True
+2022,2022 · full calendar year,Indonesia,1,2.184646305763097e-05,IDN,True
+2022,2022 · full calendar year,Israel,1,2.184646305763097e-05,ISR,True
+2022,2022 · full calendar year,Jamaica,1,2.184646305763097e-05,JAM,True
+2022,2022 · full calendar year,Kazakhstan,1,2.184646305763097e-05,KAZ,True
+2022,2022 · full calendar year,Kenya,1,2.184646305763097e-05,KEN,True
+2022,2022 · full calendar year,Myanmar (Burma),1,2.184646305763097e-05,MMR,True
+2022,2022 · full calendar year,Other and unknown,1,2.184646305763097e-05,,False
+2022,2022 · full calendar year,Philippines,1,2.184646305763097e-05,PHL,True
+2022,2022 · full calendar year,Poland,1,2.184646305763097e-05,POL,True
+2022,2022 · full calendar year,Qatar,1,2.184646305763097e-05,QAT,True
+2022,2022 · full calendar year,Ukraine,1,2.184646305763097e-05,UKR,True
+2022,2022 · full calendar year,Western Sahara,1,2.184646305763097e-05,ESH,True
+2022,2022 · full calendar year,Zimbabwe,1,2.184646305763097e-05,ZWE,True
+2021,2021 · full calendar year,Iran,8319,0.29162868961649024,IRN,True
+2021,2021 · full calendar year,Iraq,6117,0.2144359531655332,IRQ,True
+2021,2021 · full calendar year,Eritrea,2875,0.10078524854518685,ERI,True
+2021,2021 · full calendar year,Syria,2451,0.08592161536843582,SYR,True
+2021,2021 · full calendar year,Afghanistan,1437,0.050375096403281215,AFG,True
+2021,2021 · full calendar year,Vietnam,1403,0.04918320129005118,VNM,True
+2021,2021 · full calendar year,Sudan,1064,0.037299305896375236,SDN,True
+2021,2021 · full calendar year,Albania,815,0.028570426978896446,ALB,True
+2021,2021 · full calendar year,Not currently recorded,582,0.02040243987940826,,False
+2021,2021 · full calendar year,Ethiopia,544,0.01907032181168057,ETH,True
+2021,2021 · full calendar year,Kuwait,537,0.018824931641309682,KWT,True
+2021,2021 · full calendar year,Stateless,498,0.017457757834957583,,False
+2021,2021 · full calendar year,Egypt,366,0.01283040033653509,EGY,True
+2021,2021 · full calendar year,Somalia,318,0.011147724882563275,SOM,True
+2021,2021 · full calendar year,Pakistan,161,0.0056439739185304635,PAK,True
+2021,2021 · full calendar year,Libya,160,0.00560891817990605,LBY,True
+2021,2021 · full calendar year,Yemen,135,0.00473252471429573,YEM,True
+2021,2021 · full calendar year,Algeria,109,0.003821075510060997,DZA,True
+2021,2021 · full calendar year,Palestine,95,0.0033302951693192175,PSE,True
+2021,2021 · full calendar year,Sri Lanka,80,0.002804459089953025,LKA,True
+2021,2021 · full calendar year,Turkey,69,0.0024188459650844843,TUR,True
+2021,2021 · full calendar year,India,67,0.002348734487835659,IND,True
+2021,2021 · full calendar year,South Sudan,62,0.0021734557947135948,SSD,True
+2021,2021 · full calendar year,Refugee,42,0.0014723410222253384,,False
+2021,2021 · full calendar year,Chad,38,0.001332118067727687,TCD,True
+2021,2021 · full calendar year,"Gambia, The",22,0.000771226249737082,GMB,True
+2021,2021 · full calendar year,Guinea,21,0.0007361705111126692,GIN,True
+2021,2021 · full calendar year,Morocco,19,0.0006660590338638435,MAR,True
+2021,2021 · full calendar year,Tunisia,13,0.0004557246021173666,TUN,True
+2021,2021 · full calendar year,Mali,12,0.0004206688634929538,MLI,True
+2021,2021 · full calendar year,Niger,11,0.000385613124868541,NER,True
+2021,2021 · full calendar year,Other and unknown,11,0.000385613124868541,,False
+2021,2021 · full calendar year,Senegal,9,0.00031550164761971533,SEN,True
+2021,2021 · full calendar year,China,7,0.0002453901703708897,CHN,True
+2021,2021 · full calendar year,Nigeria,7,0.0002453901703708897,NGA,True
+2021,2021 · full calendar year,Ivory Coast,6,0.0002103344317464769,CIV,True
+2021,2021 · full calendar year,Lebanon,6,0.0002103344317464769,LBN,True
+2021,2021 · full calendar year,Ghana,5,0.00017527869312206407,GHA,True
+2021,2021 · full calendar year,Central African Republic,4,0.00014022295449765126,CAF,True
+2021,2021 · full calendar year,Bangladesh,3,0.00010516721587323845,BGD,True
+2021,2021 · full calendar year,Mauritania,3,0.00010516721587323845,MRT,True
+2021,2021 · full calendar year,Brazil,2,7.011147724882563e-05,BRA,True
+2021,2021 · full calendar year,Djibouti,2,7.011147724882563e-05,DJI,True
+2021,2021 · full calendar year,Jordan,2,7.011147724882563e-05,JOR,True
+2021,2021 · full calendar year,Liberia,2,7.011147724882563e-05,LBR,True
+2021,2021 · full calendar year,Russia,2,7.011147724882563e-05,RUS,True
+2021,2021 · full calendar year,Saudi Arabia,2,7.011147724882563e-05,SAU,True
+2021,2021 · full calendar year,Andorra,1,3.5055738624412815e-05,AND,True
+2021,2021 · full calendar year,Belarus,1,3.5055738624412815e-05,BLR,True
+2021,2021 · full calendar year,Burkina Faso,1,3.5055738624412815e-05,BFA,True
+2021,2021 · full calendar year,Cameroon,1,3.5055738624412815e-05,CMR,True
+2021,2021 · full calendar year,Denmark,1,3.5055738624412815e-05,DNK,True
+2021,2021 · full calendar year,Guinea-Bissau,1,3.5055738624412815e-05,GNB,True
+2021,2021 · full calendar year,Haiti,1,3.5055738624412815e-05,HTI,True
+2021,2021 · full calendar year,South Africa,1,3.5055738624412815e-05,ZAF,True
+2021,2021 · full calendar year,Tajikistan,1,3.5055738624412815e-05,TJK,True
+2021,2021 · full calendar year,United Arab Emirates,1,3.5055738624412815e-05,ARE,True
+2021,2021 · full calendar year,Western Sahara,1,3.5055738624412815e-05,ESH,True
+2020,2020 · full calendar year,Iran,2373,0.28029766123316796,IRN,True
+2020,2020 · full calendar year,Iraq,1648,0.19466099692889205,IRQ,True
+2020,2020 · full calendar year,Sudan,969,0.1144578313253012,SDN,True
+2020,2020 · full calendar year,Syria,776,0.0916607606898181,SYR,True
+2020,2020 · full calendar year,Eritrea,511,0.060359083392393105,ERI,True
+2020,2020 · full calendar year,Afghanistan,494,0.058351051263879045,AFG,True
+2020,2020 · full calendar year,Stateless,389,0.04594849988188046,,False
+2020,2020 · full calendar year,Yemen,252,0.029766123316796598,YEM,True
+2020,2020 · full calendar year,Vietnam,118,0.013938105362626978,VNM,True
+2020,2020 · full calendar year,Ethiopia,108,0.012756909992912827,ETH,True
+2020,2020 · full calendar year,Pakistan,104,0.012284431845027168,PAK,True
+2020,2020 · full calendar year,Refugee,99,0.011693834160170093,,False
+2020,2020 · full calendar year,Kuwait,79,0.00933144342074179,KWT,True
+2020,2020 · full calendar year,India,64,0.007559650366170565,IND,True
+2020,2020 · full calendar year,Palestine,62,0.007323411292227734,PSE,True
+2020,2020 · full calendar year,Chad,59,0.006969052681313489,TCD,True
+2020,2020 · full calendar year,Albania,54,0.0063784549964564135,ALB,True
+2020,2020 · full calendar year,Egypt,53,0.006260335459484999,EGY,True
+2020,2020 · full calendar year,South Sudan,34,0.004016064257028112,SSD,True
+2020,2020 · full calendar year,Mali,32,0.0037798251830852823,MLI,True
+2020,2020 · full calendar year,Libya,28,0.003307347035199622,LBY,True
+2020,2020 · full calendar year,Guinea,24,0.002834868887313962,GIN,True
+2020,2020 · full calendar year,Sri Lanka,18,0.002126151665485471,LKA,True
+2020,2020 · full calendar year,"Gambia, The",16,0.0018899125915426411,GMB,True
+2020,2020 · full calendar year,Senegal,14,0.001653673517599811,SEN,True
+2020,2020 · full calendar year,Somalia,14,0.001653673517599811,SOM,True
+2020,2020 · full calendar year,Algeria,10,0.0011811953697141507,DZA,True
+2020,2020 · full calendar year,Ivory Coast,10,0.0011811953697141507,CIV,True
+2020,2020 · full calendar year,Turkey,10,0.0011811953697141507,TUR,True
+2020,2020 · full calendar year,Nigeria,8,0.0009449562957713206,NGA,True
+2020,2020 · full calendar year,Morocco,7,0.0008268367587999055,MAR,True
+2020,2020 · full calendar year,Niger,4,0.0004724781478856603,NER,True
+2020,2020 · full calendar year,Georgia,3,0.00035435861091424523,GEO,True
+2020,2020 · full calendar year,Guinea-Bissau,3,0.00035435861091424523,GNB,True
+2020,2020 · full calendar year,Mauritania,3,0.00035435861091424523,MRT,True
+2020,2020 · full calendar year,Ghana,2,0.00023623907394283014,GHA,True
+2020,2020 · full calendar year,Sierra Leone,2,0.00023623907394283014,SLE,True
+2020,2020 · full calendar year,Tajikistan,2,0.00023623907394283014,TJK,True
+2020,2020 · full calendar year,Benin,1,0.00011811953697141507,BEN,True
+2020,2020 · full calendar year,Burkina Faso,1,0.00011811953697141507,BFA,True
+2020,2020 · full calendar year,Central African Republic,1,0.00011811953697141507,CAF,True
+2020,2020 · full calendar year,China,1,0.00011811953697141507,CHN,True
+2020,2020 · full calendar year,Jamaica,1,0.00011811953697141507,JAM,True
+2020,2020 · full calendar year,Lebanon,1,0.00011811953697141507,LBN,True
+2020,2020 · full calendar year,Liberia,1,0.00011811953697141507,LBR,True
+2020,2020 · full calendar year,Myanmar (Burma),1,0.00011811953697141507,MMR,True
+2020,2020 · full calendar year,Other and unknown,1,0.00011811953697141507,,False
+2020,2020 · full calendar year,Russia,1,0.00011811953697141507,RUS,True
+2019,2019 · full calendar year,Iran,1213,0.6581660336408031,IRN,True
+2019,2019 · full calendar year,Iraq,471,0.2555615843733044,IRQ,True
+2019,2019 · full calendar year,Afghanistan,69,0.037438958220293,AFG,True
+2019,2019 · full calendar year,Pakistan,25,0.013564839934888768,PAK,True
+2019,2019 · full calendar year,Syria,14,0.007596310363537711,SYR,True
+2019,2019 · full calendar year,Albania,13,0.00705371676614216,ALB,True
+2019,2019 · full calendar year,Refugee,7,0.0037981551817688553,,False
+2019,2019 · full calendar year,Ethiopia,5,0.0027129679869777536,ETH,True
+2019,2019 · full calendar year,Vietnam,3,0.0016277807921866521,VNM,True
+2019,2019 · full calendar year,"Gambia, The",2,0.0010851871947911015,GMB,True
+2019,2019 · full calendar year,Guinea,2,0.0010851871947911015,GIN,True
+2019,2019 · full calendar year,Kuwait,2,0.0010851871947911015,KWT,True
+2019,2019 · full calendar year,Mali,2,0.0010851871947911015,MLI,True
+2019,2019 · full calendar year,Nigeria,2,0.0010851871947911015,NGA,True
+2019,2019 · full calendar year,Stateless,2,0.0010851871947911015,,False
+2019,2019 · full calendar year,Tajikistan,2,0.0010851871947911015,TJK,True
+2019,2019 · full calendar year,Turkey,2,0.0010851871947911015,TUR,True
+2019,2019 · full calendar year,Azerbaijan,1,0.0005425935973955507,AZE,True
+2019,2019 · full calendar year,Egypt,1,0.0005425935973955507,EGY,True
+2019,2019 · full calendar year,Ivory Coast,1,0.0005425935973955507,CIV,True
+2019,2019 · full calendar year,Lebanon,1,0.0005425935973955507,LBN,True
+2019,2019 · full calendar year,Niger,1,0.0005425935973955507,NER,True
+2019,2019 · full calendar year,Philippines,1,0.0005425935973955507,PHL,True
+2019,2019 · full calendar year,Uzbekistan,1,0.0005425935973955507,UZB,True
+2018,2018 · full calendar year,Iran,238,0.7959866220735786,IRN,True
+2018,2018 · full calendar year,Iraq,33,0.11036789297658862,IRQ,True
+2018,2018 · full calendar year,Albania,16,0.05351170568561873,ALB,True
+2018,2018 · full calendar year,Ukraine,4,0.013377926421404682,UKR,True
+2018,2018 · full calendar year,Vietnam,4,0.013377926421404682,VNM,True
+2018,2018 · full calendar year,Afghanistan,3,0.010033444816053512,AFG,True
+2018,2018 · full calendar year,Syria,1,0.0033444816053511705,SYR,True
+all,All available · January 2018–June 2026,Iran,31122,0.1521731689786179,IRN,True
+all,All available · January 2018–June 2026,Afghanistan,29057,0.14207620882371635,AFG,True
+all,All available · January 2018–June 2026,Eritrea,20977,0.10256849063892,ERI,True
+all,All available · January 2018–June 2026,Iraq,19640,0.09603113677591593,IRQ,True
+all,All available · January 2018–June 2026,Albania,15422,0.07540693438687249,ALB,True
+all,All available · January 2018–June 2026,Syria,14916,0.07293281243124043,SYR,True
+all,All available · January 2018–June 2026,Sudan,14481,0.07080584988045004,SDN,True
+all,All available · January 2018–June 2026,Vietnam,8750,0.042783729469921816,VNM,True
+all,All available · January 2018–June 2026,Turkey,7542,0.03687713001853147,TUR,True
+all,All available · January 2018–June 2026,Somalia,6967,0.03406562779622232,SOM,True
+all,All available · January 2018–June 2026,Ethiopia,4112,0.020105908066322117,ETH,True
+all,All available · January 2018–June 2026,Not currently recorded,3950,0.019313797874993276,,False
+all,All available · January 2018–June 2026,Egypt,3460,0.016917909024677654,EGY,True
+all,All available · January 2018–June 2026,Yemen,3427,0.016756553244962523,YEM,True
+all,All available · January 2018–June 2026,India,3068,0.015001197944425157,IND,True
+all,All available · January 2018–June 2026,Kuwait,2348,0.011480708205185876,KWT,True
+all,All available · January 2018–June 2026,Refugee,2241,0.01095752431338226,,False
+all,All available · January 2018–June 2026,Stateless,1836,0.008977248835060165,,False
+all,All available · January 2018–June 2026,Georgia,1668,0.008155801229237668,GEO,True
+all,All available · January 2018–June 2026,Libya,1525,0.007456592850472088,LBY,True
+all,All available · January 2018–June 2026,South Sudan,1321,0.006459120757687625,SSD,True
+all,All available · January 2018–June 2026,Sri Lanka,1291,0.0063124336852193215,LKA,True
+all,All available · January 2018–June 2026,Palestine,959,0.004689096749903431,PSE,True
+all,All available · January 2018–June 2026,Pakistan,925,0.00452285140110602,PAK,True
+all,All available · January 2018–June 2026,Sierra Leone,378,0.0018482571131006225,SLE,True
+all,All available · January 2018–June 2026,Tanzania,372,0.0018189196986069618,TZA,True
+all,All available · January 2018–June 2026,Algeria,364,0.0017798031459487476,DZA,True
+all,All available · January 2018–June 2026,Chad,292,0.0014277541720248193,TCD,True
+all,All available · January 2018–June 2026,Guinea,191,0.0009339076947148648,GIN,True
+all,All available · January 2018–June 2026,Nigeria,184,0.0008996807111389273,NGA,True
+all,All available · January 2018–June 2026,Tajikistan,172,0.000841005882151606,TJK,True
+all,All available · January 2018–June 2026,Tunisia,165,0.0008067788985756685,TUN,True
+all,All available · January 2018–June 2026,Other and unknown,156,0.0007627727768351776,,False
+all,All available · January 2018–June 2026,"Gambia, The",149,0.00072854579325924,GMB,True
+all,All available · January 2018–June 2026,Morocco,137,0.0006698709642719188,MAR,True
+all,All available · January 2018–June 2026,Mali,94,0.00045961949373401724,MLI,True
+all,All available · January 2018–June 2026,Senegal,84,0.0004107238029112494,SEN,True
+all,All available · January 2018–June 2026,Lebanon,81,0.00039605509566441907,LBN,True
+all,All available · January 2018–June 2026,China,75,0.00036671768117075844,CHN,True
+all,All available · January 2018–June 2026,Ivory Coast,46,0.00022492017778473182,CIV,True
+all,All available · January 2018–June 2026,Niger,39,0.0001906931942087944,NER,True
+all,All available · January 2018–June 2026,Jordan,36,0.00017602448696196405,JOR,True
+all,All available · January 2018–June 2026,Bangladesh,35,0.00017113491787968727,BGD,True
+all,All available · January 2018–June 2026,Russia,35,0.00017113491787968727,RUS,True
+all,All available · January 2018–June 2026,Kosovo,31,0.00015157664155058016,XKX,True
+all,All available · January 2018–June 2026,Cameroon,30,0.00014668707246830336,CMR,True
+all,All available · January 2018–June 2026,Azerbaijan,29,0.00014179750338602659,AZE,True
+all,All available · January 2018–June 2026,Uganda,28,0.0001369079343037498,UGA,True
+all,All available · January 2018–June 2026,Ghana,26,0.00012712879613919624,GHA,True
+all,All available · January 2018–June 2026,Kenya,22,0.00010757051981008914,KEN,True
+all,All available · January 2018–June 2026,Uzbekistan,18,8.801224348098202e-05,UZB,True
+all,All available · January 2018–June 2026,Burkina Faso,17,8.312267439870524e-05,BFA,True
+all,All available · January 2018–June 2026,Mauritania,16,7.823310531642846e-05,MRT,True
+all,All available · January 2018–June 2026,Germany,13,6.356439806959812e-05,DEU,True
+all,All available · January 2018–June 2026,Ukraine,12,5.867482898732135e-05,UKR,True
+all,All available · January 2018–June 2026,Liberia,11,5.378525990504457e-05,LBR,True
+all,All available · January 2018–June 2026,Dominica,9,4.400612174049101e-05,DMA,True
+all,All available · January 2018–June 2026,Saudi Arabia,9,4.400612174049101e-05,SAU,True
+all,All available · January 2018–June 2026,Congo (Democratic Republic),8,3.911655265821423e-05,COD,True
+all,All available · January 2018–June 2026,Western Sahara,8,3.911655265821423e-05,ESH,True
+all,All available · January 2018–June 2026,Central African Republic,7,3.422698357593745e-05,CAF,True
+all,All available · January 2018–June 2026,Djibouti,7,3.422698357593745e-05,DJI,True
+all,All available · January 2018–June 2026,Burundi,6,2.9337414493660674e-05,BDI,True
+all,All available · January 2018–June 2026,Cyprus (Northern part of),6,2.9337414493660674e-05,,False
+all,All available · January 2018–June 2026,Guinea-Bissau,6,2.9337414493660674e-05,GNB,True
+all,All available · January 2018–June 2026,Benin,5,2.4447845411383895e-05,BEN,True
+all,All available · January 2018–June 2026,Kazakhstan,5,2.4447845411383895e-05,KAZ,True
+all,All available · January 2018–June 2026,Moldova,5,2.4447845411383895e-05,MDA,True
+all,All available · January 2018–June 2026,North Macedonia,5,2.4447845411383895e-05,MKD,True
+all,All available · January 2018–June 2026,Philippines,5,2.4447845411383895e-05,PHL,True
+all,All available · January 2018–June 2026,Zimbabwe,5,2.4447845411383895e-05,ZWE,True
+all,All available · January 2018–June 2026,Armenia,4,1.9558276329107116e-05,ARM,True
+all,All available · January 2018–June 2026,Indonesia,4,1.9558276329107116e-05,IDN,True
+all,All available · January 2018–June 2026,Israel,4,1.9558276329107116e-05,ISR,True
+all,All available · January 2018–June 2026,Nepal,4,1.9558276329107116e-05,NPL,True
+all,All available · January 2018–June 2026,Serbia,4,1.9558276329107116e-05,SRB,True
+all,All available · January 2018–June 2026,Brazil,3,1.4668707246830337e-05,BRA,True
+all,All available · January 2018–June 2026,Myanmar (Burma),3,1.4668707246830337e-05,MMR,True
+all,All available · January 2018–June 2026,Thailand,3,1.4668707246830337e-05,THA,True
+all,All available · January 2018–June 2026,Togo,3,1.4668707246830337e-05,TGO,True
+all,All available · January 2018–June 2026,Belarus,2,9.779138164553558e-06,BLR,True
+all,All available · January 2018–June 2026,Congo,2,9.779138164553558e-06,COG,True
+all,All available · January 2018–June 2026,Cyprus,2,9.779138164553558e-06,CYP,True
+all,All available · January 2018–June 2026,French Guiana (French),2,9.779138164553558e-06,,False
+all,All available · January 2018–June 2026,Greece,2,9.779138164553558e-06,GRC,True
+all,All available · January 2018–June 2026,Jamaica,2,9.779138164553558e-06,JAM,True
+all,All available · January 2018–June 2026,Malawi,2,9.779138164553558e-06,MWI,True
+all,All available · January 2018–June 2026,Montenegro,2,9.779138164553558e-06,MNE,True
+all,All available · January 2018–June 2026,Papua New Guinea,2,9.779138164553558e-06,PNG,True
+all,All available · January 2018–June 2026,Poland,2,9.779138164553558e-06,POL,True
+all,All available · January 2018–June 2026,South Africa,2,9.779138164553558e-06,ZAF,True
+all,All available · January 2018–June 2026,St Lucia,2,9.779138164553558e-06,LCA,True
+all,All available · January 2018–June 2026,Andorra,1,4.889569082276779e-06,AND,True
+all,All available · January 2018–June 2026,Bahrain,1,4.889569082276779e-06,BHR,True
+all,All available · January 2018–June 2026,Belgium,1,4.889569082276779e-06,BEL,True
+all,All available · January 2018–June 2026,Bolivia,1,4.889569082276779e-06,BOL,True
+all,All available · January 2018–June 2026,Bosnia and Herzegovina,1,4.889569082276779e-06,BIH,True
+all,All available · January 2018–June 2026,British overseas citizens,1,4.889569082276779e-06,,False
+all,All available · January 2018–June 2026,Bulgaria,1,4.889569082276779e-06,BGR,True
+all,All available · January 2018–June 2026,Denmark,1,4.889569082276779e-06,DNK,True
+all,All available · January 2018–June 2026,Equatorial Guinea,1,4.889569082276779e-06,GNQ,True
+all,All available · January 2018–June 2026,Finland,1,4.889569082276779e-06,FIN,True
+all,All available · January 2018–June 2026,France,1,4.889569082276779e-06,FRA,True
+all,All available · January 2018–June 2026,Guyana,1,4.889569082276779e-06,GUY,True
+all,All available · January 2018–June 2026,Haiti,1,4.889569082276779e-06,HTI,True
+all,All available · January 2018–June 2026,Italy,1,4.889569082276779e-06,ITA,True
+all,All available · January 2018–June 2026,Kyrgyzstan,1,4.889569082276779e-06,KGZ,True
+all,All available · January 2018–June 2026,Latvia,1,4.889569082276779e-06,LVA,True
+all,All available · January 2018–June 2026,Mozambique,1,4.889569082276779e-06,MOZ,True
+all,All available · January 2018–June 2026,Qatar,1,4.889569082276779e-06,QAT,True
+all,All available · January 2018–June 2026,Sweden,1,4.889569082276779e-06,SWE,True
+all,All available · January 2018–June 2026,Turkmenistan,1,4.889569082276779e-06,TKM,True
+all,All available · January 2018–June 2026,United Arab Emirates,1,4.889569082276779e-06,ARE,True
+all,All available · January 2018–June 2026,United States,1,4.889569082276779e-06,USA,True

@@ -5,14 +5,20 @@ export const outcomes = [
   ["closed", "Otherwise closed", "#8574bd"]
 ];
 
-export function countryYears(data, country, unit) {
-  const found = new Map(data.rows.filter(d => d.country === country && d.unit === unit).map(d => [d.year, d]));
+export function countryYears(data, country) {
+  const fields = ["applications", "decisions", "recognised", "other_protection", "rejected", "closed"];
+  const found = new Map();
+  for (const row of data.rows.filter(d => d.country === country && ["P", "C"].includes(d.unit))) {
+    if (!found.has(row.year)) found.set(row.year, []);
+    found.get(row.year).push(row);
+  }
   return Array.from({length: data.metadata.year_to_available - data.metadata.year_from + 1}, (_, i) => {
     const year = data.metadata.year_from + i;
-    return found.get(year) || {
-      country, unit, year, applications: null, decisions: null, recognised: null,
-      other_protection: null, rejected: null, closed: null
-    };
+    const sources = found.get(year) || [];
+    return Object.assign({country, unit: "P+C", year}, Object.fromEntries(fields.map(key => {
+      const values = sources.map(row => row[key]).filter(value => value != null);
+      return [key, values.length ? values.reduce((sum, value) => sum + value, 0) : null];
+    })));
   });
 }
 

@@ -1,0 +1,65 @@
+## Small-boat arrivals: official live figures and history {#small-boats}
+
+The latest-seven-days panel attempts a direct read of the **official GOV.UK daily feed** when this page loads, and can be refreshed below. If access fails, it retains a dated snapshot. Arrivals are **people detected arriving**, not a count of asylum applications, decisions, or grants. They must not be added to asylum claims or used as a grant-rate denominator.
+
+[Latest official daily figures](https://www.gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats/migrants-detected-crossing-the-english-channel-in-small-boats-last-7-days) · [Official time series and weekly summaries](https://www.gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats) · [Quarterly official statistics](https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables).
+
+```{ojs}
+//| echo: false
+//| output: false
+boatsSnapshot=FileAttachment("data/uk/small-boats/comparison.json").json()
+boatsLive=import((await FileAttachment("assets/small-boats-live.js").url())+"?v=1")
+```
+
+```{ojs}
+//| echo: false
+{
+ const container=document.createElement("div");
+ const dispose=boatsLive.mount(container,boatsSnapshot,Plot,width);invalidation.then(dispose);return container;
+}
+```
+
+### Daily history and cumulative arrivals
+
+This view uses the saved official daily series from **2018**, supplemented by the saved daily feed where it overlaps or extends the weekly download. It does not silently turn missing days into zero. The previous year's line is cut to the same month and day as the selected year's available observations; a full year is never compared with a partial year as though both were complete.
+
+```{ojs}
+//| echo: false
+viewof boatsYear=Inputs.select(Array.from(new Set(boatsSnapshot.rows.map(d=>Number(d.date.slice(0,4))))),{label:"Arrival year",value:Number(boatsSnapshot.metadata.data_through.slice(0,4)),format:String})
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+boatsCurrent=boatsSnapshot.rows.filter(d=>Number(d.date.slice(0,4))===boatsYear)
+boatsLastDate=boatsCurrent.at(-1)?.date
+boatsPrevious=boatsSnapshot.rows.filter(d=>Number(d.date.slice(0,4))===boatsYear-1 && d.date.slice(5)<=boatsLastDate.slice(5))
+boatsCumulative=[boatsCurrent,boatsPrevious].flatMap((rows,index)=>{let sum=0;return rows.map(d=>({date:new Date("2000-"+d.date.slice(5)+"T00:00:00Z"),value:(sum+=d.arrivals),year:String(boatsYear-index)}))})
+```
+
+```{ojs}
+//| echo: false
+{
+ const note=document.createElement("p");note.className="reading-note";
+ note.textContent="History snapshot through "+new Date(boatsSnapshot.metadata.data_through).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})+". Selected year: "+boatsCurrent.reduce((sum,d)=>sum+d.arrivals,0).toLocaleString("en-GB")+" arrivals through "+new Date(boatsLastDate).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})+". Historical data was retrieved "+new Date(boatsSnapshot.metadata.retrieved_at_utc).toLocaleString("en-GB",{day:"numeric",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit",timeZone:"UTC",hour12:false})+" UTC. The live panel above may be newer.";
+ return note;
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1100),height:360,marginLeft:80,ariaLabel:"Cumulative small-boat arrivals compared through matching calendar dates",
+ x:{label:"Month",type:"utc",tickFormat:d=>d.toLocaleDateString("en-GB",{month:"short",timeZone:"UTC"})},y:{label:"Cumulative people detected arriving",grid:true},
+ color:{domain:Array.from(new Set(boatsCumulative.map(d=>d.year))),range:["#256f68","#8574bd"],legend:true},
+ marks:[Plot.lineY(boatsCumulative,{x:"date",y:"value",stroke:"year",strokeWidth:2.7,title:d=>d.year+" · "+d.date.toLocaleDateString("en-GB",{day:"numeric",month:"long",timeZone:"UTC"})+": "+d.value.toLocaleString("en-GB")})]})
+```
+
+The lines share a month-and-day axis. Leap-day arrivals remain included, so a leap year may include one extra day when compared with a non-leap year. These are provisional operational figures that may be revised. The Home Office identifies its quarterly immigration statistics as the final, authoritative small-boats series. [Source definitions and update frequency](https://www.gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats).
+
+[Download the saved daily series (CSV)](data/uk/small-boats/daily-arrivals.csv) · [Exact official workbook used](data/uk/small-boats/time-series.ods) · [Snapshot metadata and values](data/uk/small-boats/comparison.json).
+
+Live refresh only updates the seven-day panel in your browser; it does not publish the report or rewrite its historical data. A historical refresh uses the separate, explicit data-refresh process. Other routes of entry and arrivals not detected in this series are outside its scope; connecting small-boat arrival cohorts to asylum outcomes requires the separate linked Home Office tables, not a join on calendar year alone.
+
+{{< include _small-boat-map.qmd >}}
+
+{{< include _small-boat-grants.qmd >}}

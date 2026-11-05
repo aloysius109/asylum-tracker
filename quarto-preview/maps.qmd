@@ -1,0 +1,89 @@
+---
+title: "Applications on the map"
+subtitle: "Where reported asylum applications are received, and where they originate."
+toc: false
+page-layout: full
+---
+
+Two views of the same **2000–2025** application records. Highlighted countries belong to each period-wide Top 20. **Circle area represents application volume**, on the same size scale in both maps. Hover over a country or circle for its rank, exact volume, and share of all recorded applications; click a circle for details. Zoom and pan to explore nearby countries.
+
+These are application events, not unique applicants. Original persons- and case-reported values are combined without conversion. Origins identify reported countries of origin, rather than application submission locations or travel routes. Boundary shapes provide geographic context; historical reporting codes need not match today's boundaries exactly. Circle positions are approximate display anchors, not application office locations.
+
+
+## Top 20 receiving countries {#receiving-map}
+
+**30.7 million applications · 75% of all recorded applications worldwide.**
+
+<iframe class="application-map" src="maps/receiving.html" title="Interactive map of top 20 receiving countries, 2000 to 2025" loading="lazy"></iframe>
+
+[Open map full-screen](maps/receiving.html)
+
+
+::: {.callout-note collapse="true" title="Exact country totals and map accessibility alternative"}
+
+| Rank | Country | Applications | Worldwide share |
+|---:|---|---:|---:|
+| 1 | United States (USA) | 6,249,314 | 15% |
+| 2 | Germany (DEU) | 4,892,322 | 12% |
+| 3 | France (FRA) | 3,129,453 | 7.7% |
+| 4 | United Kingdom (GBR) | 1,851,793 | 4.5% |
+| 5 | South Africa (ZAF) | 1,547,654 | 3.8% |
+| 6 | Italy (ITA) | 1,305,662 | 3.2% |
+| 7 | Canada (CAN) | 1,285,767 | 3.2% |
+| 8 | Egypt (EGY) | 1,220,532 | 3.0% |
+| 9 | Sweden (SWE) | 1,068,354 | 2.6% |
+| 10 | Spain (ESP) | 1,064,818 | 2.6% |
+| 11 | Greece (GRC) | 936,901 | 2.3% |
+| 12 | Türkiye (TUR) | 864,753 | 2.1% |
+| 13 | Austria (AUT) | 753,700 | 1.9% |
+| 14 | Belgium (BEL) | 748,040 | 1.8% |
+| 15 | Mexico (MEX) | 717,847 | 1.8% |
+| 16 | Russian Federation (RUS) | 657,711 | 1.6% |
+| 17 | Switzerland (CHE) | 620,749 | 1.5% |
+| 18 | Peru (PER) | 612,174 | 1.5% |
+| 19 | Kenya (KEN) | 593,327 | 1.5% |
+| 20 | Netherlands (NLD) | 576,239 | 1.4% |
+
+:::
+
+## Top 20 reported origins {#origin-map}
+
+**24.8 million applications · 61% of all recorded applications worldwide.**
+
+<iframe class="application-map" src="maps/origin.html" title="Interactive map of top 20 reported origins, 2000 to 2025" loading="lazy"></iframe>
+
+[Open map full-screen](maps/origin.html)
+
+
+**Not plotted:** Unknown origin: **1,496,630 applications** (3.7% of worldwide records). It remains part of the Top 20 total; no substitute country is added.
+
+::: {.callout-note collapse="true" title="Exact country totals and map accessibility alternative"}
+
+| Rank | Country | Applications | Worldwide share |
+|---:|---|---:|---:|
+| 1 | Afghanistan (AFG) | 2,752,286 | 6.8% |
+| 2 | Venezuela, Bolivarian Republic of (VEN) | 2,385,750 | 5.9% |
+| 3 | Syrian Arab Republic (SYR) | 2,336,949 | 5.7% |
+| 4 | Iraq (IRQ) | 1,653,234 | 4.1% |
+| 5 | Unknown origin (UNK) | 1,496,630 | 3.7% |
+| 6 | Sudan (SDN) | 1,430,879 | 3.5% |
+| 7 | Congo, The Democratic Republic of the (COD) | 1,263,884 | 3.1% |
+| 8 | Somalia (SOM) | 1,161,820 | 2.9% |
+| 9 | Colombia (COL) | 1,082,426 | 2.7% |
+| 10 | Eritrea (ERI) | 992,288 | 2.4% |
+| 11 | Ukraine (UKR) | 959,747 | 2.4% |
+| 12 | Türkiye (TUR) | 935,152 | 2.3% |
+| 13 | Pakistan (PAK) | 905,863 | 2.2% |
+| 14 | Nigeria (NGA) | 834,279 | 2.0% |
+| 15 | China (CHN) | 819,175 | 2.0% |
+| 16 | Serbia (SRB) | 803,731 | 2.0% |
+| 17 | Russian Federation (RUS) | 799,455 | 2.0% |
+| 18 | Iran, Islamic Republic of (IRN) | 755,347 | 1.9% |
+| 19 | Haiti (HTI) | 732,479 | 1.8% |
+| 20 | Cuba (CUB) | 723,185 | 1.8% |
+
+:::
+
+[Download both Top 20 rankings and exact shares (CSV)](data/application-map-totals.csv) · [Origins & destinations](origins.qmd) · [Country Explorer](explore.qmd)
+
+The maps use the bundled world-countries.json boundary file and the fixed application snapshot, rather than live map tiles. Leaflet and jQuery are bundled locally, so viewing these maps needs no external library or map-tile requests. Exact country tables provide a text alternative.

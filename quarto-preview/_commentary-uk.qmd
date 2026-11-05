@@ -1,0 +1,10 @@
+## What the UK trends show {#uk-commentary}
+
+The Home Office calendar-year series records **101,911 people claiming asylum in 2025**, compared with **45,537 in 2019** (124% higher). In 2025 it recorded **135,740 initial decisions**. Initial decision output exceeded that year's claims, but those decisions include claims lodged earlier; this is not the fraction of 2025 applicants who were processed.
+
+The published main-applicant initial grant rate was **42% in 2025**, versus **52% in 2019**. This official rate has its own applicant scope: it should not be reconstructed from the all-people grant and decision counts. The separately dated small-boat rates below concern a specific arrival group, rather than everyone claiming asylum in the UK.
+
+**Cross-country context uses the broader UNHCR extract.** On that common reported-activity basis, the UK recorded 168,185 applications and 194,877 decisions in 2025, or 116 decisions per 100 applications. The corresponding ratios were Germany (124), France (98), Canada (72). These contrasts show flows relative to demand, not staff efficiency or waiting times. They combine persons and cases and different procedure mixes; the first-instance persons-only comparison below has a deliberately narrower scope.
+
+Source: the saved [Home Office asylum tables](https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables) and pinned UNHCR extracts used on this page. Compare calendar years with calendar years; rolling years ending June are labelled separately.
+

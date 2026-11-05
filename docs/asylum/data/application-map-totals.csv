@@ -1,0 +1,41 @@
+dimension,rank,country,name,applications,share_percent,mapped
+receiving,1,USA,United States,6249314,15.34425019383143,True
+receiving,2,DEU,Germany,4892322,12.012360524176858,True
+receiving,3,FRA,France,3129453,7.683900953262446,True
+receiving,4,GBR,United Kingdom,1851793,4.5467990725359115,True
+receiving,5,ZAF,South Africa,1547654,3.800031521777268,True
+receiving,6,ITA,Italy,1305662,3.205856578270564,True
+receiving,7,CAN,Canada,1285767,3.157007399367684,True
+receiving,8,EGY,Egypt,1220532,2.996832672766557,True
+receiving,9,SWE,Sweden,1068354,2.6231824919632114,True
+receiving,10,ESP,Spain,1064818,2.6145003760245036,True
+receiving,11,GRC,Greece,936901,2.3004194301727936,True
+receiving,12,TUR,Türkiye,864753,2.12327087226955,True
+receiving,13,AUT,Austria,753700,1.8505969408947527,True
+receiving,14,BEL,Belgium,748040,1.8366996625539482,True
+receiving,15,MEX,Mexico,717847,1.7625652941893,True
+receiving,16,RUS,Russian Federation,657711,1.6149103948425483,True
+receiving,17,CHE,Switzerland,620749,1.5241557655081288,True
+receiving,18,PER,Peru,612174,1.503101143286857,True
+receiving,19,KEN,Kenya,593327,1.4568251706916024,True
+receiving,20,NLD,Netherlands,576239,1.41486815791993,True
+origin,1,AFG,Afghanistan,2752286,6.757824137014004,True
+origin,2,VEN,"Venezuela, Bolivarian Republic of",2385750,5.857850141620878,True
+origin,3,SYR,Syrian Arab Republic,2336949,5.7380266291986874,True
+origin,4,IRQ,Iraq,1653234,4.059267325173405,True
+origin,5,UNK,Unknown origin,1496630,3.6747497673494935,False
+origin,6,SDN,Sudan,1430879,3.5133080803907952,True
+origin,7,COD,"Congo, The Democratic Republic of the",1263884,3.1032769855988103,True
+origin,8,SOM,Somalia,1161820,2.8526741911507782,True
+origin,9,COL,Colombia,1082426,2.6577341705518687,True
+origin,10,ERI,Eritrea,992288,2.4364138746007327,True
+origin,11,UKR,Ukraine,959747,2.3565143455392277,True
+origin,12,TUR,Türkiye,935152,2.296125023844513,True
+origin,13,PAK,Pakistan,905863,2.2242102914551456,True
+origin,14,NGA,Nigeria,834279,2.048446550686922,True
+origin,15,CHN,China,819175,2.011360951383122,True
+origin,16,SRB,Serbia,803731,1.9734405332390612,True
+origin,17,RUS,Russian Federation,799455,1.9629414586480223,True
+origin,18,IRN,"Iran, Islamic Republic of",755347,1.8546409015709548,True
+origin,19,HTI,Haiti,732479,1.7984919685148566,True
+origin,20,CUB,Cuba,723185,1.775671949981387,True

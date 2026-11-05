@@ -1,0 +1,29 @@
+### Where do Rwanda's applicants come from? {#rwanda-origins}
+
+Choose an application year, or the full reported period. Flags identify the recorded country of origin; they do not indicate a route or a UK relocation. These are application counts, rather than Rwanda's wider refugee population.
+
+```{ojs}
+//| echo: false
+rwandaOrigins = FileAttachment("data/uk/rwanda-origins.json").json()
+viewof rwandaOriginYear = Inputs.select(new Map([["All reported years · 2000–2025", "all"], ...Object.keys(rwandaOrigins).filter(k => k !== "all").sort().reverse().map(y => [y, y])]), {label: "Rwanda application year", value: "2025"})
+rwandaOriginGroup = rwandaOrigins[rwandaOriginYear]
+rwandaOriginCards = {
+  const box = document.createElement("div"); box.className = "origin-year-grid";
+  for (const [i,row] of rwandaOriginGroup.rows.slice(0,3).entries()) {
+    const card = document.createElement("section"); card.className = "origin-year-panel";
+    const title = document.createElement("h4");
+    if (row.flag) { const img = document.createElement("img"); img.src = `assets/flags/${row.flag}.svg`; img.alt = ""; img.width = 30; img.height = 21; img.style.marginRight = "10px"; title.append(img); }
+    title.append(`${i+1}. ${row.name}`);
+    const count = document.createElement("p"); count.className = "ranked-origin-volume"; count.textContent = `${row.applications.toLocaleString("en-GB")} applications`;
+    const share = document.createElement("p"); share.textContent = `${(row.share*100).toFixed(row.share < .1 ? 1 : 0)}% of Rwanda's reported applications`;
+    card.append(title,count,share); box.append(card);
+  }
+  return box;
+}
+rwandaOriginSummary = html`<p><strong>${rwandaOriginGroup.total.toLocaleString("en-GB")} reported applications</strong> · ${rwandaOriginYear === "all" ? "2000–2025" : rwandaOriginYear}. Top three origins shown above; every positive reported origin appears below.</p>`
+rwandaOriginTable = Inputs.table(rwandaOriginGroup.rows, {columns: ["name","applications","share"], header: {name: "Recorded origin", applications: "Applications", share: "Share of applications"}, format: {applications: x => x.toLocaleString("en-GB"), share: x => x > 0 && x < .001 ? "<0.1%" : (x*100).toFixed(x < .1 ? 1 : 0)+"%"}, rows: 10})
+```
+
+Source: the same pinned UNHCR application extract used for Rwanda's chart, with reported persons and cases combined without conversion. The shares use all reported Rwanda applications for the selected period; unknown origins are retained where reported. Missing years are not treated as zero.
+
+[Download Rwanda's application origins by year (CSV)](data/uk/rwanda-origins.csv).

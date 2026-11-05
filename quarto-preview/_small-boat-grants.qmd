@@ -1,0 +1,92 @@
+### Small-boat asylum grant rates by nationality {#small-boat-grants}
+
+The Home Office publishes **linked asylum outcomes for people recorded arriving by small boat**, rather than requiring us to infer rates from unrelated arrival and decision totals. The grant measure here is **grants of protection or other leave ÷ (grants + refusals)**, for **main applicants**. Withdrawals, administrative outcomes and pending claims are excluded from that denominator, but shown separately in the cohort table.
+
+Both views below concern **initial decisions**, not final outcomes after appeals or a prediction of an individual's chance of asylum. [Official Home Office tables and definitions](https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables).
+
+```{ojs}
+//| echo: false
+//| output: false
+boatGrantData=FileAttachment("data/uk/small-boats/grant-rates.json").json()
+boatGrantFormat=import((await FileAttachment("assets/grant-rates.js").url())+"?v=grant-rates-rounded-3")
+boatGrantLatest=boatGrantData.latest.filter(d=>d.nationality!=="All nationalities").sort((a,b)=>b.current_rate-a.current_rate)
+```
+
+#### Latest published rates: by decision date
+
+These are the **ten nationalities published in Asy_02d**, comparing the **year ending June 2025** with the **year ending June 2026**. The period is when the initial decisions were made—not when people arrived. The overall row covers all nationalities, not just the ten plotted. A line shows the change between the two published rates, without attributing its cause.
+
+```{ojs}
+//| echo: false
+{
+ const overall=boatGrantData.latest.find(d=>d.nationality==="All nationalities");
+ const p=document.createElement("p");p.className="explorer-status";
+ p.textContent="All nationalities · Initial grant rate: "+boatGrantFormat.percent(overall.current_rate)+" in the year ending June 2026, compared with "+boatGrantFormat.percent(overall.previous_rate)+" a year earlier. Current denominator: "+overall.current_decisions_main.toLocaleString("en-GB")+" main applicants with grant/refusal decisions.";
+ return p;
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1050),height:430,marginLeft:Math.min(160,width*.3),marginRight:45,
+ ariaLabel:"Official small-boat asylum grant rates by nationality in years ending June 2025 and June 2026",
+ x:{domain:[0,1],label:"Initial grants / (grants + refusals) · Main applicants",grid:true,tickFormat:d=>Math.round(d*100)+"%"},
+ y:{domain:boatGrantLatest.map(d=>d.nationality),label:null},
+ color:{domain:["Year ending June 2025","Year ending June 2026"],range:["#b7a8d4","#256f68"],legend:true},
+ marks:[Plot.link(boatGrantLatest,{x1:"previous_rate",x2:"current_rate",y1:"nationality",y2:"nationality",stroke:"#ccd7d0",strokeWidth:3}),
+ Plot.dot(boatGrantLatest,{x:"previous_rate",y:"nationality",fill:()=>"Year ending June 2025",r:5,title:d=>d.nationality+" · YE June 2025: "+boatGrantFormat.percent(d.previous_rate)+" · "+d.previous_decisions_main.toLocaleString("en-GB")+" decisions (main applicants)"}),
+ Plot.dot(boatGrantLatest,{x:"current_rate",y:"nationality",fill:()=>"Year ending June 2026",r:6,title:d=>d.nationality+" · YE June 2026: "+boatGrantFormat.percent(d.current_rate)+" · "+d.current_decisions_main.toLocaleString("en-GB")+" decisions (main applicants)"}),
+ Plot.text(boatGrantLatest,{x:"current_rate",y:"nationality",text:d=>boatGrantFormat.percent(d.current_rate),dx:9,textAnchor:"start",fontSize:11})]})
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(boatGrantData.latest,{columns:["nationality","previous_rate","current_rate","current_decisions_main","current_decisions_people","change_pp"],header:{nationality:"Nationality",previous_rate:"Grant rate · YE June 2025",current_rate:"Grant rate · YE June 2026",current_decisions_main:"Decided main applicants · YE June 2026",current_decisions_people:"Decided people including dependants",change_pp:"Change (percentage points)"},format:{previous_rate:boatGrantFormat.percent,current_rate:boatGrantFormat.percent,change_pp:d=>(d>0?"+":"")+d.toFixed(Math.abs(d)<10?1:0)},rows:11})
+```
+
+#### All nationalities: linked arrival cohorts
+
+Choose an **arrival year**, or all 2018–2025 arrivals, to inspect the outcomes recorded for that group. This is a different time basis from the decision-period chart above. The source includes asylum claims made within **14 days of the recorded small-boat arrival**, and depends on successful matching between arrival and asylum records. Main applicants only are included here, so dependants are not counted again.
+
+For **2023–2025 arrival cohorts**, initial outcomes in this edition include decisions through **15 July 2026**. Earlier cohorts were not revised in this release. Recent cohorts have had less time to reach a decision; differences in their grant rates are not a forecast of eventual outcomes.
+
+```{ojs}
+//| echo: false
+viewof boatGrantCohort=Inputs.select(boatGrantData.cohorts,{label:"Small-boat arrival cohort",format:d=>d.label,value:boatGrantData.cohorts[0]})
+```
+
+```{ojs}
+//| echo: false
+{
+ const s=boatGrantCohort.summary,p=document.createElement("p");p.className="explorer-status boat-grant-cohort-summary";
+ p.textContent=boatGrantCohort.label+" · Grant rate to date: "+boatGrantFormat.percent(s.grant_rate)+" · Grants: "+s.grants.toLocaleString("en-GB")+" · Refusals: "+s.refused.toLocaleString("en-GB")+" · Withdrawn: "+s.withdrawn.toLocaleString("en-GB")+" · Administrative outcomes: "+s.administrative.toLocaleString("en-GB")+" · Awaiting initial decision: "+s.pending.toLocaleString("en-GB")+". Rates use grants plus refusals only.";return p;
+}
+```
+
+The chart shows the **20 nationalities with the most grant/refusal decisions** in the selected arrival cohort, on a common 0–100% scale. The table contains **every published nationality/category** in that cohort, including those without a calculated rate. Small denominators can produce extreme rates; the decision counts must be read alongside the percentages.
+
+```{ojs}
+//| echo: false
+//| output: false
+boatGrantCohortChart=boatGrantCohort.rows.filter(d=>d.grant_rate!=null).slice(0,20).sort((a,b)=>b.grant_rate-a.grant_rate)
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1050),height:580,marginLeft:Math.min(200,width*.32),marginRight:45,
+ ariaLabel:"Small-boat nationality grant rates for selected arrival cohort",
+ x:{domain:[0,1],label:"Grants / (grants + refusals) · Main applicants",grid:true,tickFormat:d=>Math.round(d*100)+"%"},
+ y:{domain:boatGrantCohortChart.map(d=>d.nationality),label:null},
+ marks:[Plot.barX(boatGrantCohortChart,{x:"grant_rate",y:"nationality",fill:"#256f68",title:d=>d.nationality+": "+boatGrantFormat.percent(d.grant_rate)+" · "+d.grants.toLocaleString("en-GB")+" grants / "+d.decided.toLocaleString("en-GB")+" grant/refusal decisions · "+d.pending.toLocaleString("en-GB")+" awaiting"}),Plot.text(boatGrantCohortChart,{x:"grant_rate",y:"nationality",text:d=>boatGrantFormat.percent(d.grant_rate),dx:6,textAnchor:"start",fontSize:10})]})
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(boatGrantCohort.rows,{columns:["nationality","grant_rate","protection_grants","other_leave_grants","refused","decided","withdrawn","administrative","pending","pending_share"],header:{nationality:"Nationality/category",grant_rate:"Grant rate (grants + refusals)",protection_grants:"Protection grants",other_leave_grants:"Other-leave grants",refused:"Refusals",decided:"Grant/refusal denominator",withdrawn:"Withdrawn",administrative:"Administrative outcomes",pending:"Awaiting initial decision",pending_share:"Pending / all linked statuses"},format:{grant_rate:boatGrantFormat.percent,pending_share:boatGrantFormat.percent},rows:15})
+```
+
+Source: **IER_D03**, initial outcomes by arrival date. “Refused” follows the official outcome grouping, including any third-country refusals classified there. No rate is calculated without a positive grant/refusal denominator. Withdrawn, administrative and pending outcomes are not counted as refusals. Neither this table nor Asy_02d establishes final results after appeals.
+
+[Download published nationality rates (CSV)](data/uk/small-boats/published-nationality-grant-rates.csv) · [Download all arrival-cohort counts and rates (CSV)](data/uk/small-boats/arrival-cohort-grant-rates.csv) · [Source metadata and values](data/uk/small-boats/grant-rates.json) · [Official workbook with IER_D03 and its Notes](data/uk/small-boats/nationalities-jun-2026.xlsx).
+
+CSV cohorts overlap: the “all” row group includes the individual arrival years, so select one cohort before summing. The linked tables have a different extraction date and coverage from the nationality-arrival map and the newer daily arrivals feed; they are not joined to those counts to manufacture grant probabilities.

@@ -56,8 +56,6 @@ def main():
             raise ValueError(f"Expected one saved figure for {prefix}")
         (assets / filename).write_bytes(base64.b64decode(images[0], validate=True))
 
-    apps = apps.loc[apps["Cases / Persons"].eq("P")]
-    decs = decs.loc[decs["Cases / Persons"].eq("P")]
     annual_apps = apps.groupby("Year")["applied"].sum()
     annual_decs = decs.groupby("Year")["Total decisions"].sum()
     app_coverage = apps.groupby("Year")["Country of asylum (ISO)"].nunique()
@@ -65,52 +63,46 @@ def main():
     latest_apps = int(annual_apps.loc[year])
     latest_decs = int(annual_decs.loc[year])
     latest_reporters = int(app_coverage.loc[year])
+    pending = json.loads((DEST / "data/pending-stock-2025.json").read_text(encoding="utf-8"))
+    if pending["year"] != year or pending["pending_persons"] <= 0:
+        raise ValueError("Pending headline requires a positive observed stock for the headline year.")
     snapshot = f"""::: {{.snapshot}}
-<div><span class="value">{latest_apps / 1e6:.2f}m</span><span class="label">application events recorded in {year}<br>Persons-reported subset</span></div>
-<div><span class="value">{latest_decs / 1e6:.2f}m</span><span class="label">decisions recorded in {year}<br>Persons-reported subset</span></div>
-<div><span class="value">{latest_reporters}</span><span class="label">receiving-country codes with<br>persons-reported applications in {year}</span></div>
+<div><span class="value">{latest_apps / 1e6:.1f}m</span><span class="label">application events recorded in {year}<br>Persons and cases combined</span></div>
+<div><span class="value">{latest_decs / 1e6:.1f}m</span><span class="label">decisions recorded in {year}<br>Persons and cases combined</span></div>
+<div><span class="value">{pending['pending_persons']/1e6:.1f}m</span><span class="label">asylum seekers pending at end-{year}<br>Observed UNHCR stock (persons)</span></div>
 :::
 
 ::: {{.snapshot-note}}
-Latest shared year in the saved extracts. These totals are not estimates of complete worldwide coverage, and applications are not necessarily unique individuals.
+Application and decision totals: latest shared year in the saved extracts. These totals are not estimates of complete worldwide coverage, and applications are not necessarily unique individuals. Pending stock is a separate population measure: **{pending['pending_persons']:,} persons**, from the [UNHCR worldwide population API]({pending['url']}), retrieved {pending['retrieved_at_utc'][:10]}. The stock chart uses the same latest-year total from its separately saved annual-series snapshot.
 :::
 """
     (DEST / "_snapshot.qmd").write_text(snapshot, encoding="utf-8")
     peak_year = int(annual_apps.idxmax())
     (DEST / "_flow-reading.qmd").write_text(
-        f"In this persons-reported extract, application volume is highest in **{peak_year}**, at "
+        f"In this combined reported-applications extract, application volume is highest in **{peak_year}**, at "
         f"**{annual_apps.loc[peak_year]:,.0f} recorded events**. The latest shared year, {year}, "
         f"contains **{latest_apps:,}**. Those are descriptions of the saved records—not "
         "adjusted estimates of global demand. The coverage check below helps qualify the comparison.\n",
         encoding="utf-8")
+    ratios = annual_decs.div(annual_apps.where(annual_apps.gt(0)))
+    below = int((annual_decs < annual_apps).sum())
+    (DEST / "_productivity-reading.qmd").write_text(
+        f"Recorded decisions fell below reported applications in **{below} of {len(ratios)} years** "
+        f"between 2000 and {year}. In **{year}**, the extracts record **{latest_apps:,} applications** "
+        f"and **{latest_decs:,} decisions**: **{ratios.loc[year]*100:.0f} decisions per 100 applications**. "
+        f"The annual flow difference was **{latest_apps-latest_decs:,}**. This is a mixed-unit comparison "
+        "of recorded flows, not a measured increase in the pending caseload.\n", encoding="utf-8")
     totals = decs[["Recognized decisions", "Otherwise closed", "Total decisions"]].sum()
     recognised = totals["Recognized decisions"] / totals["Total decisions"]
     closed = totals["Otherwise closed"] / totals["Total decisions"]
     (DEST / "_outcome-reading.qmd").write_text(
-        f"Across the full 2000–{year} persons-reported extract, **{recognised:.1%}** of all "
-        f"recorded decisions recognised refugee status and **{closed:.1%}** were otherwise closed. "
+        f"Across the full 2000–{year} combined reported-units extract, **{recognised:.0%}** of all "
+        f"recorded decisions recognised refugee status and **{closed:.0%}** were otherwise closed. "
         "These period shares weight each recorded decision equally; they are not averages "
         "of national percentages or the likelihood that a new applicant receives protection.\n",
         encoding="utf-8")
-    (DEST / "_coverage-reading.qmd").write_text(
-        f"The application file contains persons-reported records for **{app_coverage.loc[year-1]}** "
-        f"receiving-country codes in {year-1} and **{app_coverage.loc[year]}** in {year}. "
-        f"The decision file contains **{dec_coverage.loc[year-1]}** and **{dec_coverage.loc[year]}**, "
-        "respectively. This shows that the set of represented reporters is not constant.\n",
-        encoding="utf-8")
-    with plt.rc_context({"font.family": "DejaVu Sans", "font.size": 11}):
-        fig, ax = plt.subplots(figsize=(11, 4.8), layout="constrained")
-        ax.plot(app_coverage.index, app_coverage.values, color="#153b40", linewidth=2.3, label="Applications")
-        ax.plot(dec_coverage.index, dec_coverage.values, color="#ae633f", linewidth=2.3, linestyle="--", label="Decisions")
-        ax.scatter([year], [app_coverage.loc[year]], color="#153b40", zorder=3)
-        ax.scatter([year], [dec_coverage.loc[year]], color="#ae633f", zorder=3)
-        ax.set(xlabel="Year", ylabel="Receiving-country codes represented",
-               title="Reporting presence in the persons-reported subset")
-        ax.spines[["top", "right"]].set_visible(False)
-        ax.grid(axis="y", alpha=.2)
-        ax.legend(frameon=False)
-        fig.savefig(assets / "reporting-coverage.png", dpi=160, facecolor="white")
-        plt.close(fig)
+    from style_reporting_coverage import main as style_reporting_coverage
+    style_reporting_coverage()
     stock = next(c for c in cells if c.source.startswith("# %% Worldwide annual application-flow"))
     stock_time = next(
         (o.text.strip() for o in stock.outputs if o.output_type == "stream" and "retrieved at:" in o.text),

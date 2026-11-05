@@ -1,4 +1,5 @@
 """Extend the original gallery with on-demand profiles for every recorded origin."""
+import argparse
 import hashlib
 from html import escape
 import json
@@ -21,7 +22,10 @@ CACHE = DEST / "assets/origins/additional"
 
 
 def main():
-    notebook = nbformat.read(ROOT / "UNHCRData.ipynb", as_version=4)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--notebook", type=Path, default=ROOT / "UNHCRData.ipynb")
+    args = parser.parse_args()
+    notebook = nbformat.read(args.notebook, as_version=4)
     cells = [cell for cell in notebook.cells if cell.cell_type == "code"]
     code_hash = hashlib.sha256(json.dumps([cell.source for cell in cells], ensure_ascii=False).encode("utf-8")).hexdigest()
     lock = json.loads((DEST / "_inputs.json").read_text(encoding="utf-8"))
@@ -63,19 +67,19 @@ def main():
         "destination_colour_map": colours,
         "country_label": lambda code: notebook_names.get(code, code),
     }
-    # Reuse the verified plotting function so selection, panels and colours match.
+    # Reuse verified selection and calculations; presentation colours are assigned per profile.
     exec(compile(plot_cell.source, "verified-notebook-origin-plot", "exec"), namespace)
     render_key = hashlib.sha256(json.dumps({
         "notebook": code_hash, "inputs": lock["inputs"],
-        "matplotlib": mpl.__version__, "renderer": "origin-profile-v1"
+        "matplotlib": mpl.__version__, "renderer": "origin-profile-v2-contrasting-local"
     }, sort_keys=True).encode()).hexdigest()
     CACHE.mkdir(parents=True, exist_ok=True)
     manifest_path = CACHE / "manifest.json"
     cached = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     previous = {entry["origin"]: entry for entry in cached.get("profiles", [])} if cached.get("render_key") == render_key else {}
     profiles = []
-    needed = [code for code in codes if code not in featured]
-    print(f"Preparing {len(codes)} origins: {len(featured)} saved notebook charts and {len(needed)} additional profiles.", flush=True)
+    needed = codes
+    print(f"Preparing {len(codes)} contrasting origin profiles, including the {len(featured)} featured gallery countries.", flush=True)
     mpl.rcParams.update(mpl.rcParamsDefault)
     generated = 0
     original_show = plt.show
@@ -92,6 +96,13 @@ def main():
                         artist.set_fontweight("normal")
                     figure.savefig(path, dpi=100, bbox_inches="tight")
                 plt.show = save_profile
+                class ProfileColours(dict):
+                    def __missing__(self, destination):
+                        palette = ["#0072B2", "#E69F00", "#009E73", "#CC79A7", "#D55E00", "#56B4E9"]
+                        colour = palette[len(self)-1]
+                        self[destination] = colour
+                        return colour
+                namespace["destination_colour_map"] = ProfileColours({"OTHER": "#929292"})
                 namespace["plot_origin_application_grant_comparison"](code)
                 plt.close("all")
                 if not path.exists() or path.stat().st_size < 1000:
@@ -110,13 +121,25 @@ def main():
     manifest_path.write_text(json.dumps({
         "render_key": render_key, "period": [2000, year_to], "profiles": profiles
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Keep featured image paths stable while publishing the new colours everywhere.
+    for entry in profiles:
+        if entry["origin"] in featured:
+            old = featured[entry["origin"]]
+            (DEST / old["file"]).write_bytes((DEST / entry["file"]).read_bytes())
+            old["sha256"] = entry["sha256"]
+    featured_manifest = DEST / "assets/origins/manifest.json"
+    featured_data = json.loads(featured_manifest.read_text(encoding="utf-8"))
+    featured_data["profiles"] = list(featured.values())
+    featured_data["presentation"] = "contrasting colours within each profile; underlying data unchanged"
+    featured_manifest.write_text(json.dumps(featured_data, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+    profiles = [entry for entry in profiles if entry["origin"] not in featured]
     all_profiles = {**featured, **{entry["origin"]: entry for entry in profiles}}
     options = ['<option value="">Choose a country of origin...</option>']
     for label, group in [("Additional origins", profiles), ("Original gallery", list(featured.values()))]:
         options.append(f'<optgroup label="{label}">')
         for entry in sorted(group, key=lambda entry: entry["name"]):
             options.append(
-                f'<option value="{entry["origin"]}" data-profile-src="{escape(entry["file"], quote=True)}" '
+                f'<option value="{entry["origin"]}" data-profile-src="{escape(entry["file"], quote=True)}?v=contrast2" '
                 f'data-profile-name="{escape(entry["name"], quote=True)}">'
                 f'{escape(entry["name"])} ({entry["origin"]})</option>')
         options.append("</optgroup>")
@@ -145,6 +168,9 @@ The **20 origins with the largest combined reported application volume, 2000-202
 '''
     page = DEST / "origins.qmd"
     text = page.read_text(encoding="utf-8")
+    text = text.replace("the same receiving country keeps its colour across the collection", "each receiving country keeps its colour across the three panels of that profile")
+    text = text.replace("A destination's colour remains consistent across profiles, but colours do not indicate better or worse outcomes.", "Six contrasting colours distinguish the featured destinations within each profile; Other is grey. Colours can differ between profiles, so use each chart's ISO-code legend when comparing countries. Colours do not indicate better or worse outcomes.")
+    text = text.replace("The figures reproduce the", "The figures use the data and calculations from the")
     text = re.sub(r'^subtitle: ".*"$',
                   f'subtitle: "Explore all {len(all_profiles)} recorded origins and their receiving-country profiles."',
                   text, count=1, flags=re.MULTILINE)
@@ -158,6 +184,7 @@ The **20 origins with the largest combined reported application volume, 2000-202
         text = text[:start] + text[end:]
     text = text.replace('\n<script type="module" src="assets/origin-selector.js"></script>\n', '')
     text = text.replace(marker, selector + "\n" + marker, 1)
+    text = re.sub(r"(assets/origins/[a-z]{3}\.png)(?!\?v=contrast2)", r"\1?v=contrast2", text)
     text += '\n<script type="module" src="assets/origin-selector.js"></script>\n'
     page.write_text(text, encoding="utf-8")
     print(f"Country dropdown ready with {len(all_profiles)} profiles.", flush=True)

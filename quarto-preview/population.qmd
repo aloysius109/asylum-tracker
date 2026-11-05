@@ -1,0 +1,118 @@
+---
+title: "Asylum activity relative to population"
+subtitle: "Applications and outcomes per 100,000 residents, matched by country and year."
+toc: false
+page-layout: full
+---
+
+A country's size changes how an application total should be read. This page divides reported asylum activity by the **receiving country's population in the same year**, showing both **events per 100,000 residents** and the inverse, **residents per recorded event**.
+
+Population comes from the World Bank's **SP.POP.TOTL** indicator: annual midyear estimates. [World Bank definition and sources](https://databank.worldbank.org/metadataglossary/World-Development-Indicators/series/SP.POP.TOTL). A missing population or asylum value remains unavailable; another year's population is never substituted.
+
+::: {.reading-note}
+**The main view uses person-reported records**, so case counts covering an unknown number of people are excluded. The optional combined view retains the report's original persons-plus-cases activity, but is exploratory and must not be read as a harmonised person-based comparison. Applications are events and can include repeat claims and appeals; these rates do not count unique residents, measure public-service costs, or estimate someone's chance of asylum.
+
+The six measures overlap: **any protection** already includes refugee status and other protection. Do not add all six rates together. Closures remain a distinct processing outcome, rather than being treated as refusals.
+:::
+
+```{ojs}
+//| echo: false
+//| output: false
+populationData=FileAttachment("data/population/comparison.json").json()
+popCore=import((await FileAttachment("assets/population-core.js").url())+"?v=1")
+```
+
+```{ojs}
+//| echo: false
+viewof populationCountry=Inputs.select(populationData.countries,{label:"Receiving country",format:d=>popCore.countryName(d)+" ("+d.iso+")",value:populationData.countries.find(d=>d.iso===(new URLSearchParams(window.location.search).get("country")||"GBR"))||populationData.countries[0]})
+viewof populationYear=Inputs.select(Array.from({length:populationData.metadata.asylum_source.year_to_available-populationData.metadata.asylum_source.year_from+1},(_,i)=>populationData.metadata.asylum_source.year_from+i),{label:"Matched year",value:populationData.metadata.default_year,format:String})
+viewof populationMode=Inputs.radio(new Map([["Person-reported records (comparable population basis)","P"],["All reported activity (persons + cases; exploratory)","combined"]]),{label:"Numerator coverage",value:"P"})
+viewof populationMetric=Inputs.select(popCore.metrics,{label:"Trend and country-comparison measure",format:d=>d[1],value:popCore.metrics[0]})
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+populationRows=popCore.countryYears(populationData,populationCountry.iso,populationMode)
+populationSelected=populationRows.find(d=>d.year===populationYear)
+populationMetricKey=populationMetric[0]+"_per_100k"
+populationTable=popCore.metrics.map(([key,label])=>({measure:label,count:populationSelected[key],population:populationSelected.population,population_year:populationSelected.population_year,per_100k:populationSelected[key+"_per_100k"],residents_per_event:populationSelected["residents_per_"+key]}))
+populationComparison=populationData.top20.map(iso=>({...popCore.countryYears(populationData,iso,populationMode).find(d=>d.year===populationYear),name:popCore.countryName(populationData.countries.find(c=>c.iso===iso)||{iso,name:iso})})).sort((a,b)=>(b[populationMetricKey]??-1)-(a[populationMetricKey]??-1))
+```
+
+```{ojs}
+//| echo: false
+{
+  const note=document.createElement("p");note.className="explorer-status";
+  note.textContent=populationCountry.name+" · "+populationYear+" population: "+(populationSelected.population?populationSelected.population.toLocaleString("en-GB"):"unavailable for this year")+". Coverage: "+(populationMode==="P"?"person-reported activity only":"mixed persons/cases activity; exploratory")+". Population reference year: "+(populationSelected.population_year??"unavailable")+".";
+  return note;
+}
+```
+
+## Applications, grants, refusals and closures
+
+**Per 100,000 residents = reported events ÷ same-year population × 100,000.** Residents per event is the inverse ratio. Where a reported count is zero, the per-100,000 rate is zero, but residents per event is undefined rather than zero. Missing reports remain unavailable.
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1100),height:320,marginLeft:Math.min(260,width*.36),marginRight:55,
+ ariaLabel:"Asylum applications and outcomes per 100000 residents for "+populationCountry.name+" in "+populationYear,
+ x:{label:"Reported events per 100,000 residents",grid:true},y:{domain:populationTable.map(d=>d.measure),label:null},
+ color:{domain:popCore.metrics.map(d=>d[1]),range:popCore.metrics.map(d=>d[2])},
+ marks:[Plot.barX(populationTable.filter(d=>d.per_100k!=null),{x:"per_100k",y:"measure",fill:"measure",title:d=>d.measure+": "+popCore.display(d.per_100k)+" per 100,000 · "+d.count.toLocaleString("en-GB")+" events / "+d.population.toLocaleString("en-GB")+" residents"}),Plot.text(populationTable.filter(d=>d.per_100k!=null),{x:"per_100k",y:"measure",text:d=>popCore.display(d.per_100k),dx:6,textAnchor:"start"})]})
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(populationTable,{columns:["measure","count","population","population_year","per_100k","residents_per_event"],header:{measure:"Measure",count:"Reported count",population:"Population",population_year:"Population year",per_100k:"Per 100,000 residents",residents_per_event:"Residents per recorded event"},format:{population_year:d=>d==null?"Unavailable":String(d),per_100k:popCore.display,residents_per_event:popCore.display},rows:6})
+```
+
+## How has the population-adjusted rate changed?
+
+Each point uses that year's population, not the latest population applied retrospectively. Missing values leave gaps.
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1100),height:340,marginLeft:80,
+ ariaLabel:"Population-adjusted trend for "+populationCountry.name,
+ x:{label:"Year",ticks:populationRows.filter(d=>d.year%5===0||d.year===populationData.metadata.asylum_source.year_to_available).map(d=>d.year),tickFormat:String},
+ y:{label:populationMetric[1]+" per 100,000 residents",grid:true},
+ marks:[Plot.lineY(populationRows,{x:"year",y:populationMetricKey,stroke:populationMetric[2],strokeWidth:2.8}),Plot.dot(populationRows.filter(d=>d[populationMetricKey]!=null),{x:"year",y:populationMetricKey,fill:populationMetric[2],r:3,title:d=>d.year+": "+popCore.display(d[populationMetricKey])+" per 100,000 · population "+d.population.toLocaleString("en-GB")})]})
+```
+
+## Top 20 receiving countries on the same population basis
+
+The same period-wide Top 20 application-volume selection used elsewhere, **reordered by the selected per-100,000 measure in the chosen year**. Country names and values are also available in the table. Missing person-reported records do not mean zero activity.
+
+```{ojs}
+//| echo: false
+Plot.plot({width:Math.min(width,1100),height:610,marginLeft:Math.min(230,width*.32),marginRight:55,
+ ariaLabel:"Top 20 population-adjusted receiving-country comparison",
+ x:{label:populationMetric[1]+" per 100,000 residents",grid:true},y:{domain:populationComparison.filter(d=>d[populationMetricKey]!=null).map(d=>d.name),label:null},
+ marks:[Plot.barX(populationComparison.filter(d=>d[populationMetricKey]!=null),{x:populationMetricKey,y:"name",fill:populationMetric[2],title:d=>d.name+": "+popCore.display(d[populationMetricKey])+" per 100,000 · population "+d.population.toLocaleString("en-GB")}),Plot.text(populationComparison.filter(d=>d[populationMetricKey]!=null),{x:populationMetricKey,y:"name",text:d=>popCore.display(d[populationMetricKey]),dx:6,textAnchor:"start",fontSize:10})]})
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(populationComparison.map(d=>({country:d.name,population:d.population,population_year:d.population_year,count:d[populationMetric[0]],per_100k:d[populationMetricKey]})),{columns:["country","population","population_year","count","per_100k"],header:{country:"Receiving country",population:"Population",population_year:"Population year",count:"Reported count",per_100k:"Per 100,000 residents"},format:{population_year:d=>d==null?"Unavailable":String(d),per_100k:popCore.display},rows:20})
+```
+
+## Source dates and downloads
+
+```{ojs}
+//| echo: false
+{
+ const p=document.createElement("p");p.className="reading-note";
+ const stamp=value=>value?new Date(value).toLocaleString("en-GB",{day:"numeric",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit",timeZone:"UTC",hour12:false})+" UTC":"bundled snapshot";
+ p.textContent="World Bank population retrieved: "+stamp(populationData.metadata.population_source.retrieved_at_utc)+". UNHCR activity snapshot: "+stamp(populationData.metadata.asylum_source.downloaded_at_utc)+". These are separately dated data sources; matching years does not make all definitions or revisions identical.";return p;
+}
+```
+
+- [Counts, matched populations and unrounded ratios by reporting unit (CSV)](data/population/asylum-population-comparison.csv)
+- [Population API download (JSON)](data/population/population.json)
+- [Country metadata used to exclude World Bank regional aggregates](data/population/countries.json)
+- [Retrieval URLs and source hashes](data/population/sources.json)
+
+The comparison uses receiving-country population, not the population of each applicant's country of origin. Rates are descriptive activity indicators, not measures of the proportion of residents who claimed asylum. Coverage, procedures, repeat applications, and changes in reporting units still matter. World Bank country/economy codes are matched exactly to receiving-country codes; unmatched historical or special codes remain unavailable rather than being reassigned.
+
+These international activity measures include all reported procedural stages. The UK official-statistics comparison deliberately uses a narrower first-instance scope, so its counts can differ.

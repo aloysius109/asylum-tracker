@@ -1,16 +1,17 @@
-name: Refresh and publish asylum explorer
+name: Check UNHCR data and prepare review preview
 on:
   push:
     branches: [main]
     paths:
-      - "docs/**"
-      - "quarto-preview/**"
-      - "scripts/prepare_quarto_preview.py"
-      - "scripts/style_publication_charts.py"
-      - "scripts/prepare_origin_gallery.py"
-      - "scripts/prepare_additional_origins.py"
+      - "scripts/refresh_report.py"
       - "scripts/refresh_explorer_data.py"
+      - "tests/test_refresh_report.py"
       - "tests/test_explorer_data.py"
+      - "asylum-applications.csv"
+      - "asylum-decisions.csv"
+      - "quarto-preview/_inputs.json"
+      - "quarto-preview/data/explorer.json"
+      - "quarto-preview/data/pending-stock-series.json"
       - ".github/workflows/publish-quarto.yml"
   workflow_dispatch:
   schedule:
@@ -18,10 +19,10 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: pages
+  group: asylum-refresh-review
   cancel-in-progress: false
 jobs:
-  build:
+  review:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -30,46 +31,18 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: "1.11.9"
       - run: python -m pip install -r requirements.txt
-      - name: Check explorer data safeguards
-        run: python -m unittest discover -s tests -p test_explorer_data.py
-      - name: Restore cached additional origin charts
-        uses: actions/cache@v6
-        with:
-          path: quarto-preview/assets/origins/additional
-          key: origin-profiles-linux-v1-${{ hashFiles('quarto-preview/_inputs.json', 'scripts/prepare_additional_origins.py', 'requirements.txt') }}
-          restore-keys: origin-profiles-linux-v1-
-      - name: Validate and prepare the fixed analytical chapter
+      - name: Check source and isolation safeguards
         run: |
-          python scripts/prepare_quarto_preview.py
-          python scripts/prepare_origin_gallery.py
-          python scripts/prepare_additional_origins.py
-          python scripts/style_publication_charts.py
-      - name: Download and validate current explorer data
-        run: python scripts/refresh_explorer_data.py --refresh
-      - name: Render the publication
-        run: quarto render quarto-preview
-      - name: Assemble the portfolio and Quarto publication
-        run: |
-          python -c "import shutil; from pathlib import Path; shutil.copytree('docs', '_publication', dirs_exist_ok=True); shutil.copytree('quarto-preview/_site', '_publication/asylum', dirs_exist_ok=True); Path('_publication/.nojekyll').touch()"
-      - uses: actions/upload-artifact@v7
+          python -m unittest discover -s tests -p test_explorer_data.py
+          python -m unittest discover -s tests -p test_refresh_report.py
+      - name: Download sources and build a separate review preview
+        run: python scripts/refresh_report.py --refresh --output artifacts/refresh-review/candidate
+      - name: Save review preview, exact sources and audit (including failure details)
+        if: always()
+        uses: actions/upload-artifact@v7
         with:
-          name: explorer-source-snapshots
-          path: quarto-preview/data/
+          name: unhcr-refresh-review
+          path: artifacts/refresh-review/candidate/
+          if-no-files-found: warn
           retention-days: 30
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: _publication
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment: github-pages
-    steps:
-      - uses: actions/configure-pages@v6
-      - uses: actions/deploy-pages@v5

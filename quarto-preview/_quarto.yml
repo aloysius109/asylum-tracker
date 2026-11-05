@@ -3,17 +3,44 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - worldwide.qmd
     - methods.qmd
     - explore.qmd
     - origins.qmd
     - productivity.qmd
+    - grants.qmd
+    - maps.qmd
+    - uk.qmd
+    - population.qmd
   resources:
     - assets/origin-selector.js
+    - data/uk/**
+    - data/population/**
+    - assets/population-core.js
+    - assets/small-boats-live.js
+    - maps/**
+    - assets/vendor/maps/**
+    - data/application-map-totals.csv
+    - assets/annual-outcomes/**
+    - data/annual-decision-outcomes.csv
+    - assets/origins/application-volumes.csv
+    - assets/origins/*.png
     - assets/origins/additional/**
     - assets/explorer-core.js
+    - assets/grant-rates.js
+    - assets/origin-year-cards.js
+    - assets/flags/**
+    - data/origin-year-explorer.json
+    - data/processing-assessment.csv
+    - data/processing-assessment.json
+    - data/commentary-evidence.json
     - data/explorer.json
     - data/source-snapshot.zip
     - data/processing-productivity.csv
+    - data/application-concentration.csv
+    - data/pending-stock-series.json
+    - data/origin-outcome-detail.csv
+    - data/processing-gap-detail.csv
 website:
   title: "Asylum in perspective"
   description: "A reader's guide to worldwide asylum applications, decisions, and pending claims."
@@ -22,18 +49,30 @@ website:
     foreground: "#ffffff"
     left:
       - href: index.qmd
-        text: Worldwide trends
-      - href: explore.qmd
-        text: Country explorer
-      - href: origins.qmd
-        text: Origins & destinations
+        text: Summary
+      - href: worldwide.qmd
+        text: Worldwide
+      - text: Countries
+        menu:
+          - href: explore.qmd
+            text: Receiving-country explorer
+          - href: origins.qmd
+            text: Origins & destinations
+          - href: maps.qmd
+            text: Maps
+          - href: population.qmd
+            text: Activity per population
       - href: productivity.qmd
-        text: Processing Productivity
+        text: Processing
+      - href: grants.qmd
+        text: Grant rates
+      - href: uk.qmd
+        text: UK & Rwanda
       - href: methods.qmd
-        text: Methods & sources
+        text: Methods
     right:
       - href: https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb
-        text: Analysis notebook
+        text: Notebook
         icon: github
   search: true
   page-footer:

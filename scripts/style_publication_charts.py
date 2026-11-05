@@ -10,6 +10,8 @@ from matplotlib.ticker import FuncFormatter, PercentFormatter
 import numpy as np
 import pandas as pd
 import pycountry
+from style_pending_stock import main as style_pending_stock
+from style_reporting_coverage import main as style_reporting_coverage
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "quarto-preview"
@@ -32,6 +34,61 @@ def decorate(ax, label):
 
 def annual(frame, columns):
     return frame.groupby("Year")[columns].sum(min_count=1).reindex(YEARS)
+
+
+def application_concentration(apps):
+    """Show the same period-wide Top 20 selections against all recorded applications."""
+    world = int(apps.applied.sum())
+    sections, records = [], []
+    for column, kind, heading, filename, colour in [
+        ("Country of asylum (ISO)", "receiving", "Top 20 receiving countries", "receiving-concentration.png", "#00a98f"),
+        ("Country of origin (ISO)", "origin", "Top 20 reported origins", "origin-concentration.png", "#8574bd"),
+    ]:
+        grouped = apps.groupby(column, dropna=False).applied.sum()
+        if int(grouped.sum()) != world or grouped.index.isna().any():
+            raise ValueError(f"Missing country codes or non-reconciling application totals: {column}")
+        top = grouped.nlargest(20)
+        volume = int(top.sum())
+        other = world - volume
+        share = volume/world
+        with plt.rc_context({"font.family":"DejaVu Sans", "font.size":12, "text.color":"#20383b"}):
+            fig, ax = plt.subplots(figsize=(4.5, 4.1), layout="constrained")
+            ax.pie([volume, other], colors=[colour, "#e8eeeb"],
+                   startangle=90, counterclock=False,
+                   wedgeprops={"width":.26, "edgecolor":"white", "linewidth":3})
+            ax.text(0,.07,f"{share:.0%}",ha="center",va="center",fontsize=34,color="#20383b")
+            ax.text(0,-.20,"of applications",ha="center",va="center",fontsize=12,color="#526767")
+            fig.savefig(DEST / "assets" / filename, dpi=150, facecolor="white")
+            plt.close(fig)
+        sections.append(f'''::: {{.concentration-card}}
+### {heading}
+
+**{volume/1e6:.1f} million applications**
+
+![{heading} account for {share:.0%} of reported applications, compared with all other countries or origins.](assets/{filename}){{fig-alt="Pie comparing {volume:,} applications for the Top 20 with {other:,} for all others, 2000 to 2025."}}
+
+<div class="concentration-key"><span><i style="background:{colour}"></i>Top 20 <strong>{volume:,} · {share:.0%}</strong></span><span><i style="background:#e8eeeb"></i>All others <strong>{other:,} · {1-share:.0%}</strong></span></div>
+:::
+''')
+        for label, count in [("Top 20", volume), ("All others", other)]:
+            records.append({"dimension":kind, "group":label, "applications":count,
+                            "worldwide_recorded_applications":world, "share_percent":count/world*100,
+                            "year_from":2000, "year_to":2025, "reporting_units":"P+C"})
+    (DEST / "data").mkdir(exist_ok=True)
+    pd.DataFrame(records).to_csv(DEST / "data/application-concentration.csv", index=False)
+    text = f'''## Where are applications concentrated? {{#concentration}}
+
+**{world:,} reported applications worldwide, 2000–2025.** The two pies describe the same recorded application total from different perspectives: where applications were received and where they originated.
+
+:::: {{.headline-concentration}}
+'''+"\n".join(sections)+'''::::
+
+Each Top 20 is selected by total application volume across the full period, matching the country galleries. The origin group includes **Unknown origin**. Original persons- and case-reported values are added without conversion: these are reported application events, not unique people or estimates of unreported worldwide activity.
+
+[Compare activity per 100,000 residents](population.qmd) ? [Explore both Top 20 groups on a map](maps.qmd) ? [Receiving-country profiles](explore.qmd#top-20-gallery) · [Origin profiles and exact volumes](origins.qmd) · [Download these totals (CSV)](data/application-concentration.csv)
+'''
+    (DEST / "_application-concentration.qmd").write_text(text, encoding="utf-8")
+    print(f"Concentration totals reconcile to {world:,} recorded applications.")
 
 
 def flows(ax, apps, decs, unit):
@@ -115,7 +172,7 @@ The pale line shows each annual ratio; the teal line is a **three-year centred m
 
 :::: {.origin-gallery .productivity-gallery}
 """
-    (DEST / "productivity.qmd").write_text(page + "\n".join(cards) + "\n::::\n", encoding="utf-8")
+    (DEST / "productivity.qmd").write_text(page + "\n".join(cards) + "\n::::\n\n{{< include _processing-gap-detail.qmd >}}\n", encoding="utf-8")
 
 
 def main():
@@ -125,12 +182,15 @@ def main():
             raise ValueError(f"Fixed-edition input changed: {filename}")
     apps = pd.read_csv(ROOT / "asylum-applications.csv")
     decs = pd.read_csv(ROOT / "asylum-decisions.csv")
+    application_concentration(apps)
+    style_pending_stock()
+    style_reporting_coverage()
     receiving = DEST / "assets/receiving"
     receiving.mkdir(parents=True, exist_ok=True)
     ranking = apps.groupby("Country of asylum (ISO)")["applied"].sum().nlargest(20)
     parts = ["""## Gallery: Top 20 receiving countries {#top-20-gallery}
 
-The 20 receiving countries with the largest **combined reported application volume, 2000–2025**, in the fixed notebook edition. Reported applications and decisions combine persons and cases without conversion; they are **not counts of unique people**. The dropdown above uses its own dated, refreshed dataset and lets you examine units separately.
+The 20 receiving countries with the largest **combined reported application volume, 2000–2025**, in the fixed notebook edition. Reported applications and decisions combine persons and cases without conversion; they are **not counts of unique people**. The dropdown above uses its own dated, refreshed dataset and also combines the reported units.
 
 **Colours show decision outcomes; the blue line shows applications.** Decisions can concern earlier applications. Gaps indicate unavailable records, not confirmed zeros. Click a chart to enlarge it.
 
@@ -160,8 +220,21 @@ The 20 receiving countries with the largest **combined reported application volu
         parts.append("::::\n")
         (DEST / "_receiving-gallery.qmd").write_text("\n".join(parts), encoding="utf-8")
         productivity(apps, decs, ranking)
-        papps = apps.loc[apps["Cases / Persons"].eq("P")]
-        pdecs = decs.loc[decs["Cases / Persons"].eq("P")]
+        papps = apps.copy()
+        pdecs = decs.copy()
+        app_totals = annual(apps, ["applied"])["applied"]
+        decision_totals = annual(decs, ["Total decisions"])["Total decisions"]
+        ratios = decision_totals.div(app_totals.where(app_totals.gt(0)))*100
+        fig, ax = plt.subplots(figsize=(12, 5.5), layout="constrained")
+        ax.bar(YEARS, ratios, color=np.where(ratios < 100, "#ef6655", "#00a98f"), width=.8)
+        ax.axhline(100, color="#164b63", linestyle="--", linewidth=1.8, label="Decisions match applications")
+        decorate(ax, "Decisions per 100 applications")
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:,.0f}"))
+        ax.set_ylim(bottom=0)
+        ax.set_title("Is recorded processing output keeping up?", loc="left", fontsize=18, pad=35)
+        ax.legend(loc="lower left", bbox_to_anchor=(0,1.01), frameon=False)
+        fig.savefig(DEST / "assets/worldwide-productivity.png", dpi=160, facecolor="white")
+        plt.close(fig)
         # Preserve the application-type breakdown used by the chapter.
         papps = papps.copy()
         papps["Application group"] = papps["Application type"].map({"N": "New", "R": "Repeat", "A": "Appeal"}).fillna("Other / unspecified")
@@ -175,26 +248,13 @@ The 20 receiving countries with the largest **combined reported application volu
             ax.bar(YEARS, v, bottom=bottom, color=colour, width=.78, label=str(key))
             bottom += v
         ax.plot(YEARS, annual(pdecs, ["Total decisions"])["Total decisions"], color="#164b63", marker="o", markersize=3, linewidth=2.5, label="Recorded decisions")
-        decorate(ax, "Reported persons")
+        decorate(ax, "Reported applications / decisions")
         ax.set_title("Applications by type and recorded decisions", loc="left", fontsize=18, pad=55)
         ax.legend(loc="lower left", bbox_to_anchor=(0,1.01), ncol=3, frameon=False)
         fig.savefig(DEST / "assets/applications-and-decisions.png", dpi=160, facecolor="white")
         plt.close(fig)
-        values = annual(pdecs, OUTCOMES)
-        totals = annual(pdecs, ["Total decisions"])["Total decisions"]
-        fig, ax = plt.subplots(figsize=(12, 5.5), layout="constrained")
-        bottom = np.zeros(len(YEARS))
-        for key, label, colour in zip(OUTCOMES, LABELS, COLOURS):
-            v = (values[key]/totals).to_numpy()
-            ax.bar(YEARS, v, bottom=bottom, color=colour, width=.88, label=label)
-            bottom += v
-        decorate(ax, "Share of recorded decisions")
-        ax.set_ylim(0,1)
-        ax.yaxis.set_major_formatter(PercentFormatter(1))
-        ax.set_title("How recorded decisions are composed", loc="left", fontsize=18, pad=40)
-        ax.legend(loc="lower left", bbox_to_anchor=(0,1.01), ncol=4, frameon=False)
-        fig.savefig(DEST / "assets/decision-composition.png", dpi=160, facecolor="white")
-        plt.close(fig)
+        from style_annual_decision_pies import main as style_annual_decision_pies
+        style_annual_decision_pies()
     print("Styled worldwide figures and prepared 20 receiving-country profiles from pinned inputs.")
 
 

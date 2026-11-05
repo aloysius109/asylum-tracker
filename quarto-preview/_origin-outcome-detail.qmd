@@ -1,0 +1,172 @@
+## Different origins, different outcomes, different years {#origin-outcomes}
+
+These profiles replace the original destination/origin grant-rate and 2025 applications-and-grant-rates figures. Each receiving country shows its **Top 10 origins by reported application volume**, selected separately for the full period and for 2025. Receiving countries use the same period-wide Top 20 selection as elsewhere.
+
+The stacked bars show all four outcomes. The heatmaps compare the **recognised refugee-status share of all recorded decisions**, including closures in the denominator, on a common 0–100% colour scale. Grey means unavailable, not zero. These are outcome shares, not cohort success rates or the substantive recognition rates above. Changes across origin, destination, and year do not by themselves establish discrimination or policy effects: procedure, case mix, reporting units, and coverage also vary.
+
+The 2025 panels place application volumes beside decision outcomes on separate axes, avoiding the original overlapping scales. Decisions need not concern the applications recorded in that year. Period rates use summed decision counts, not averages of annual percentages. Persons and cases are combined without conversion. Fixed 2000–2025 inputs; the dropdown above uses its own dated snapshot.
+
+[Download underlying counts and annual recognised shares (CSV)](data/origin-outcome-detail.csv). Origin labels are ISO codes; UNK denotes unknown origin.
+
+:::: {.origin-gallery}
+::: {.origin-card}
+### United States (USA)
+
+![United States: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/usa-origins.png){loading="lazy"}
+
+![United States: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/usa-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Germany (DEU)
+
+![Germany: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/deu-origins.png){loading="lazy"}
+
+![Germany: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/deu-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### France (FRA)
+
+![France: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/fra-origins.png){loading="lazy"}
+
+![France: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/fra-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### United Kingdom (GBR)
+
+![United Kingdom: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/gbr-origins.png){loading="lazy"}
+
+![United Kingdom: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/gbr-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### South Africa (ZAF)
+
+![South Africa: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/zaf-origins.png){loading="lazy"}
+
+![South Africa: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/zaf-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Italy (ITA)
+
+![Italy: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/ita-origins.png){loading="lazy"}
+
+![Italy: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/ita-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Canada (CAN)
+
+![Canada: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/can-origins.png){loading="lazy"}
+
+![Canada: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/can-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Egypt (EGY)
+
+![Egypt: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/egy-origins.png){loading="lazy"}
+
+![Egypt: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/egy-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Sweden (SWE)
+
+![Sweden: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/swe-origins.png){loading="lazy"}
+
+![Sweden: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/swe-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Spain (ESP)
+
+![Spain: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/esp-origins.png){loading="lazy"}
+
+![Spain: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/esp-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Greece (GRC)
+
+![Greece: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/grc-origins.png){loading="lazy"}
+
+![Greece: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/grc-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Türkiye (TUR)
+
+![Türkiye: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/tur-origins.png){loading="lazy"}
+
+![Türkiye: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/tur-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Austria (AUT)
+
+![Austria: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/aut-origins.png){loading="lazy"}
+
+![Austria: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/aut-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Belgium (BEL)
+
+![Belgium: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/bel-origins.png){loading="lazy"}
+
+![Belgium: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/bel-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Mexico (MEX)
+
+![Mexico: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/mex-origins.png){loading="lazy"}
+
+![Mexico: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/mex-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Russian Federation (RUS)
+
+![Russian Federation: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/rus-origins.png){loading="lazy"}
+
+![Russian Federation: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/rus-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Switzerland (CHE)
+
+![Switzerland: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/che-origins.png){loading="lazy"}
+
+![Switzerland: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/che-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Peru (PER)
+
+![Peru: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/per-origins.png){loading="lazy"}
+
+![Peru: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/per-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Kenya (KEN)
+
+![Kenya: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/ken-origins.png){loading="lazy"}
+
+![Kenya: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/ken-2025.png){loading="lazy"}
+:::
+
+::: {.origin-card}
+### Netherlands (NLD)
+
+![Netherlands: overall outcomes for its Top 10 application origins and annual refugee-status shares.](assets/detail/nld-origins.png){loading="lazy"}
+
+![Netherlands: 2025 application volumes alongside decision outcomes for its Top 10 application origins.](assets/detail/nld-2025.png){loading="lazy"}
+:::
+
+::::
