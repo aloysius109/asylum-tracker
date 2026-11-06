@@ -15,7 +15,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Check the reviewed publication manifest and local links
-        run: python scripts/stage_report_publication.py --check
+        run: |
+          python scripts/stage_report_publication.py --check
+          python scripts/check_sexual_violence_publication.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: docs

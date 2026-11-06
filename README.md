@@ -393,3 +393,7 @@ scheduled trigger. Run it only for a reviewed release.
 The independent **Check UNHCR data and prepare review preview** workflow remains
 review-only. Its weekly source checks do not update the public report. Future
 releases require a complete edition rebuild/review before staging and publishing.
+
+## Sexual violence in perspective
+
+[Read the worldwide and UK report](https://aloysius109.github.io/python-charts/sexual-violence/), with separate childhood evidence, justice outcomes, source definitions, and downloadable data. The evidence snapshot is 6 November 2026. Source files and build instructions are in `sexual-violence-report/`; its `medium/` directory contains the accompanying article and six charts.
