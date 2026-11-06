@@ -71,7 +71,7 @@ website:
       - href: methods.qmd
         text: Methods
     right:
-      - href: https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb
+      - href: https://github.com/aloysius109/asylum-tracker/blob/main/UNHCRData.ipynb
         text: Notebook
         icon: github
   search: true

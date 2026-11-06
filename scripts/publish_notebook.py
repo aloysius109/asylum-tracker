@@ -98,7 +98,7 @@ def main():
                 previous.unlink()
     navigation = """<nav class="report-nav" aria-label="Report navigation">
 <a href="./">← Python Charts</a><span>Asylum statistics / Full analysis</span>
-<a href="https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb">Notebook &amp; source ↗</a></nav>"""
+<a href="https://github.com/aloysius109/asylum-tracker/blob/main/UNHCRData.ipynb">Notebook &amp; source ↗</a></nav>"""
     body = body.replace("</head>", '<link rel="stylesheet" href="assets/report.css"></head>')
     body = body.replace("<body", '<body', 1)
     start = body.index(">", body.index("<body")) + 1

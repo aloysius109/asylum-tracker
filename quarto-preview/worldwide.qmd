@@ -98,7 +98,7 @@ The processing story has three parts: incoming applications, recorded decision o
 They do not, by themselves, explain national policy differences, measure an applicant's chance of recognition, or establish how long people wait.
 
 ::: {.report-end}
-**Go further:** [Read the methods and sources](methods.qmd), inspect the [full analysis notebook](https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb), or explore [UNHCR's methodology](https://www.unhcr.org/refugee-statistics/methodology).
+**Go further:** [Read the methods and sources](methods.qmd), inspect the [full analysis notebook](https://github.com/aloysius109/asylum-tracker/blob/main/UNHCRData.ipynb), or explore [UNHCR's methodology](https://www.unhcr.org/refugee-statistics/methodology).
 
 This is an independent analysis, not an official UNHCR publication. Figures describe the saved extracts and observed stock data used for this edition.
 :::

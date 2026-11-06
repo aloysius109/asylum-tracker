@@ -149,7 +149,7 @@ The legend above each chart names the featured receiving countries using ISO cod
 
 Shares can change with source coverage, reporting units, procedures, and the mix of claims. Some years have little or no recorded volume. These charts do not track application cohorts or explain the causes of differences between destinations.
 
-[Methods and source definitions](methods.qmd) · [Explore a receiving country's annual totals](explore.qmd) · [Original analysis notebook](https://github.com/aloysius109/python-charts/blob/main/UNHCRData.ipynb)
+[Methods and source definitions](methods.qmd) · [Explore a receiving country's annual totals](explore.qmd) · [Original analysis notebook](https://github.com/aloysius109/asylum-tracker/blob/main/UNHCRData.ipynb)
 ''')
     (DEST / "origins.qmd").write_text("\n".join(parts), encoding="utf-8")
     (assets / "manifest.json").write_text(json.dumps({
