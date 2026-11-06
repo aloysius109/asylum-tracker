@@ -48,8 +48,8 @@ def check_links(root):
                 continue
             # Root-absolute project links are checked against the GitHub Pages project prefix.
             relative=unquote(url.path)
-            if relative.startswith("/python-charts/asylum/"):
-                target=root/relative.removeprefix("/python-charts/asylum/")
+            if relative.startswith("/asylum-tracker/asylum/"):
+                target=root/relative.removeprefix("/asylum-tracker/asylum/")
             elif relative.startswith("/"):
                 continue
             else:

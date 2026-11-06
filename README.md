@@ -1,4 +1,4 @@
-# Python Data Visualizations & Analytics
+# Asylum Tracker
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Matplotlib](https://img.shields.io/badge/Library-Matplotlib-orange.svg)](https://matplotlib.org/)
@@ -80,8 +80,8 @@ All scripts in this repository support zero-network / offline execution:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/aloysius109/python-charts.git
-cd python-charts
+git clone https://github.com/aloysius109/asylum-tracker.git
+cd asylum-tracker
 ```
 
 ### 2. Create and Activate a Virtual Environment
@@ -160,7 +160,7 @@ include a Plotly Dash application.
 
 ## Public chart portfolio
 
-Visit **[Python Charts](https://aloysius109.github.io/python-charts/)** for a curated
+Visit **[Asylum Tracker](https://aloysius109.github.io/asylum-tracker/)** for a curated
 selection of notebook charts and the interactive NASA Johnson Space Center map.
 GitHub Pages publishes the static `docs/` folder from `main`.
 
@@ -183,7 +183,7 @@ files or client datasets are included in `docs/`.
 
 ## Complete asylum-statistics report
 
-Read the **[full published analysis](https://aloysius109.github.io/python-charts/asylum-analysis.html)**.
+Read the **[full published analysis](https://aloysius109.github.io/asylum-tracker/asylum-analysis.html)**.
 It includes the complete notebook narrative and charts, expandable Python source,
 and saved initial views of the Jupyter controls. Changing dropdown selections
 requires a live Jupyter kernel; GitHub Pages does not execute Python.
@@ -379,8 +379,8 @@ only; publication is not part of the refresh process.
 
 ## Publishing a reviewed report
 
-The shareable report is at https://aloysius109.github.io/python-charts/asylum/.
-The portfolio at https://aloysius109.github.io/python-charts/ links to it.
+The shareable report is at https://aloysius109.github.io/asylum-tracker/asylum/.
+The portfolio at https://aloysius109.github.io/asylum-tracker/ links to it.
 
 After a complete local render and review, run
 `python scripts/stage_report_publication.py` to copy the exact HTML/assets into
