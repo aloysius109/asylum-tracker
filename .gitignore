@@ -53,3 +53,6 @@ quarto-preview/assets/origins/additional/
 
 # Temporary libraries produced by Quarto browser rendering
 quarto-preview/site_libs/
+
+# This publication now has its own repository.
+/sexual-violence-report/

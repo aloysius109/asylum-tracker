@@ -1,4 +1,2 @@
 # Preserve the exact reviewed bytes across Windows/Linux checkouts.
 docs/asylum/** -text
-docs/sexual-violence/** -text
-sexual-violence-report/** -text
