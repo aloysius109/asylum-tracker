@@ -16,9 +16,14 @@ jobs:
           python-version: "3.12"
       - name: Check the reviewed publication manifest and local links
         run: python scripts/stage_report_publication.py --check
+      - name: Package only the reviewed asylum report
+        run: |
+          mkdir -p _publication/asylum
+          cp -a docs/asylum/. _publication/asylum/
+          cp docs/index.html docs/.nojekyll _publication/
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: docs
+          path: _publication
   deploy:
     needs: package
     runs-on: ubuntu-latest
@@ -30,6 +35,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
-      - name: Publish the reviewed report and portfolio
+      - name: Publish the reviewed asylum report
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000

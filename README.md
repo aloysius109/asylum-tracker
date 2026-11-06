@@ -158,35 +158,21 @@ execution dependencies are included in `requirements.txt`.
 The examples use Matplotlib, Folium, and Jupyter widgets. This repository does not
 include a Plotly Dash application.
 
-## Public chart portfolio
+## Published asylum report
 
-Visit **[Asylum Tracker](https://aloysius109.github.io/asylum-tracker/)** for a curated
-selection of notebook charts and the interactive NASA Johnson Space Center map.
-GitHub Pages publishes the static `docs/` folder from `main`.
-
-To update the published snapshots after a successful notebook refresh:
-
-```bash
-python -X utf8 scripts/execute_notebook.py
-python -X utf8 scripts/build_portfolio.py
-```
-
-Review the resulting charts, then commit and push `docs/` along with the updated
-notebook. The build script selects three verified notebook outputs and regenerates
-the NASA HTML map from its Python source. It refuses notebooks with missing
-execution counts or saved errors. The existing example-check workflow uploads its
-outputs as artifacts; it does not update or deploy the curated Pages files.
-
-The portfolio uses aggregate public UNHCR snapshots and a geographic location
-example. Maps require external JavaScript and map-tile services. No private work
-files or client datasets are included in `docs/`.
+[Asylum Tracker](https://aloysius109.github.io/asylum-tracker/) opens the
+[asylum report](https://aloysius109.github.io/asylum-tracker/asylum/) directly.
+The manual publication workflow packages only `docs/asylum/`, the root redirect,
+and `.nojekyll`. The former chart portfolio, NASA example and standalone notebook
+export are excluded from the website. Their source and build tools remain in the
+repository for local use.
 
 ## Complete asylum-statistics report
 
-Read the **[full published analysis](https://aloysius109.github.io/asylum-tracker/asylum-analysis.html)**.
-It includes the complete notebook narrative and charts, expandable Python source,
-and saved initial views of the Jupyter controls. Changing dropdown selections
-requires a live Jupyter kernel; GitHub Pages does not execute Python.
+Read the **[published report](https://aloysius109.github.io/asylum-tracker/asylum/)**.
+The standalone notebook HTML is a local export retained in the repository;
+it is not included in the website deployment. Its saved Jupyter controls require
+a live kernel to change selections; GitHub Pages does not execute Python.
 
 The publication distinguishes persons from cases, recognised shares of all
 recorded decisions from substantive-decision recognition rates, and observed
@@ -197,7 +183,7 @@ are retained, and unsupported case-to-person estimates and modelled backlog
 allocations have been removed. Eurostat pending observations are labelled as
 all-instance pending persons.
 
-To refresh the complete publication and gallery:
+To refresh the local notebook export and example assets:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -380,14 +366,15 @@ only; publication is not part of the refresh process.
 ## Publishing a reviewed report
 
 The shareable report is at https://aloysius109.github.io/asylum-tracker/asylum/.
-The portfolio at https://aloysius109.github.io/asylum-tracker/ links to it.
+The root address https://aloysius109.github.io/asylum-tracker/ redirects directly to it.
 
 After a complete local render and review, run
 `python scripts/stage_report_publication.py` to copy the exact HTML/assets into
 `docs/asylum/` and record a SHA-256 publication manifest. Commit that snapshot
 using `git add -f docs/asylum` (generated HTML is normally ignored). The manual
-**Publish reviewed report** workflow validates the manifest/links and deploys
-`docs/` without running the notebook or refreshing any data. It has no push or
+**Publish reviewed report** workflow validates the manifest/links and deploys only
+`docs/asylum/` plus the root redirect and `.nojekyll`, without running the notebook
+or refreshing any data. It has no push or
 scheduled trigger. Run it only for a reviewed release.
 
 The independent **Check UNHCR data and prepare review preview** workflow remains
