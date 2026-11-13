@@ -1,5 +1,5 @@
 {
-  "prepared_at_utc": "2026-11-13T17:06:59.622526+00:00",
+  "prepared_at_utc": "2026-11-13T17:13:07.867899+00:00",
   "description": "Reviewed static report; no source refresh or notebook execution at deployment.",
   "input_lock": {
     "executed_code_sha256": "d0de64d9d029e56f0922b595e13dddb6bf0a7e8217a6e7b191015d4b7f87bfd7",
@@ -18,7 +18,7 @@
     "population.html": "a8fab57762b6e5071cc9c864bbefd759115acce70f59f37e588af40611a042b6",
     "productivity.html": "0cbc544861aeaa41a819e7faaa033c1f261d9d067ecfedbb7c75e87ec9048b80",
     "search.json": "cab2983aa14faaeaf2e104b9e3a1d86caded89608f0410aee2bd17ff5a9c1843",
-    "uk.html": "c866ba1c4d571d80659c8ca7897cf335fa1f0cb8d9ca69e066549540bf7d1d08",
+    "uk.html": "ee53155df0aa2292c550c21a2e4a8dc1d524e25af0675af1e29319fe3062a46d",
     "worldwide.html": "d1db1ac32636c9e8c5a080723b38694e26bdae3926c6d4e752af012512667d50",
     "assets/applications-and-decisions.png": "fd4e2d552736c2f8e9f384e4bd5b95963a87e1e06e002c271d2579c35940964d",
     "assets/explorer-core.js": "6d2de1cbbe0a8339fcf59790141ea8d2517bdb62a6a813003c5adec6708d7fb8",
