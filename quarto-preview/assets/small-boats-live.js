@@ -40,8 +40,11 @@ export function mount(container,snapshot,Plot,width) {
   status.textContent="Saved fallback snapshot, retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Attempting the live official daily feed…";draw();
   async function refresh() {
     button.disabled=true;
-    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
+    status.textContent="Refreshing the latest seven days from GOV.UK…";
+    let timeout;
     try {
+      const controller=new AbortController();
+      timeout=setTimeout(()=>controller.abort(),12000);
       const response=await fetch(endpoint,{cache:"no-store",signal:controller.signal});
       if (!response.ok)throw new Error(`GOV.UK returned HTTP ${response.status}.`);
       const payload=await response.json(),fresh=parse(payload);
@@ -54,7 +57,7 @@ export function mount(container,snapshot,Plot,width) {
         const reason=error?.name==="AbortError"?"The request timed out.":error instanceof Error?error.message:"Unknown error.";
         status.textContent="Live refresh unavailable ("+reason+"). Retaining the last available figures through "+format(rows[6].date)+"; saved snapshot retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Use the official source links for the newest publication.";
       }
-    } finally {clearTimeout(timeout);if (!disposed)button.disabled=false;}
+    } finally {if (timeout)clearTimeout(timeout);if (!disposed)button.disabled=false;}
   }
   button.addEventListener("click",refresh);refresh();
   return ()=>{disposed=true;};

@@ -1,5 +1,5 @@
 {
-  "prepared_at_utc": "2026-11-13T16:44:09.173306+00:00",
+  "prepared_at_utc": "2026-11-13T16:56:20.229636+00:00",
   "description": "Reviewed static report; no source refresh or notebook execution at deployment.",
   "input_lock": {
     "executed_code_sha256": "d0de64d9d029e56f0922b595e13dddb6bf0a7e8217a6e7b191015d4b7f87bfd7",
@@ -18,7 +18,7 @@
     "population.html": "a8fab57762b6e5071cc9c864bbefd759115acce70f59f37e588af40611a042b6",
     "productivity.html": "0cbc544861aeaa41a819e7faaa033c1f261d9d067ecfedbb7c75e87ec9048b80",
     "search.json": "cab2983aa14faaeaf2e104b9e3a1d86caded89608f0410aee2bd17ff5a9c1843",
-    "uk.html": "5ac9dccf8f6f568b95d53f4e120d8e5ad127a414e52371009f040770aa4eff83",
+    "uk.html": "e15bd09106d3f9d4d438985365d0a8e2bf46900f07832f1b283e4382ff1f34db",
     "worldwide.html": "d1db1ac32636c9e8c5a080723b38694e26bdae3926c6d4e752af012512667d50",
     "assets/applications-and-decisions.png": "fd4e2d552736c2f8e9f384e4bd5b95963a87e1e06e002c271d2579c35940964d",
     "assets/explorer-core.js": "6d2de1cbbe0a8339fcf59790141ea8d2517bdb62a6a813003c5adec6708d7fb8",
@@ -30,7 +30,7 @@
     "assets/population-core.js": "7a6863feb6008418e614e2c630ab9bddb6f117c12c6fecec5ce728b222080810",
     "assets/receiving-concentration.png": "ff9b4cb84f6188ac007a53afb2cf3efbce5a6a9818520c8727b0b3f555ff0b54",
     "assets/reporting-coverage.png": "b078b9884a1b8ed34b0d4f8a3b8b6d31825aacaaba0ea4ccc555f4fe591b61e5",
-    "assets/small-boats-live.js": "5409a02a28b5992a93180e1ca5b9be6ccd14e4daed07295e05638e76f31341c3",
+    "assets/small-boats-live.js": "f688752486f0b7b89475030d49ed88bb32a10bf625c253905d08631bd85644ad",
     "assets/worldwide-productivity.png": "0419c5402afb75a443f0c37982ebc4b88ccea8ba28acc21acd5111c94b01b5cb",
     "data/annual-decision-outcomes.csv": "cb38b73f3880a6491bff3eb2f6a7e54fa879e0e99fbf444626226f79024eafbd",
     "data/application-concentration.csv": "9c65418df8bc8d4fa0757f130f018d5563f532b2c67ebe09aa1ffec407d6fea8",
