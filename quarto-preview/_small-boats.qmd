@@ -11,10 +11,12 @@ boatsSnapshot=FileAttachment("data/uk/small-boats/comparison.json").json()
 boatsLive=import((await FileAttachment("assets/small-boats-live.js").url())+"?v=5")
 ```
 
+::: {.small-boats-refresh}
 ```{ojs}
 //| echo: false
 viewof boatsRefresh=Inputs.button("Refresh latest seven days from GOV.UK")
 ```
+:::
 
 ```{ojs}
 //| echo: false
