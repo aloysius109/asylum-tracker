@@ -20,11 +20,10 @@ export function parse(payload) {
   return records;
 }
 const format=date=>new Date(date).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"});
-export function mount(container,snapshot,Plot,width) {
+export function mount(container,snapshot,Plot,width,refreshTrigger) {
   let rows=snapshot.latest7,disposed=false;
-  const button=document.createElement("button");button.type="button";button.className="btn btn-outline-primary";button.textContent="Refresh latest seven days from GOV.UK";
   const status=document.createElement("p");status.className="reading-note";status.setAttribute("role","status");status.setAttribute("aria-live","polite");
-  const display=document.createElement("div");container.className="small-boats-live";container.append(button,status,display);
+  const display=document.createElement("div");container.className="small-boats-live";container.append(status,display);
   function draw() {
     const total=rows.reduce((sum,row)=>sum+row.arrivals,0),boats=rows.reduce((sum,row)=>sum+row.boats,0);
     const note=document.createElement("p");note.className="explorer-status";note.textContent=total.toLocaleString("en-GB")+" people detected arriving · "+boats.toLocaleString("en-GB")+" boats · "+format(rows[0].date)+" to "+format(rows[6].date)+". Provisional operational data.";
@@ -39,7 +38,6 @@ export function mount(container,snapshot,Plot,width) {
   }
   status.textContent="Saved fallback snapshot, retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Attempting the live official daily feed…";draw();
   async function refresh() {
-    button.disabled=true;
     status.textContent="Refreshing the latest seven days from GOV.UK…";
     let timeout;
     try {
@@ -56,8 +54,9 @@ export function mount(container,snapshot,Plot,width) {
         const reason=error instanceof Error?error.message:"Unknown error.";
         status.textContent="Live refresh unavailable ("+reason+"). Retaining the last available figures through "+format(rows[6].date)+"; saved snapshot retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Use the official source links for the newest publication.";
       }
-    } finally {if (timeout)clearTimeout(timeout);if (!disposed)button.disabled=false;}
+    } finally {if (timeout)clearTimeout(timeout);}
   }
-  button.addEventListener("click",refresh);refresh();
+  void refreshTrigger;
+  refresh();
   return ()=>{disposed=true;};
 }
