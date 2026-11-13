@@ -1,8 +1,11 @@
 export const endpoint="https://www.gov.uk/api/content/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats/migrants-detected-crossing-the-english-channel-in-small-boats-last-7-days";
 const months=["January","February","March","April","May","June","July","August","September","October","November","December"];
 export function parse(payload) {
-  const doc=new DOMParser().parseFromString(payload.details.body,"text/html"),records=[];
-  for (const row of doc.querySelectorAll("tr")) {
+  const body=payload?.details?.body;
+  if (typeof body!=="string") throw new Error("GOV.UK response did not contain the expected HTML table.");
+  const template=document.createElement("template");template.innerHTML=body;
+  const records=[];
+  for (const row of template.content.querySelectorAll("tr")) {
     const cells=Array.from(row.querySelectorAll("th,td")).map(cell=>cell.textContent.trim());
     const match=cells[0]?.match(/^(\d{1,2}) ([A-Za-z]+) (\d{4})$/);
     if (!match) continue;
@@ -37,17 +40,21 @@ export function mount(container,snapshot,Plot,width) {
   status.textContent="Saved fallback snapshot, retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Attempting the live official daily feed…";draw();
   async function refresh() {
     button.disabled=true;
+    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
     try {
-      const response=await fetch(endpoint,{cache:"no-store",signal:AbortSignal.timeout(12000)});
-      if (!response.ok)throw new Error("Official feed unavailable.");
+      const response=await fetch(endpoint,{cache:"no-store",signal:controller.signal});
+      if (!response.ok)throw new Error(`GOV.UK returned HTTP ${response.status}.`);
       const payload=await response.json(),fresh=parse(payload);
       if (disposed)return;
       if (fresh[6].date<rows[6].date)throw new Error("Official feed is older than the saved snapshot.");
       rows=fresh;draw();
       status.textContent="Live GOV.UK daily feed · publication updated "+format(payload.public_updated_at||payload.details.public_timestamp)+" · checked "+new Date().toLocaleString("en-GB",{day:"numeric",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit",timeZone:"UTC",hour12:false})+" UTC. Historical charts below remain a separately dated snapshot.";
     } catch(error) {
-      if (!disposed)status.textContent="Live refresh unavailable. Retaining the last available figures through "+format(rows[6].date)+"; saved snapshot retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Use the official source links for the newest publication.";
-    } finally {if (!disposed)button.disabled=false;}
+      if (!disposed) {
+        const reason=error?.name==="AbortError"?"The request timed out.":error instanceof Error?error.message:"Unknown error.";
+        status.textContent="Live refresh unavailable ("+reason+"). Retaining the last available figures through "+format(rows[6].date)+"; saved snapshot retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Use the official source links for the newest publication.";
+      }
+    } finally {clearTimeout(timeout);if (!disposed)button.disabled=false;}
   }
   button.addEventListener("click",refresh);refresh();
   return ()=>{disposed=true;};

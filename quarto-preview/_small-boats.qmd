@@ -8,7 +8,7 @@ The latest-seven-days panel attempts a direct read of the **official GOV.UK dail
 //| echo: false
 //| output: false
 boatsSnapshot=FileAttachment("data/uk/small-boats/comparison.json").json()
-boatsLive=import((await FileAttachment("assets/small-boats-live.js").url())+"?v=1")
+boatsLive=import((await FileAttachment("assets/small-boats-live.js").url())+"?v=2")
 ```
 
 ```{ojs}
