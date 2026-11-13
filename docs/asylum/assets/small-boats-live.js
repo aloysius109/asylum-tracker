@@ -43,9 +43,8 @@ export function mount(container,snapshot,Plot,width) {
     status.textContent="Refreshing the latest seven days from GOV.UK…";
     let timeout;
     try {
-      const controller=new AbortController();
-      timeout=setTimeout(()=>controller.abort(),12000);
-      const response=await fetch(endpoint,{cache:"no-store",signal:controller.signal});
+      const timedOut=new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error("The request timed out.")),12000);});
+      const response=await Promise.race([fetch(endpoint,{cache:"no-store"}),timedOut]);
       if (!response.ok)throw new Error(`GOV.UK returned HTTP ${response.status}.`);
       const payload=await response.json(),fresh=parse(payload);
       if (disposed)return;
@@ -54,7 +53,7 @@ export function mount(container,snapshot,Plot,width) {
       status.textContent="Live GOV.UK daily feed · publication updated "+format(payload.public_updated_at||payload.details.public_timestamp)+" · checked "+new Date().toLocaleString("en-GB",{day:"numeric",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit",timeZone:"UTC",hour12:false})+" UTC. Historical charts below remain a separately dated snapshot.";
     } catch(error) {
       if (!disposed) {
-        const reason=error?.name==="AbortError"?"The request timed out.":error instanceof Error?error.message:"Unknown error.";
+        const reason=error instanceof Error?error.message:"Unknown error.";
         status.textContent="Live refresh unavailable ("+reason+"). Retaining the last available figures through "+format(rows[6].date)+"; saved snapshot retrieved "+format(snapshot.metadata.retrieved_at_utc)+". Use the official source links for the newest publication.";
       }
     } finally {if (timeout)clearTimeout(timeout);if (!disposed)button.disabled=false;}
