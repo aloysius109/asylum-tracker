@@ -83,8 +83,8 @@ website:
         icon: github
   search: true
   page-footer:
-    left: "An independent analysis by Kathryn Hopkins"
-    right: "Source data: UNHCR · Independent analysis"
+    left: "[Kathryn Hopkins](https://aloysius109.github.io/) · Data through 2025"
+    right: "Sources: UNHCR, Eurostat & EUAA · See Methods for source terms"
 format:
   html:
     theme:
