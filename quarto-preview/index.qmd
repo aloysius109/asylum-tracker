@@ -1,6 +1,8 @@
 ---
 title: "Asylum under pressure"
 subtitle: "The global picture, the processing gap, and the countries keeping pace."
+image: "https://aloysius109.github.io/assets/og/asylum.png"
+image-alt: "Asylum in perspective — a reader's guide to worldwide applications, decisions and pending claims."
 author: Kathryn Hopkins
 toc: false
 ---
