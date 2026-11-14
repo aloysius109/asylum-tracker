@@ -41,6 +41,9 @@ artifacts/
 # Complete published notebook
 !docs/asylum-analysis.html
 
+# Standalone Medium article package
+!medium-edition/article.html
+
 # Local Quarto prototype output
 quarto-preview/_site/
 quarto-preview/.quarto/

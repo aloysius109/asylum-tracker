@@ -1,0 +1,13 @@
+MEDIUM EDITION ? PUBLISHING INSTRUCTIONS
+
+1. Open article.html in a browser. Copy the rendered article and paste it into your existing Medium story in edit mode. Check the title and subtitle fields separately.
+2. Upload the four PNG files in images/ at their corresponding figure positions. Local images may not survive clipboard paste; upload the original files directly. Remove any duplicate images or broken image placeholders.
+3. Copy each figure caption beneath its uploaded image, using Medium image captions. Add the supplied descriptive alt text through Medium image controls where available.
+4. Check headings, bold text and external links in Medium preview, especially on mobile. Use a wide display for charts if Medium offers it; retain the full chart and its labels.
+5. Keep the link to the full interactive report near the beginning. Interactive maps and selectors remain on that website.
+6. In the story settings, set the canonical link to https://aloysius109.github.io/asylum-tracker/asylum/ if it is not already set from the original import.
+7. Review the article before updating the published story. No Medium or GitHub publication has been changed by creating this package.
+
+This is a standalone article adaptation of the existing report edition, with four original static chart assets. It has no Quarto classes, scripts, local page links or interactive controls. Do not upload HTML as a code block or expect Medium to host the local file. Copy the rendered content, then upload images.
+
+Source edition: 5 November 2026. Data through 2025. Figures and findings are taken from quarto-preview/index.qmd, worldwide.qmd, _commentary-worldwide.qmd and _processing-assessment.qmd. The source report and generated _site files were not edited.
