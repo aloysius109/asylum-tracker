@@ -34,8 +34,11 @@ with workspace() as work:
         script = "FoliumNASASpaceCenter.py" if name == "NASA_JSC" else "FoliumSmallBoats2022-24.py"
         runpy.run_path(str(ROOT / script), run_name="__main__")
         assert Path(name + ".html").stat().st_size > 1000
+    chart_output = Path(work) / "outputs"
+    chart_output.mkdir(parents=True, exist_ok=True)
+    os.environ["UNHCR_OUTPUT_DIR"] = str(chart_output)
     runpy.run_path(str(ROOT / "UNHCRData.py"), run_name="__main__")
-    charts = list(Path(work).glob("*.png"))
+    charts = list(chart_output.glob("*.png"))
     assert len(charts) >= 10, "Expected UNHCR chart exports"
     out = ROOT / "artifacts"
     out.mkdir(exist_ok=True)

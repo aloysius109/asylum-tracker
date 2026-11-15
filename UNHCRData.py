@@ -30,7 +30,12 @@ import matplotlib.ticker as mtick
 from matplotlib.ticker import StrMethodFormatter
 
 mpl.rcParams.update(mpl.rcParamsDefault)
-OUTPUT_DIR = Path(__file__).resolve().parent / "outputs" if "__file__" in globals() else Path("outputs")
+DEFAULT_OUTPUT_DIR = (
+	Path(__file__).resolve().parent / "outputs"
+	if "__file__" in globals()
+	else Path("outputs")
+)
+OUTPUT_DIR = Path(os.environ.get("UNHCR_OUTPUT_DIR", DEFAULT_OUTPUT_DIR))
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # %% Pre-processing - Set up UNHCR API parameters
 # %% Retrieve all available data from 2000 through the latest year returned
