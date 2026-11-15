@@ -59,3 +59,6 @@ quarto-preview/site_libs/
 
 # This publication now has its own repository.
 /sexual-violence-report/
+
+# Source-watch report written by the review workflow
+/source-watch.md

@@ -18,6 +18,7 @@ on:
     - cron: "17 6 * * 1"
 permissions:
   contents: read
+  issues: write
 concurrency:
   group: asylum-refresh-review
   cancel-in-progress: false
@@ -46,3 +47,33 @@ jobs:
           path: artifacts/refresh-review/candidate/
           if-no-files-found: warn
           retention-days: 30
+      - id: watch
+        name: Summarise what the source check found
+        if: always()
+        run: |
+          python scripts/report_source_change.py artifacts/refresh-review/candidate/audit.json \
+            --report source-watch.md \
+            --run-url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - name: Report a UNHCR revision as an issue
+        if: always() && steps.watch.outputs.drift == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          state=$(grep -o 'source-watch:[0-9a-f]\{12\}' source-watch.md | head -n 1)
+          gh label create source-watch --color ededed \
+            --description "Upstream data source changed or unreachable" --force
+          for number in $(gh issue list --label source-watch --state all --limit 20 --json number --jq '.[].number'); do
+            if gh issue view "$number" --json body,comments --jq '[.body] + [.comments[].body] | join("\n")' \
+                 | grep -qF "$state"; then
+              echo "Issue #$number already reports $state. Close it to dismiss this state."
+              exit 0
+            fi
+          done
+          open=$(gh issue list --label source-watch --state open --limit 1 --json number --jq '.[].number')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body-file source-watch.md
+          else
+            gh issue create --title "Source watch: UNHCR data has been revised ($(date -u +%Y-%m-%d))" \
+              --label source-watch --body-file source-watch.md
+          fi

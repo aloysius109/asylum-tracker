@@ -224,8 +224,17 @@ The local `.github/workflows/publish-quarto.yml` has been changed to a
 **review-only** source-check workflow. Once explicitly pushed/enabled, it checks
 weekly on Monday at 06:17 UTC, on relevant main-branch pushes and via its manual
 Run workflow button. It saves the `unhcr-refresh-review` artifact for 30 days.
-It has read-only repository permissions and no Pages deployment job. Scheduling
-can be delayed. These local changes have not activated any remote schedule.
+It has read-only repository contents, permission to open issues, and no Pages
+deployment job. Scheduling can be delayed.
+
+When the audit reports anything other than `NO ACTIVITY REVISIONS DETECTED`,
+`python scripts/report_source_change.py` turns that audit into a short summary
+and the workflow opens an issue labelled `source-watch`, so a revision is noticed
+without opening Actions. Each distinct finding is reported once: closing the issue
+dismisses that state, and a new state is added as a comment on the open issue.
+Nothing is adopted, replaced or published by that step. GitHub disables scheduled
+workflows after 60 days without repository activity; dispatch the workflow manually
+to re-enable it after a long quiet period.
 
 For a safe source check, use `python scripts/refresh_report.py --refresh` rather
 than overwriting the report's explorer data in place; see the review process below.
