@@ -18,6 +18,8 @@ jobs:
       - name: Check explorer data handling
         run: python -m unittest discover -s tests -p test_explorer_data.py
       - run: python scripts/verify_examples.py
+      - name: Execute notebook for publication
+        run: python scripts/execute_notebook.py
       - name: Validate and export the saved publication
         run: python scripts/publish_notebook.py
       - uses: actions/upload-artifact@v7
