@@ -81,3 +81,8 @@ Each had fewer decisions than applications in at least four of five years, with 
 :::
 
 An independent analysis by Kathryn Hopkins. Report edition · 5 November 2026.
+
+## Related reports
+
+- [Sexual violence in perspective](https://aloysius109.github.io/sexual-violence-report/) — both reports examine sensitive human-rights evidence with careful distinctions between measures.
+- [Predictive analytics](https://aloysius109.github.io/predictive-analytics/) — the interactive model uses the same UNHCR asylum-outcome data.

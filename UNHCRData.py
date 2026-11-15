@@ -15,6 +15,7 @@ https://www.unhcr.org/refugee-statistics/download/?url=837ayH
 # %% Preprocessing - Import requirements
 # %% Import Requirements
 import os
+from pathlib import Path
 from io import BytesIO
 from datetime import date
 from zipfile import BadZipFile, ZipFile
@@ -29,6 +30,8 @@ import matplotlib.ticker as mtick
 from matplotlib.ticker import StrMethodFormatter
 
 mpl.rcParams.update(mpl.rcParamsDefault)
+OUTPUT_DIR = Path(__file__).resolve().parent / "outputs" if "__file__" in globals() else Path("outputs")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # %% Pre-processing - Set up UNHCR API parameters
 # %% Retrieve all available data from 2000 through the latest year returned
 # by UNHCR.
@@ -335,7 +338,7 @@ ax.set_title(
 )
 ax.legend(wedges, Countries, loc='lower left', fontsize=14)
 # And save the figure as a PNG in your working directory
-fig.savefig("AppVolumesPieChart.png", bbox_inches='tight', dpi=200)
+fig.savefig(OUTPUT_DIR / "AppVolumesPieChart.png", bbox_inches='tight', dpi=200)
 plt.show()
 # %% 2017 Onwards - Plot Top 20 Receiving Country Application Volumes as a
 # Bar Chart
@@ -374,7 +377,7 @@ for spine in ('top', 'right', 'left'):
 
 fig.tight_layout()
 fig.savefig(
-	f'Top20_2017_to_{latest_available_year}_application_volumes.png',
+	OUTPUT_DIR / f'Top20_2017_to_{latest_available_year}_application_volumes.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -465,7 +468,7 @@ ax.tick_params(axis='y', length=0)
 for spine in ('top', 'right', 'left'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
-fig.savefig(f'Top20Applications{last_calendar_year}.png', bbox_inches='tight',
+fig.savefig(OUTPUT_DIR / f'Top20Applications{last_calendar_year}.png', bbox_inches='tight',
             dpi=200)
 plt.show()
 # %% Last Calendar Year - Plot Top 20 Receiving Countries Decision Surplus
@@ -517,7 +520,7 @@ ax.tick_params(axis='y', length=0)
 for spine in ('top', 'right', 'left'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
-fig.savefig(f'Backlog{last_calendar_year}.png', bbox_inches='tight', dpi=200)
+fig.savefig(OUTPUT_DIR / f'Backlog{last_calendar_year}.png', bbox_inches='tight', dpi=200)
 plt.show()
 # %% Worldwide Analysis 2000 to Last Calendar Year - Prepare Chart Datasets
 # %% Worldwide analysis: create annual totals and outcome rates
@@ -624,7 +627,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_applications_and_decisions_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_applications_and_decisions_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -720,7 +723,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_decision_outcomes_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_decision_outcomes_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -770,7 +773,7 @@ ax.set_title(
 ax.legend(wedges, worldwide_outcome_labels, loc='lower left', frameon=False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_decision_outcome_rates_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_decision_outcome_rates_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -829,7 +832,7 @@ fig.suptitle(
 )
 fig.tight_layout(rect=(0, 0.05, 1, 0.97))
 fig.savefig(
-	f'Worldwide_decision_outcome_rates_by_year_2000_to_'
+	OUTPUT_DIR / f'Worldwide_decision_outcome_rates_by_year_2000_to_'
     f'{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
@@ -900,7 +903,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_decision_outcome_rates_bar_chart_2000_'
+	OUTPUT_DIR / f'Worldwide_decision_outcome_rates_bar_chart_2000_'
     f'to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
@@ -946,7 +949,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_FVP_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_FVP_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -992,7 +995,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_annual_shortfall_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_annual_shortfall_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -1043,7 +1046,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Worldwide_shortfall_waterfall_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Worldwide_shortfall_waterfall_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -1140,7 +1143,7 @@ fig.suptitle(
 )
 fig.tight_layout(rect=(0.03, 0.03, 1, 0.96))
 fig.savefig(
-	f'Top_20_country_FVP_2000_to_{latest_available_year}.png',
+	OUTPUT_DIR / f'Top_20_country_FVP_2000_to_{latest_available_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -1245,7 +1248,7 @@ for country_code in top_20_worldwide_codes:
 		ax.spines[spine].set_visible(False)
 	fig.tight_layout()
 	fig.savefig(
-		f'Top_20_{country_code}_decision_outcomes_2000_to_'
+		OUTPUT_DIR / f'Top_20_{country_code}_decision_outcomes_2000_to_'
         f'{last_calendar_year}.png',
 		bbox_inches='tight',
 		dpi=200,
@@ -1337,7 +1340,7 @@ for spine in ('top', 'right', 'left'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'Top_20_minimum_backlog_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_minimum_backlog_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -1393,7 +1396,7 @@ fig.suptitle(
 )
 fig.tight_layout(rect=(0.04, 0.09, 1, 0.91))
 fig.savefig(
-	f'Top_20_country_annual_shortfalls_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_country_annual_shortfalls_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
 plt.show()
@@ -1447,7 +1450,7 @@ fig.suptitle(
 )
 fig.tight_layout(rect=(0.04, 0.09, 1, 0.91))
 fig.savefig(
-	f'Top_20_country_shortfall_waterfalls_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_country_shortfall_waterfalls_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
 plt.show()
@@ -1549,7 +1552,7 @@ for spine in ('top', 'right'):
 	ax.spines[spine].set_visible(False)
 fig.tight_layout()
 fig.savefig(
-	f'RWA_decision_outcomes_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'RWA_decision_outcomes_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight',
 	dpi=200,
 )
@@ -1764,7 +1767,7 @@ fig.supxlabel(
 )
 fig.tight_layout(rect=(0, 0.03, 1, 0.97))
 fig.savefig(
-	f'Top_20_destination_application_origins_2000_'
+	OUTPUT_DIR / f'Top_20_destination_application_origins_2000_'
     f'to_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
@@ -1825,7 +1828,7 @@ fig.text(
 )
 fig.tight_layout(rect=(0, 0.06, 1, 0.97))
 fig.savefig(
-	f'Top_20_destination_origin_grant_rates_2000_to_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_destination_origin_grant_rates_2000_to_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
 plt.show()
@@ -1995,7 +1998,7 @@ fig.supxlabel(
 )
 fig.tight_layout(rect=(0, 0.03, 1, 0.97))
 fig.savefig(
-	f'Top_20_destination_application_origins_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_destination_application_origins_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
 plt.show()
@@ -2057,7 +2060,7 @@ fig.text(
 )
 fig.tight_layout(rect=(0, 0.06, 1, 0.97))
 fig.savefig(
-	f'Top_20_destination_origin_grant_rates_{last_calendar_year}.png',
+	OUTPUT_DIR / f'Top_20_destination_origin_grant_rates_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )
 plt.show()
@@ -2151,7 +2154,7 @@ fig.suptitle(
 )
 fig.tight_layout(rect=(0, 0, 1, 0.94))
 fig.savefig(
-	f'Top_20_destination_applications_and_grant_rat'
+	OUTPUT_DIR / f'Top_20_destination_applications_and_grant_rat'
     f'es_{last_calendar_year}.png',
 	bbox_inches='tight', dpi=200,
 )

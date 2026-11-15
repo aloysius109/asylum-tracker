@@ -91,6 +91,7 @@ format:
       - cosmo
       - theme.scss
     include-in-header: head-social.html
+    include-after-body: analytics.html
     toc: true
     toc-title: "In this chapter"
     toc-depth: 2
