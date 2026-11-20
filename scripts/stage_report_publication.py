@@ -12,7 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "quarto-preview/_site"
 DEST = ROOT / "docs/asylum"
 REQUIRED = ["index.html","worldwide.html","methods.html","explore.html","origins.html",
-            "productivity.html","grants.html","maps.html","uk.html","population.html"]
+            "productivity.html","grants.html","maps.html","uk.html","population.html",
+            "summary/index.html"]
 MANIFEST = "publication.json"
 
 
@@ -101,7 +102,7 @@ def stage():
               "description":"Reviewed static report; no source refresh or notebook execution at deployment.",
               "input_lock":json.loads((ROOT/"quarto-preview/_inputs.json").read_text(encoding="utf-8")),
               "files":current}
-    (DEST/MANIFEST).write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    (DEST/MANIFEST).write_text(json.dumps(manifest,indent=2),encoding="utf-8",newline="\n")
     validate()
 
 

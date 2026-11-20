@@ -1,5 +1,5 @@
 {
-  "prepared_at_utc": "2026-11-14T18:36:25.516769+00:00",
+  "prepared_at_utc": "2026-11-20T13:36:55.020928+00:00",
   "description": "Reviewed static report; no source refresh or notebook execution at deployment.",
   "input_lock": {
     "executed_code_sha256": "d0de64d9d029e56f0922b595e13dddb6bf0a7e8217a6e7b191015d4b7f87bfd7",
@@ -50,6 +50,7 @@
     "maps/origin.html": "18f452f226f630a9d93aa1d517be3362fe47e67895e411bc1098bcc32df3cfaa",
     "maps/receiving.html": "3f8e4486a6a3a2e8a30ce440df2f0d233f2a7b38e32ab709ac95dc1789bf4445",
     "maps/small-boats-nationalities.html": "5c6023ca8f55d8cbb063d20f9312e7fad2e41d5895bcb92d3047d22ed797bc58",
+    "summary/index.html": "ebb01a9676ad3ebc489ee6e7533ca2e6e9895f4317f8adf6116dafee88623aa0",
     "assets/annual-outcomes/2000.png": "b27822353927049239628ee31c0844a3d87dc3be6f8832138a603b3cd2abc9a6",
     "assets/annual-outcomes/2001.png": "fbbbdcb4007010d1d5330358d8c5fefc152a311da75a35be05c775c923717bc8",
     "assets/annual-outcomes/2002.png": "2780a94cab58bf415ed1ae5d727f359c13ec3191b4144d14ba8d18b91ba7e06b",
@@ -605,6 +606,10 @@
     "site_libs/quarto-contrib/glightbox/glightbox.min.js": "03dfe1fbce92a9f17fcd1a1501213bd820d050ab085c338419ab06a3631c9459",
     "site_libs/quarto-contrib/glightbox/lightbox.css": "6b3fe0e87e89511791431a74df3b4026b4560b17e135440baa8435d0698afd01",
     "site_libs/quarto-html/scrollable-regions/scrollable-regions.js": "b2f956903f5b9c36742454e74d37571f96eceedad7b0b603abc9fac713cf992e",
-    "site_libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+    "site_libs/quarto-html/tabsets/tabsets.js": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15",
+    "summary/images/01-applications-and-decisions.png": "fd4e2d552736c2f8e9f384e4bd5b95963a87e1e06e002c271d2579c35940964d",
+    "summary/images/02-observed-pending.png": "dd1f390bd27b1e88b8aea4b73ed9ff902356955e3a041642333fab4d9579fea9",
+    "summary/images/03-worldwide-productivity.png": "0419c5402afb75a443f0c37982ebc4b88ccea8ba28acc21acd5111c94b01b5cb",
+    "summary/images/04-country-processing-balance.png": "7fe68f83cc3004721881151ea1a5bd8615abbba48651cc879ea1348abe70357a"
   }
 }

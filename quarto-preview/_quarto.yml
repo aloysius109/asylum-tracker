@@ -12,6 +12,8 @@ project:
     - maps.qmd
     - uk.qmd
     - population.qmd
+  post-render:
+    - python ../scripts/publish_summary.py --article ../medium-edition/article.html --images ../medium-edition/images --output _site --canonical https://aloysius109.github.io/asylum-tracker/asylum/
   resources:
     - assets/origin-selector.js
     - data/uk/**

@@ -41,6 +41,9 @@ artifacts/
 # Complete published notebook
 !docs/asylum-analysis.html
 
+# Published short read
+!docs/asylum/summary/index.html
+
 # Standalone Medium article package
 !medium-edition/article.html
 
